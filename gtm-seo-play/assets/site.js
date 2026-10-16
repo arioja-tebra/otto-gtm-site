@@ -4,8 +4,8 @@ const progress=document.querySelector('.reading-progress');if(progress){const up
 document.querySelector('#copy-link')?.addEventListener('click',async()=>{const status=document.querySelector('#share-status');try{await navigator.clipboard.writeText(location.href);status.textContent='Link copied.'}catch{status.textContent='Copy this page’s URL from your address bar.'}});document.querySelector('#print-article')?.addEventListener('click',()=>print());
 
 // Carry the source page and campaign tags into the signup, without browser storage.
-document.querySelectorAll('a[href="/otto-previews/previous/waitlist/"]').forEach(link=>{
- const query=new URLSearchParams(location.search), target=new URL('/otto-previews/previous/waitlist/',location.origin);
+document.querySelectorAll('a[href="/otto-previews/gtm-seo-play/waitlist/"]').forEach(link=>{
+ const query=new URLSearchParams(location.search), target=new URL('/otto-previews/gtm-seo-play/waitlist/',location.origin);
  target.searchParams.set('from',location.pathname);
  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(key=>{if(query.has(key))target.searchParams.set(key,query.get(key).slice(0,120));});
  link.href=target.pathname+target.search;
