@@ -1,0 +1,9 @@
+Otto security evaluation questions
+
+1. Provide the applicable BAA and covered services.
+2. Explain consent, audio and transcript retention, deletion, and backups.
+3. Identify AI subprocessors and contractual training-use limits.
+4. Document access controls, MFA, audit logs, encryption, and incident notification.
+5. Demonstrate record export and explain account-closure retention.
+
+Prepared for evaluation on October 16, 2026. These questions are not security certifications.

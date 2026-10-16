@@ -1,0 +1,38 @@
+/* Shared review fixes, used by both visual editions. */
+.toolkit-seal{text-align:center;gap:5px;padding:12px;flex-shrink:0;isolation:isolate}
+.toolkit-seal span{display:block;width:60px;max-width:100%;margin:0 auto;font-size:9px;line-height:1.15;letter-spacing:.07em;text-align:center;white-space:normal}
+:where(.panel,.tool-shell>*,.fields>*,.note-fields>*,.growth-split>*,.post-layout>*,.cost-plan-grid>*){min-width:0}
+:where(input,select,textarea){max-width:100%}
+:where(.prose,.sources,.review-note,.document-info-grid,.otto-document){overflow-wrap:anywhere}
+:where(.table-scroll){max-width:100%;overscroll-behavior-x:contain}
+:where(.table-scroll):focus-visible{outline:2px solid #417e86;outline-offset:4px}
+button:disabled{cursor:not-allowed;opacity:.6}
+.growth-page .post-layout .resource-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.growth-page .post-layout .resource-card{padding:24px}
+.growth-page .post-layout .resource-card h3{font-size:27px}
+.growth-page .post-layout .resource-card .text-link{display:block}
+.note-fields textarea{font-size:16px;line-height:1.6;min-height:180px}
+#note-status:empty{display:none}
+#note-status{font-size:14px;color:#365c58;padding:12px 16px;border-radius:10px;background:#e3ece5;margin-bottom:0}
+.growth-page .sources{border-top:1px solid #cad8cf;padding-top:26px;margin-top:36px}
+.growth-page .sources a{overflow-wrap:anywhere}
+.product-mock .mock-date{line-height:1.35}
+@media(max-width:680px){
+ .toolkit-seal{width:84px;height:84px;font-size:29px;bottom:20px}
+ .tools-hub-intro h1{font-size:clamp(40px,11vw,52px)}
+ .tools-hub-promises{flex-wrap:wrap;gap:10px 18px}
+ .growth-page .post-layout .resource-cards{grid-template-columns:1fr}
+ .actions{gap:10px}.actions .button{white-space:normal;text-align:center}
+ .growth-page .growth-hero h1{font-size:clamp(35px,10vw,43px)}
+ .fields{grid-template-columns:1fr}
+ .toolkit-note{overflow-wrap:anywhere}
+ .mock-choice{flex-wrap:wrap;gap:8px}
+ .record-detail{gap:12px}.record-detail b{text-align:right}
+ .friendly-sticker{right:6px;max-width:145px}
+ .post-heading .dek{font-size:18px}.byline{line-height:1.55}
+ .prose .article-tool-callout{grid-template-columns:1fr}.article-tool-callout .tool-icon{display:none}
+ .article-demo-callout{max-width:360px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+.preview-bar{background:#004852;color:#f6f3eb;padding:9px 20px;font:13px/1.45 "Source Sans 3",sans-serif;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;text-align:center}.preview-bar a{color:inherit;text-decoration:underline;text-underline-offset:3px}.preview-bar span{color:#d5e3da}.preview-bar a[aria-current]{font-weight:700}.preview-label{font-weight:600}.preview-note{padding:13px 16px;background:#e3ece5;border-radius:12px;font-size:14px;color:#004852}.waitlist-demo [hidden]{display:none!important}
