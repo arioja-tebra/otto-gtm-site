@@ -1,0 +1,192 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import pages from "../../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/switch/from-simplepractice/"]}>
+  <main id="main" class="growth-page">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <a href="/tools/">Resources</a> <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">A plan for your SimplePractice records.</span>
+      </nav>
+      <header class="growth-hero">
+        <div class="eyebrow">Switching from SimplePractice</div>
+        <h1>A plan for your SimplePractice records.</h1>
+        <p>
+          We start with the exports you can obtain, then confirm how the
+          receiving system will handle them.
+        </p>
+      </header>
+      <div class="growth-answer">
+        <strong>Before you begin</strong>
+        <p>
+          These are preparation steps for evaluating a move to Otto. Otto’s
+          accepted imports, migration service, timing, and fees still need
+          confirmation. There is no migration upload on this site.
+        </p>
+      </div>
+      <section class="growth-section prose">
+        <h2>1. Confirm access and responsibility.</h2>
+        <p>
+          Identify who may export the practice’s records, which clients are in
+          scope, who will retain the original records, and how the export will
+          be stored and transferred securely.
+        </p>
+        <h2>2. Understand the source export.</h2>
+        <p>
+          SimplePractice documents exports under{" "}
+          <strong>Settings → Practice → Data export</strong>. The account owner
+          or a practice manager with data-export permissions chooses a scope and
+          export type. Its guide distinguishes Complete, Sessions, and Contacts
+          exports.
+        </p>
+        <p>
+          Keep password protection enabled and retrieve files while the export
+          is available. Review restricted-client settings and the resulting
+          contents. The guide says appointment data needs a separate report; the
+          Contacts export uses vCard rather than a spreadsheet.
+        </p>
+        <p>
+          Use the{" "}
+          <a href="https://support.simplepractice.com/hc/en-us/articles/207625506-Exporting-client-information-through-data-exports">
+            current SimplePractice export guide
+          </a>{" "}
+          for the exact steps and contents. A Complete export does not establish
+          that Otto can import every included item.
+        </p>
+        <h2>3. Match each record category to a destination.</h2>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Record category</th>
+                <th>Acceptance question for Otto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Demographics and insurance</td>
+                <td>Which fields and file formats are supported?</td>
+              </tr>
+              <tr>
+                <td>Historical notes and signatures</td>
+                <td>
+                  Can we preserve dates, authorship, signature information, and
+                  readability?
+                </td>
+              </tr>
+              <tr>
+                <td>Attachments and forms</td>
+                <td>
+                  What uploads are supported, and how will they attach to the
+                  correct client?
+                </td>
+              </tr>
+              <tr>
+                <td>Appointments and balances</td>
+                <td>Can these transfer, or will the practice recreate them?</td>
+              </tr>
+              <tr>
+                <td>Audit and access records</td>
+                <td>
+                  What stays in an accessible archive, and who owns retention?
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>4. Test, reconcile, and plan cutover.</h2>
+        <p>
+          Use an agreed sample to compare counts, dates, labels, and document
+          contents. Keep an exception list and resolve mismatches before
+          approving a broader move. Budget overlap time using the{" "}
+          <a href="/tools/ehr-cost-calculator/">EHR cost calculator</a>.
+        </p>
+      </section>
+      <section class="growth-section migration-checklist">
+        <span class="eyebrow">Your preparation checklist</span>
+        <h2>Keep track of the next steps.</h2>
+        <p>
+          Check items as you review them. This checklist stays in the current
+          page; download a copy to keep your progress.
+        </p>
+        <label>
+          <input type="checkbox" data-migration-item /> Export permission and
+          record ownership confirmed
+        </label>
+        <label>
+          <input type="checkbox" data-migration-item /> Record categories and
+          counts inventoried
+        </label>
+        <label>
+          <input type="checkbox" data-migration-item /> Otto import scope,
+          costs, and timeline confirmed
+        </label>
+        <label>
+          <input type="checkbox" data-migration-item /> Secure transfer method
+          agreed
+        </label>
+        <label>
+          <input type="checkbox" data-migration-item /> Sample transferred and
+          checked
+        </label>
+        <label>
+          <input type="checkbox" data-migration-item /> Exceptions resolved and
+          retention plan approved
+        </label>
+        <label>
+          <input type="checkbox" data-migration-item /> Cutover and client
+          communications planned
+        </label>
+        <button
+          class="button"
+          id="migration-download"
+          data-vendor="SimplePractice"
+        >
+          Download checklist
+        </button>
+      </section>
+      <div class="tool-support">
+        <a href="/compare/otto-vs-simplepractice/">
+          Compare Otto and SimplePractice ↗
+        </a>
+        <a href="/security/">Review data questions ↗</a>
+        <a href="/waitlist/">Discuss your practice ↗</a>
+      </div>
+      <div class="sources">
+        <h2>Sources and review</h2>
+        <p>
+          Sources checked October 16, 2026. Confirm current product terms before
+          choosing software.
+        </p>
+        <ul>
+          <li>
+            <a href="https://support.simplepractice.com/hc/en-us/articles/207625506-Exporting-client-information-through-data-exports">
+              SimplePractice export documentation
+            </a>
+          </li>
+        </ul>
+      </div>
+      <script is:inline src="/assets/documents.js"></script>
+      <script is:inline src="/assets/migration.js" defer></script>
+    </div>
+    <section class="cta-section">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Make more room for the work you love.</h2>
+            <p>
+              See how Otto brings notes, scheduling, telehealth, and payments
+              into your practice day.
+            </p>
+          </div>
+          <a class="button light" href="/waitlist/">
+            Join the waitlist <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

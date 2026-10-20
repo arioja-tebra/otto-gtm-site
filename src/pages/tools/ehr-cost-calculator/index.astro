@@ -1,0 +1,642 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import pages from "../../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/tools/ehr-cost-calculator/"]}>
+  <main id="main" class="growth-page">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <a href="/tools/">Resources</a> <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">What will your EHR really cost?</span>
+      </nav>
+      <header class="growth-hero">
+        <div class="eyebrow">Free practice planning tool</div>
+        <h1>What will your EHR really cost?</h1>
+        <p>
+          Bring two quotes. We’ll help you compare subscriptions, usage,
+          transaction fees, and the cost of getting started.
+        </p>
+      </header>
+      <div class="growth-answer">
+        <strong>Compare your quotes</strong>
+        <p>
+          These starting values are fictional examples, not Otto or competitor
+          quotes. Enter current vendor prices and billing terms. We show an
+          annual average; actual monthly charges may vary.
+        </p>
+      </div>
+      <form id="ehr-cost-form">
+        <section class="panel">
+          <h2>Your practice assumptions</h2>
+          <div class="fields ehr-shared">
+            <label>
+              Clinicians
+              <input
+                name="providers"
+                type="number"
+                value="1"
+                min="1"
+                max="100"
+                step="1"
+                required
+              />
+            </label>
+            <label>
+              Sessions per clinician / week
+              <input
+                name="weekly"
+                type="number"
+                value="20"
+                min="0"
+                max="200"
+                step="1"
+                required
+              />
+            </label>
+            <label>
+              Working weeks / year
+              <input
+                name="weeks"
+                type="number"
+                value="48"
+                min="1"
+                max="52"
+                step="1"
+                required
+              />
+            </label>
+            <label>
+              Average session fee ($)
+              <input
+                name="fee"
+                type="number"
+                value="160"
+                min="0"
+                max="10000"
+                step="0.01"
+                required
+              />
+            </label>
+            <label>
+              Sessions paid by card (%)
+              <input
+                name="cardshare"
+                type="number"
+                value="75"
+                min="0"
+                max="100"
+                step="0.01"
+                required
+              />
+            </label>
+            <label>
+              Sessions using AI notes (%)
+              <input
+                name="aishare"
+                type="number"
+                value="100"
+                min="0"
+                max="100"
+                step="0.01"
+                required
+              />
+            </label>
+            <label>
+              Claims per month (practice)
+              <input
+                name="claims"
+                type="number"
+                value="0"
+                min="0"
+                max="100000"
+                step="1"
+                required
+              />
+            </label>
+          </div>
+        </section>
+        <div class="cost-plan-grid">
+          <fieldset class="plan-inputs">
+            <legend>Plan A</legend>
+            <label>
+              Plan name
+              <input name="a_name" value="Plan A" maxlength="60" required />
+            </label>
+            <div class="fields">
+              <label>
+                Base subscription ($)
+                <input
+                  name="a_base"
+                  type="number"
+                  value="99"
+                  min="0"
+                  max="1000000"
+                  step="0.01"
+                  required
+                />
+              </label>
+              <label>
+                Each additional clinician ($)
+                <input
+                  name="a_seat"
+                  type="number"
+                  value="50"
+                  min="0"
+                  max="1000000"
+                  step="0.01"
+                  required
+                />
+              </label>
+              <label>
+                Subscription billing period
+                <select name="a_period">
+                  <option value="1">Monthly</option>
+                  <option value="12">Annual</option>
+                </select>
+                <span class="help">
+                  Applies to base subscription and additional clinician prices.
+                </span>
+              </label>
+              <label>
+                AI fee per enabled clinician / month ($)
+                <input
+                  name="a_ai"
+                  type="number"
+                  value="0"
+                  min="0"
+                  max="1000000"
+                  step="0.01"
+                  required
+                />
+              </label>
+              <label>
+                Clinicians with AI enabled
+                <input
+                  name="a_aiusers"
+                  type="number"
+                  value="1"
+                  min="0"
+                  max="100"
+                  step="1"
+                  required
+                />
+              </label>
+              <label>
+                Other monthly add-ons ($)
+                <input
+                  name="a_addons"
+                  type="number"
+                  value="0"
+                  min="0"
+                  max="1000000"
+                  step="0.01"
+                  required
+                />
+              </label>
+              <label>
+                Card processing (%)
+                <input
+                  name="a_percent"
+                  type="number"
+                  value="2.9"
+                  min="0"
+                  max="100"
+                  step="0.01"
+                  required
+                />
+              </label>
+              <label>
+                Fee per card transaction ($)
+                <input
+                  name="a_transaction"
+                  type="number"
+                  value="0.3"
+                  min="0"
+                  max="1000"
+                  step="0.01"
+                  required
+                />
+              </label>
+            </div>
+            <details class="cost-advanced">
+              <summary>Usage limits, claims, and setup</summary>
+              <div class="fields">
+                <label>
+                  AI notes included / month (practice)
+                  <input
+                    name="a_includedai"
+                    type="number"
+                    value="100000"
+                    min="0"
+                    max="1000000"
+                    step="1"
+                    required
+                  />
+                </label>
+                <label>
+                  Each extra AI note ($)
+                  <input
+                    name="a_overai"
+                    type="number"
+                    value="0"
+                    min="0"
+                    max="1000000"
+                    step="0.01"
+                    required
+                  />
+                </label>
+                <label>
+                  Claims included / month (practice)
+                  <input
+                    name="a_includedclaims"
+                    type="number"
+                    value="0"
+                    min="0"
+                    max="100000"
+                    step="1"
+                    required
+                  />
+                </label>
+                <label>
+                  Each extra claim ($)
+                  <input
+                    name="a_claim"
+                    type="number"
+                    value="0.25"
+                    min="0"
+                    max="1000"
+                    step="0.01"
+                    required
+                  />
+                </label>
+                <label>
+                  Other annual fees ($)
+                  <input
+                    name="a_annual"
+                    type="number"
+                    value="0"
+                    min="0"
+                    max="1000000"
+                    step="0.01"
+                    required
+                  />
+                </label>
+                <label>
+                  Setup, migration, and overlap total ($)
+                  <input
+                    name="a_setup"
+                    type="number"
+                    value="0"
+                    min="0"
+                    max="1000000"
+                    step="0.01"
+                    required
+                  />
+                </label>
+              </div>
+              <p class="micro">
+                For unlimited AI usage, keep the allowance above your expected
+                notes. Enter any overlapping old-system subscriptions in setup.
+                AI usage is averaged across the year; set the number of
+                AI-enabled clinicians explicitly.
+              </p>
+            </details>
+          </fieldset>
+          <fieldset class="plan-inputs">
+            <legend>Plan B</legend>
+            <label>
+              Plan name
+              <input name="b_name" value="Plan B" maxlength="60" required />
+            </label>
+            <div class="fields">
+              <label>
+                Base subscription ($)
+                <input
+                  name="b_base"
+                  type="number"
+                  value="79"
+                  min="0"
+                  max="1000000"
+                  step="0.01"
+                  required
+                />
+              </label>
+              <label>
+                Each additional clinician ($)
+                <input
+                  name="b_seat"
+                  type="number"
+                  value="50"
+                  min="0"
+                  max="1000000"
+                  step="0.01"
+                  required
+                />
+              </label>
+              <label>
+                Subscription billing period
+                <select name="b_period">
+                  <option value="1">Monthly</option>
+                  <option value="12">Annual</option>
+                </select>
+                <span class="help">
+                  Applies to base subscription and additional clinician prices.
+                </span>
+              </label>
+              <label>
+                AI fee per enabled clinician / month ($)
+                <input
+                  name="b_ai"
+                  type="number"
+                  value="35"
+                  min="0"
+                  max="1000000"
+                  step="0.01"
+                  required
+                />
+              </label>
+              <label>
+                Clinicians with AI enabled
+                <input
+                  name="b_aiusers"
+                  type="number"
+                  value="1"
+                  min="0"
+                  max="100"
+                  step="1"
+                  required
+                />
+              </label>
+              <label>
+                Other monthly add-ons ($)
+                <input
+                  name="b_addons"
+                  type="number"
+                  value="0"
+                  min="0"
+                  max="1000000"
+                  step="0.01"
+                  required
+                />
+              </label>
+              <label>
+                Card processing (%)
+                <input
+                  name="b_percent"
+                  type="number"
+                  value="2.9"
+                  min="0"
+                  max="100"
+                  step="0.01"
+                  required
+                />
+              </label>
+              <label>
+                Fee per card transaction ($)
+                <input
+                  name="b_transaction"
+                  type="number"
+                  value="0.3"
+                  min="0"
+                  max="1000"
+                  step="0.01"
+                  required
+                />
+              </label>
+            </div>
+            <details class="cost-advanced">
+              <summary>Usage limits, claims, and setup</summary>
+              <div class="fields">
+                <label>
+                  AI notes included / month (practice)
+                  <input
+                    name="b_includedai"
+                    type="number"
+                    value="100000"
+                    min="0"
+                    max="1000000"
+                    step="1"
+                    required
+                  />
+                </label>
+                <label>
+                  Each extra AI note ($)
+                  <input
+                    name="b_overai"
+                    type="number"
+                    value="0"
+                    min="0"
+                    max="1000000"
+                    step="0.01"
+                    required
+                  />
+                </label>
+                <label>
+                  Claims included / month (practice)
+                  <input
+                    name="b_includedclaims"
+                    type="number"
+                    value="0"
+                    min="0"
+                    max="100000"
+                    step="1"
+                    required
+                  />
+                </label>
+                <label>
+                  Each extra claim ($)
+                  <input
+                    name="b_claim"
+                    type="number"
+                    value="0.25"
+                    min="0"
+                    max="1000"
+                    step="0.01"
+                    required
+                  />
+                </label>
+                <label>
+                  Other annual fees ($)
+                  <input
+                    name="b_annual"
+                    type="number"
+                    value="0"
+                    min="0"
+                    max="1000000"
+                    step="0.01"
+                    required
+                  />
+                </label>
+                <label>
+                  Setup, migration, and overlap total ($)
+                  <input
+                    name="b_setup"
+                    type="number"
+                    value="0"
+                    min="0"
+                    max="1000000"
+                    step="0.01"
+                    required
+                  />
+                </label>
+              </div>
+              <p class="micro">
+                For unlimited AI usage, keep the allowance above your expected
+                notes. Enter any overlapping old-system subscriptions in setup.
+                AI usage is averaged across the year; set the number of
+                AI-enabled clinicians explicitly.
+              </p>
+            </details>
+          </fieldset>
+        </div>
+        <p class="error" role="alert" id="ehr-error"></p>
+        <div class="actions">
+          <button type="button" class="button outline" id="ehr-demo">
+            Fill with demo data
+          </button>
+          <button type="button" class="button outline" id="ehr-reset">
+            Reset examples
+          </button>
+        </div>
+      </form>
+      <section id="ehr-results" aria-live="polite" aria-atomic="true">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Based on your inputs</span>
+            <h2>Your software cost, itemized.</h2>
+          </div>
+        </div>
+        <div id="ehr-totals" class="cost-plan-grid"></div>
+        <p id="ehr-difference" class="growth-answer"></p>
+        <div class="table-scroll">
+          <table class="growth-table" id="ehr-breakdown">
+            <thead>
+              <tr>
+                <th>Monthly average</th>
+                <th>Plan A</th>
+                <th>Plan B</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="actions">
+          <button class="button" id="ehr-download">
+            Download comparison
+          </button>
+          <button class="button outline" id="ehr-print">
+            Print / save as PDF
+          </button>
+        </div>
+      </section>
+      <section class="growth-section prose">
+        <h2>What the calculation includes</h2>
+        <p>
+          Monthly average sessions = clinicians × weekly sessions × working
+          weeks ÷ 12. We apply card processing to the selected share of session
+          payments. AI notes are based on sessions for AI-enabled clinicians,
+          and we charge overages only above the practice-level allowance you
+          enter.
+        </p>
+        <p>
+          We normalize annual subscription prices to monthly amounts, add
+          recurring fees, and calculate the first year as 12 months of recurring
+          cost plus setup, migration, and overlap. Other annual fees are divided
+          by 12. We assume one card transaction per card-paid session and treat
+          claims as a separate practice-level input.
+        </p>
+        <p>
+          This excludes taxes, discounts, refunds, chargebacks, financing, and
+          the value of staff time. It does not compare feature quality, clinical
+          suitability, or guarantee vendor charges.
+        </p>
+        <h2>Bring the terms with the price.</h2>
+        <p>
+          Check provider billing units, included notes, claim allowances,
+          support, telehealth, and payment rates. Keep the quote and its date.
+          Otto’s advertised $99 monthly offer still needs its billing unit and
+          fees confirmed here; enter a verified quote rather than assuming those
+          terms.
+        </p>
+        <div class="tool-support">
+          <a href="/compare/otto-vs-simplepractice/">
+            Otto vs. SimplePractice ↗
+          </a>
+          <a href="/compare/otto-vs-therapynotes/">Otto vs. TherapyNotes ↗</a>
+          <a href="/switch/">Plan a switch ↗</a>
+        </div>
+      </section>
+      <section class="otto-tool-hook" aria-label="Meet Otto">
+        <div class="otto-hook-mark" aria-hidden="true">
+          <img src="/assets/otto-logo.svg" alt="" />
+          <svg viewBox="0 0 100 100">
+            <path d="M50 100V25" stroke="#004852" stroke-width="2" />
+            <path d="M50 75C13 73 8 43 8 33c31 1 42 20 42 42" fill="#8ca7a2" />
+            <path d="M50 58c34-2 42-28 43-40-29 0-43 18-43 40" fill="#417e86" />
+          </svg>
+        </div>
+        <div class="otto-hook-copy">
+          <span class="eyebrow">Meet Otto by Tebra</span>
+          <h2>Let Otto take more off your plate.</h2>
+          <p>
+            Otto drafts progress notes for your review and brings scheduling,
+            telehealth, and payments into one place.
+          </p>
+          <div class="otto-hook-features">
+            <span>AI-assisted notes</span>
+            <span>Scheduling</span>
+            <span>Payments</span>
+          </div>
+        </div>
+        <div class="otto-hook-action">
+          <a class="button light" href="/waitlist/">
+            Learn more <span aria-hidden="true">↗</span>
+          </a>
+          <span>Join the Otto waitlist</span>
+        </div>
+      </section>
+      <div class="sources">
+        <h2>Sources and review</h2>
+        <p>
+          Sources checked October 16, 2026. Confirm current product terms before
+          choosing software.
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.simplepractice.com/pricing/">
+              SimplePractice current pricing
+            </a>
+          </li>
+          <li>
+            <a href="https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options">
+              TherapyNotes current subscription options
+            </a>
+          </li>
+          <li>
+            <a href="/waitlist/">Contact Otto</a>
+          </li>
+        </ul>
+      </div>
+      <script is:inline src="/assets/documents.js"></script>
+      <script is:inline src="/assets/ehr-cost.js" defer></script>
+    </div>
+    <section class="cta-section">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Make more room for the work you love.</h2>
+            <p>
+              See how Otto brings notes, scheduling, telehealth, and payments
+              into your practice day.
+            </p>
+          </div>
+          <a class="button light" href="/waitlist/">
+            Join the waitlist <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

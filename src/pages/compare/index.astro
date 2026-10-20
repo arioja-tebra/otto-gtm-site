@@ -1,0 +1,199 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import pages from "../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/compare/"]}>
+  <main id="main" class="ed-page">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <a href="/compare/">Compare EHRs</a> <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">Compare Mental Health EHRs</span>
+      </nav>
+      <header class="ed-compact">
+        <div class="eyebrow">
+          Find the best mental health EHR for your practice
+        </div>
+        <h1>
+          Start with the day
+          <br />
+          you want to have.
+        </h1>
+        <p>
+          Your EHR is part of every visit. Choose one that helps you prepare,
+          document, keep the record current, and get paid. We built Otto around
+          the connections between those jobs.
+        </p>
+        <a class="button" href="/demo/#watch">
+          Meet Otto in two minutes ↗
+        </a>
+      </header>
+      <section class="ed-section">
+        <div class="ed-section-head">
+          <div>
+            <span class="eyebrow">Compare the options</span>
+            <h2>See where Otto fits.</h2>
+          </div>
+          <p>
+            Use the same practice scenario in each product. Bring your
+            must-haves and take the comparison beyond the feature list.
+          </p>
+        </div>
+        <div class="resource-cards">
+          <a class="resource-card" href="/compare/otto-vs-simplepractice/">
+            <span class="tag">Comparison</span>
+            <h3>Otto vs. SimplePractice</h3>
+            <p>
+              Evaluate documentation, practice workflows, and the terms you need
+              to confirm.
+            </p>
+            <span class="text-link">Compare workflows ↗</span>
+          </a>
+          <a class="resource-card" href="/compare/otto-vs-therapynotes/">
+            <span class="tag">Comparison</span>
+            <h3>Otto vs. TherapyNotes</h3>
+            <p>Compare AI notes, claims workflows, and cost components.</p>
+            <span class="text-link">Compare workflows ↗</span>
+          </a>
+          <a class="resource-card" href="/tools/ehr-cost-calculator/">
+            <span class="tag">Free calculator</span>
+            <h3>Work out the full software cost</h3>
+            <p>
+              Include provider seats, AI usage, payments, claims, and setup.
+            </p>
+            <span class="text-link">Compare your costs ↗</span>
+          </a>
+        </div>
+      </section>
+      <section class="ed-section">
+        <div class="ed-section-head">
+          <div>
+            <span class="eyebrow">Why consider Otto</span>
+            <h2>Follow the work through to the next step.</h2>
+          </div>
+          <p>
+            Otto’s central idea is a connected practice day: useful context
+            before the visit, documentation you review, and a clear path into
+            the chart and payment.
+          </p>
+        </div>
+        <div class="ed-facts">
+          <section>
+            <span class="tag">01</span>
+            <h3>The context comes with you</h3>
+            <p>
+              Patient summaries and last-session highlights connect preparation
+              to the documented history.
+            </p>
+          </section>
+          <section>
+            <span class="tag">02</span>
+            <h3>The note moves the work forward</h3>
+            <p>
+              After signature, Otto proposes structured chart updates and
+              carries the visit into charge review.
+            </p>
+          </section>
+          <section>
+            <span class="tag">03</span>
+            <h3>Clinical changes need your approval</h3>
+            <p>
+              Review the note, then confirm or dismiss the proposed diagnoses,
+              plan items, and medication changes.
+            </p>
+          </section>
+        </div>
+      </section>
+      <section class="ed-section">
+        <div class="ed-section-head">
+          <div>
+            <span class="eyebrow">Three useful questions</span>
+            <h2>Choose for the work you repeat.</h2>
+          </div>
+          <p>
+            The right fit depends on the patients you see, the way you document,
+            and the services your practice needs.
+          </p>
+        </div>
+        <div class="ed-facts">
+          <section>
+            <span class="tag">01</span>
+            <h3>What happens after the note?</h3>
+            <p>
+              Follow chart updates, payment, and preparation for next time.
+              Check where information carries forward and where you need to
+              enter it again.
+            </p>
+          </section>
+          <section>
+            <span class="tag">02</span>
+            <h3>Can you review and correct it?</h3>
+            <p>
+              Try the note editor, clinical approval controls, correction path,
+              and record export. Understand how to recover when something needs
+              attention.
+            </p>
+          </section>
+          <section>
+            <span class="tag">03</span>
+            <h3>Does it fit the practice?</h3>
+            <p>
+              Confirm insurance, prescribing, paperwork, team access, migration,
+              and costs. Evaluate the capabilities available to your account
+              today.
+            </p>
+          </section>
+        </div>
+      </section>
+      <section class="ed-section ed-faq">
+        <div>
+          <span class="eyebrow">A few useful answers</span>
+          <h2>Get to know the details.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>
+              What makes an EHR the best fit for a mental health practice?
+            </summary>
+            <p>
+              Look for a fit with your actual visits: documentation format,
+              clinical review, recurring scheduling, telehealth, billing, and
+              record access. For Otto, evaluate the connected path from session
+              preparation through approved chart updates and cash-pay
+              collection.
+            </p>
+          </details>
+          <details>
+            <summary>Who should take a closer look at Otto?</summary>
+            <p>
+              Independent mental health providers interested in a connected
+              workflow, particularly solo, self-pay practices. Discuss
+              additional requirements with the team.
+            </p>
+          </details>
+          <details>
+            <summary>Where should I start if I am switching?</summary>
+            <p>
+              Begin with the <a href="/switch/">switching guides</a>. Inventory
+              records, confirm the receiving workflow, test a sample, and plan
+              continuity before changing systems.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="ed-close">
+        <div>
+          <h2>See what a connected practice day can feel like.</h2>
+          <p>
+            Watch Otto carry a visit from preparation through documentation and
+            payment. Then tell us about the way you practice.
+          </p>
+        </div>
+        <a class="button light" href="/waitlist/">
+          Join the waitlist ↗
+        </a>
+      </section>
+    </div>
+  </main>
+</SiteLayout>

@@ -1,0 +1,29 @@
+{
+  "name": "otto-gtm-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": ">=22.22.0" },
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "node --test tests/*.test.mjs",
+    "validate": "pnpm check && pnpm build && pnpm test",
+    "preview:cloudflare": "pnpm build && wrangler dev",
+    "deploy": "pnpm validate && wrangler deploy",
+    "format": "prettier --write src"
+  },
+  "dependencies": { "astro": "7.4.1" },
+  "devDependencies": {
+    "@astrojs/check": "0.9.11",
+    "typescript": "^5.9.3",
+    "wrangler": "4.151.3",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "1.1.1",
+    "cheerio": "^1.1.2",
+    "@playwright/test": "^1.56.0"
+  }
+}

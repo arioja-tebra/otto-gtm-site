@@ -1,0 +1,44 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import pages from "../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/about/"]}>
+  <main id="main">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">About Otto by Tebra</span>
+      </nav>
+      <article class="content-narrow prose">
+        <div class="eyebrow">Otto by Tebra</div>
+        <h1>About Otto by Tebra</h1>
+        <p class="lead">
+          Otto by Tebra is an AI-native EHR for mental health providers.
+        </p>
+        <p>
+          The public product brings together AI-drafted notes, clinician review,
+          scheduling, telehealth, patient records, and payments. This resource
+          site helps independent practices work through the business questions
+          around that care.
+        </p>
+        <h2>Practical support between sessions.</h2>
+        <p>
+          The journal covers session rates, superbills, and Good Faith
+          Estimates. Companion tools show their assumptions and let you prepare
+          a document or calculation using your own inputs.
+        </p>
+        <p>
+          Articles link to their sources and include a date. We avoid
+          unsupported outcome claims and identify where a calculation or
+          workflow needs a practice-specific decision.
+        </p>
+        <div class="tool-support">
+          <a href="/mental-health-ehr/">Explore the product ↗</a>
+          <a href="/blog/">Read the journal ↗</a>
+          <a href="/editorial-policy/">Editorial approach ↗</a>
+        </div>
+      </article>
+    </div>
+  </main>
+</SiteLayout>

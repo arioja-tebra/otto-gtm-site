@@ -1,0 +1,56 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import pages from "../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/editorial-policy/"]}>
+  <main id="main">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">Editorial Policy &amp; Source Standards</span>
+      </nav>
+      <article class="content-narrow prose">
+        <div class="eyebrow">Otto by Tebra</div>
+        <h1>Editorial Policy & Source Standards</h1>
+        <p class="lead">
+          Practice guidance should make its sources and limits easy to find.
+        </p>
+        <h2>Use named, relevant sources.</h2>
+        <p>
+          Regulatory and billing statements link to government guidance or the
+          documentation of the product being described. Worked examples are
+          labeled hypothetical. We separate a calculator’s output from a market
+          benchmark or prediction.
+        </p>
+        <h2>Show the author and review date.</h2>
+        <p>
+          Articles display an organizational byline, source-check date, and
+          links to supporting material. A named reviewer is added only after
+          that person has completed and approved the review. No expert review is
+          claimed for the current drafts.
+        </p>
+        <h2>Keep product claims specific.</h2>
+        <p>
+          Product pages describe publicly documented workflows. Unverified
+          pricing, security, or availability details stay explicit. We do not
+          treat standalone tools as evidence of integrated EHR capabilities.
+        </p>
+        <h2>Check changes before publication.</h2>
+        <p>
+          Confirm product and competitor descriptions against current
+          documentation. Review legal, coding, and financial guidance with the
+          appropriate owner. Update both the visible page and its structured
+          data when the underlying facts change.
+        </p>
+        <h2>Current collection status.</h2>
+        <p>
+          This is an internal review edition prepared October 16, 2026. The
+          content was drafted with AI assistance using Mateo’s package and the
+          linked sources. Final editorial approval, specialist review, and the
+          author assignment are pending.
+        </p>
+      </article>
+    </div>
+  </main>
+</SiteLayout>

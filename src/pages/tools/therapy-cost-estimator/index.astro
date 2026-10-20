@@ -1,0 +1,220 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import pages from "../../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/tools/therapy-cost-estimator/"]}>
+  <main id="main">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <a href="/tools/">Free tools</a> <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">Therapy cost estimator</span>
+      </nav>
+      <section class="tool-hero">
+        <div class="eyebrow">Free practice tool</div>
+        <h1>Make the cost conversation clearer.</h1>
+        <p>
+          Estimate therapy costs across several sessions, with room for
+          deductibles and out-of-network benefits.
+        </p>
+      </section>
+      <div class="tool-demo-bar">
+        <button type="button" id="fill-demo" data-tool="therapy-cost-estimator">
+          Fill with demo data <span aria-hidden="true">↗</span>
+        </button>
+        <span>See a finished example in one click.</span>
+        <p id="demo-status" role="status"></p>
+      </div>
+      <div class="tool-shell">
+        <section class="panel">
+          <h2>Start with the benefit details.</h2>
+          <p class="micro">
+            Illustrative inputs. No client information needed.
+          </p>
+          <form id="cost-form">
+            <div class="fields">
+              <label>
+                Session fee ($)
+                <input
+                  id="fee"
+                  type="number"
+                  min="0"
+                  max="10000"
+                  step="0.01"
+                  value="180"
+                  required
+                />
+              </label>
+              <label>
+                Insurer’s allowed amount ($)
+                <input
+                  id="allowed"
+                  type="number"
+                  min="0"
+                  max="10000"
+                  step="0.01"
+                  value="120"
+                  required
+                />
+                <span class="help">Confirm this amount with the plan.</span>
+              </label>
+              <label>
+                Remaining OON deductible ($)
+                <input
+                  id="deductible"
+                  type="number"
+                  min="0"
+                  max="1000000"
+                  step="0.01"
+                  value="300"
+                  required
+                />
+              </label>
+              <label>
+                Client coinsurance (%)
+                <input
+                  id="coinsurance"
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="40"
+                  required
+                />
+                <span class="help">
+                  The client’s share after the deductible.
+                </span>
+              </label>
+              <label>
+                Number of sessions
+                <input
+                  id="visits"
+                  type="number"
+                  min="1"
+                  max="104"
+                  step="1"
+                  value="12"
+                  required
+                />
+              </label>
+              <label>
+                Out-of-network benefits?
+                <select id="covered">
+                  <option value="yes">Yes, assumed covered</option>
+                  <option value="no">No OON benefits</option>
+                </select>
+              </label>
+            </div>
+          </form>
+          <p class="error" id="cost-error" role="alert"></p>
+          <div class="notice">
+            This planning model assumes all listed sessions are eligible under
+            one benefit year. It excludes copays, benefit caps, out-of-pocket
+            limits, authorization rules, and changes in coverage. Payment is
+            determined by the insurer.
+          </div>
+          <div class="actions">
+            <button type="button" class="button" id="cost-report">
+              Download styled report
+            </button>
+            <button type="button" class="button outline" id="cost-print">
+              Print / save as PDF
+            </button>
+            <button type="button" class="button outline" id="cost-download">
+              Export data (CSV)
+            </button>
+          </div>
+        </section>
+        <section
+          class="panel result-panel"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          <span class="tag">Estimated client cost</span>
+          <div class="result" id="cost-total">
+            $1,476.00
+          </div>
+          <p id="cost-per"></p>
+          <div id="cost-lines"></div>
+          <p class="micro" style="margin-top:20px">
+            The client may pay the full fee upfront and receive any approved
+            reimbursement later.
+          </p>
+        </section>
+      </div>
+      <section class="otto-tool-hook" aria-label="Meet Otto">
+        <div class="otto-hook-mark" aria-hidden="true">
+          <img src="/assets/otto-logo.svg" alt="" />
+          <svg viewBox="0 0 100 100">
+            <path d="M50 100V25" stroke="#004852" stroke-width="2" />
+            <path d="M50 75C13 73 8 43 8 33c31 1 42 20 42 42" fill="#8ca7a2" />
+            <path d="M50 58c34-2 42-28 43-40-29 0-43 18-43 40" fill="#417e86" />
+          </svg>
+        </div>
+        <div class="otto-hook-copy">
+          <span class="eyebrow">Meet Otto by Tebra</span>
+          <h2>Let Otto take more off your plate.</h2>
+          <p>
+            Otto drafts progress notes for your review and brings scheduling,
+            telehealth, and payments into one place.
+          </p>
+          <div class="otto-hook-features">
+            <span>AI-assisted notes</span>
+            <span>Scheduling</span>
+            <span>Payments</span>
+          </div>
+        </div>
+        <div class="otto-hook-action">
+          <a class="button light" href="/waitlist/">
+            Learn more <span aria-hidden="true">↗</span>
+          </a>
+          <span>Join the Otto waitlist</span>
+        </div>
+      </section>
+      <section class="tool-info">
+        <h2>See how each session adds up.</h2>
+        <div class="table-scroll">
+          <table id="cost-table">
+            <thead>
+              <tr>
+                <th>Session</th>
+                <th>Fee</th>
+                <th>To deductible</th>
+                <th>Plan pays</th>
+                <th>Client cost</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <h2 style="margin-top:35px">
+          An estimate starts with the allowed amount.
+        </h2>
+        <p>
+          For each eligible session, the model applies the smaller of the fee
+          and the allowed amount to the remaining deductible. It then applies
+          the plan’s share to the eligible amount left over. Client cost is the
+          session fee minus the estimated plan payment.
+        </p>
+        <p>
+          Any fee above the allowed amount stays in the client’s estimated cost
+          here. See{" "}
+          <a href="https://www.healthcare.gov/glossary/out-of-network-coinsurance/">
+            HealthCare.gov’s definition of out-of-network coinsurance
+          </a>
+          . Confirm coverage, allowed amounts, deductible treatment, and
+          submission requirements with the insurer.
+        </p>
+        <div class="tool-support">
+          <a href="/blog/superbill-for-therapy/">Read the superbill guide ↗</a>
+          <a href="/tools/superbill/">Create a superbill ↗</a>
+          <a href="/tools/good-faith-estimate/">Prepare a self-pay GFE ↗</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script is:inline src="/assets/documents.js"></script>
+  <script is:inline src="/assets/cost.js"></script>
+  <script is:inline src="/assets/tool-demo.js" defer></script>
+</SiteLayout>

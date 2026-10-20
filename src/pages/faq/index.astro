@@ -1,0 +1,116 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import pages from "../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/faq/"]}>
+  <main id="main">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">
+          Otto FAQs: Notes, Pricing, Tools &amp; Practice Fit
+        </span>
+      </nav>
+      <section class="tool-hero">
+        <div class="eyebrow">Questions worth asking</div>
+        <h1>Get a clearer picture of Otto.</h1>
+        <p>Direct answers, with links to the details.</p>
+      </section>
+      <div class="faq-list">
+        <details>
+          <summary>Who is Otto designed for?</summary>
+          <p>
+            Otto’s public site describes an AI-native EHR for mental health
+            providers. Evaluate its current workflows against your practice
+            size, specialty, payment model, and record requirements.
+          </p>
+        </details>
+        <details>
+          <summary>Does Otto offer more than AI note drafting?</summary>
+          <p>
+            The public product page also lists scheduling, telehealth, patient
+            records, and payments. See the{" "}
+            <a href="/mental-health-ehr/">mental health EHR overview</a> for the
+            workflow.
+          </p>
+        </details>
+        <details>
+          <summary>Which note formats does Otto describe?</summary>
+          <p>
+            Otto lists SOAP and DAP notes. The clinician reviews, edits, and
+            signs the draft. Read about{" "}
+            <a href="/ai-progress-notes/">AI progress notes</a>.
+          </p>
+        </details>
+        <details>
+          <summary>What does the advertised trial include?</summary>
+          <p>
+            The current public offer is 10 signed notes or 30 days, whichever
+            comes first, with no card required. Contact the{" "}
+            <a href="/waitlist/">Otto team</a> to confirm billing details.
+          </p>
+        </details>
+        <details>
+          <summary>Does a superbill guarantee reimbursement?</summary>
+          <p>
+            Payment depends on the client’s plan, benefits, deductible,
+            eligibility, and submission requirements. A superbill supplies
+            information for a claim. Read the{" "}
+            <a href="/blog/superbill-for-therapy/">superbill guide</a>.
+          </p>
+        </details>
+        <details>
+          <summary>Are these free tools part of the EHR?</summary>
+          <p>
+            These are standalone browser tools. This resource site does not
+            establish that the same workflows are integrated into the Otto EHR.
+          </p>
+        </details>
+        <details>
+          <summary>Do the free tools upload or save my entries?</summary>
+          <p>
+            The tools calculate and build documents in the browser without
+            submitting entries to a server or saving them in browser storage.
+            Downloads and printouts contain the entered information. Use
+            fictitious client details in this review version.
+          </p>
+        </details>
+        <details>
+          <summary>
+            Can I import existing records or use insurance claims?
+          </summary>
+          <p>
+            Current support and limits need to be confirmed with Otto. Ask for a
+            demonstration using the record formats, payers, and workflows your
+            practice needs.
+          </p>
+        </details>
+        <details>
+          <summary>Where can I review data handling and BAA terms?</summary>
+          <p>
+            Start with the <a href="/security/">security review questions</a>{" "}
+            and request written, Otto-specific answers. This site does not
+            verify BAA availability or recording-retention terms.
+          </p>
+        </details>
+      </div>
+    </div>
+    <section class="cta-section">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Make more room for the work you love.</h2>
+            <p>
+              See how Otto brings notes, scheduling, telehealth, and payments
+              into your practice day.
+            </p>
+          </div>
+          <a class="button light" href="/waitlist/">
+            Join the waitlist <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</SiteLayout>
