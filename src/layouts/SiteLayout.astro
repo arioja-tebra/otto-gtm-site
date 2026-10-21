@@ -1,0 +1,94 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { absoluteSchema, indexingEnabled, type PageMetadata } from "../lib/seo";
+
+interface Props {
+  metadata: PageMetadata;
+}
+const { metadata } = Astro.props;
+const site = Astro.site!;
+const canonical = new URL(Astro.url.pathname, site).href;
+const image = new URL("/assets/social-card.png", site).href;
+const robots =
+  indexingEnabled && !metadata.noindex ? "index,follow" : "noindex,follow";
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": absoluteSchema(metadata.graph, site),
+}).replace(/</g, "\\u003c");
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-K8VSPMNJ");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{metadata.title}</title>
+    <meta name="description" content={metadata.description} />
+    <meta name="robots" content={robots} />
+    {!metadata.noindex && <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content={metadata.type} />
+    <meta property="og:site_name" content="Otto by Tebra" />
+    <meta property="og:title" content={metadata.title} />
+    <meta property="og:description" content={metadata.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Otto: The independent practice journal"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={metadata.title} />
+    <meta name="twitter:description" content={metadata.description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="theme-color" content="#f6f3eb" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="/assets/source-sans-3.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    {["site", "documents", "growth", "product", "polish", "editorial"].map(
+      (name) => (
+        <link rel="stylesheet" href={`/assets/${name}.css`} />
+      ),
+    )}
+    <script is:inline defer src="/assets/navigation.js"></script>
+    <script is:inline defer src="/assets/site.js"></script>
+    <script type="application/ld+json" set:html={schema} />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K8VSPMNJ"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+        title="Google Tag Manager"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

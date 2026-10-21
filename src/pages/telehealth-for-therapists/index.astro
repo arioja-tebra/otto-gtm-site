@@ -1,0 +1,180 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import pages from "../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/telehealth-for-therapists/"]}>
+  <main id="main" class="ed-page">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <a href="/mental-health-ehr/">Mental health EHR</a>{" "}
+        <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">
+          Telehealth for Therapists &amp; Mental Health Practices
+        </span>
+      </nav>
+      <div class="ed-feature-hero">
+        <section class="ed-hero">
+          <div>
+            <div class="eyebrow">Telehealth for mental health</div>
+            <h1>
+              Meet your client.
+              <br />
+              <em>Keep the context close.</em>
+            </h1>
+            <p class="ed-dek">
+              Otto brings video visits into the same workspace as session
+              preparation, clinical notes, and the patient record. Move through
+              the encounter with the information you need nearby.
+            </p>
+            <div class="ed-actions">
+              <a class="button" href="/waitlist/">
+                Join the waitlist ↗
+              </a>
+              <a class="text-link" href="/demo/#watch">
+                Watch the 2-minute demo ↗
+              </a>
+            </div>
+            <p class="micro">
+              For independent mental health practices · Built by Tebra
+            </p>
+          </div>
+          <div class="ed-hero-art">
+            <img
+              class="ed-photo"
+              src="/assets/therapist-session.png"
+              alt="A therapist listening during a client session"
+              width="640"
+              height="420"
+            />
+          </div>
+        </section>
+      </div>
+      <section class="ed-section">
+        <div class="ed-section-head">
+          <div>
+            <span class="eyebrow">The work, connected</span>
+            <h2>One workspace, from preparation to follow-through.</h2>
+          </div>
+          <p>
+            A video visit is part of a longer care relationship. Connect the
+            appointment with the work that comes before and after it.
+          </p>
+        </div>
+        <div class="ed-facts">
+          <section>
+            <span class="tag">01</span>
+            <h3>Prepare before joining</h3>
+            <p>
+              Review the patient summary and last-session highlights while
+              getting ready for the conversation.
+            </p>
+          </section>
+          <section>
+            <span class="tag">02</span>
+            <h3>Meet inside Otto</h3>
+            <p>
+              Use the waiting room, prejoin audio and video checks, and split
+              visit layout described in Otto’s telehealth experience.
+            </p>
+          </section>
+          <section>
+            <span class="tag">03</span>
+            <h3>Continue into documentation</h3>
+            <p>
+              With appropriate consent, capture audio for the note. Review the
+              draft, sign, and confirm proposed chart updates.
+            </p>
+          </section>
+        </div>
+      </section>
+      <section class="ed-section ed-story">
+        <div>
+          <span class="eyebrow">Inside the workflow</span>
+          <h2>Keep the visit and the record together.</h2>
+          <p>
+            Integrated telehealth keeps the encounter within Otto’s practice
+            workflow. Review the client context, meet, then continue into
+            documentation and payment without assembling a separate process for
+            every stage.
+          </p>
+          <a class="text-link" href="/demo/#watch">
+            See the complete visit ↗
+          </a>
+        </div>
+        <ul class="ed-checks">
+          <li>Secure join links and patient verification</li>
+          <li>A provider meeting room and waiting room</li>
+          <li>Prejoin checks for audio and video</li>
+          <li>A split visit layout inside the workspace</li>
+        </ul>
+      </section>
+      <section class="ed-section ed-faq">
+        <div>
+          <span class="eyebrow">A few useful answers</span>
+          <h2>Get to know the details.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Do I need a separate video application?</summary>
+            <p>
+              Otto describes integrated telehealth inside its provider
+              workspace. Confirm supported browsers, devices, and patient join
+              requirements during setup.
+            </p>
+          </details>
+          <details>
+            <summary>Can I use Otto for in-person visits too?</summary>
+            <p>
+              Yes. The documentation and patient-record workflows also apply to
+              in-person sessions. Patient consent is still needed when recording
+              audio.
+            </p>
+          </details>
+          <details>
+            <summary>Are group or couples sessions supported?</summary>
+            <p>
+              Confirm your exact visit type with the team. This preview does not
+              establish support for group, couples, or multi-party telehealth.
+            </p>
+          </details>
+          <details>
+            <summary>Where can I review privacy and recording terms?</summary>
+            <p>
+              Start with <a href="/security/">security and data questions</a>,
+              then request the applicable written terms from Otto.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="ed-section">
+        <span class="eyebrow">Keep exploring</span>
+        <div class="ed-resources">
+          <a href="/mental-health-ehr/">The mental health EHR ↗</a>
+          <a href="/ai-progress-notes/">AI progress notes ↗</a>
+          <a href="/compare/">Compare your options ↗</a>
+          <a href="/tools/">Free practice tools ↗</a>
+        </div>
+      </section>
+      <section class="ed-close">
+        <div>
+          <h2>See what a connected practice day can feel like.</h2>
+          <p>
+            Watch Otto carry a visit from preparation through documentation and
+            payment. Then tell us about the way you practice.
+          </p>
+        </div>
+        <a class="button light" href="/waitlist/">
+          Join the waitlist ↗
+        </a>
+      </section>
+      <p class="ed-source">
+        Product details checked against{" "}
+        <a href="https://otto.tebra.com/">Otto’s public website</a> on October
+        16, 2026. Confirm availability and service terms for your practice.
+        Workflow examples are illustrative and use fictional information.
+      </p>
+    </div>
+  </main>
+</SiteLayout>

@@ -1,0 +1,88 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import pages from "../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/switch/"]}>
+  <main id="main" class="growth-page">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <a href="/tools/">Resources</a> <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">
+          Plan the move before you move the records.
+        </span>
+      </nav>
+      <header class="growth-hero">
+        <div class="eyebrow">A considered move</div>
+        <h1>Plan the move before you move the records.</h1>
+        <p>
+          We’d confirm what can transfer, who owns each step, and how you’ll
+          check the result before choosing a cutover date.
+        </p>
+      </header>
+      <div class="resource-cards">
+        <a class="resource-card" href="/switch/from-simplepractice/">
+          <span class="tag">Moving from SimplePractice</span>
+          <h3>Prepare your SimplePractice exports</h3>
+          <p>
+            Identify the export types, permissions, and records that need a
+            separate check.
+          </p>
+          <span class="text-link">See the checklist ↗</span>
+        </a>
+        <a class="resource-card" href="/switch/from-therapynotes/">
+          <span class="tag">Moving from TherapyNotes</span>
+          <h3>Prepare your TherapyNotes records</h3>
+          <p>
+            Plan document downloads, confirm other export categories, and
+            validate a sample.
+          </p>
+          <span class="text-link">See the checklist ↗</span>
+        </a>
+      </div>
+      <section class="growth-section prose">
+        <h2>Get the transfer scope in writing.</h2>
+        <p>
+          Ask Otto to confirm accepted file formats, importable fields,
+          attachments, signatures, historical notes, balances, calendars, fees,
+          timing, and the secure transfer method. Import support has not been
+          verified in this review site.
+        </p>
+        <h2>Test a small, representative sample.</h2>
+        <p>
+          Agree on the test and acceptance criteria with the receiving team.
+          Compare record counts and inspect document readability, author
+          attribution, dates, and links to the correct client. Track exceptions
+          before transferring more records.
+        </p>
+        <h2>Protect continuity of care.</h2>
+        <p>
+          Plan an overlap period, explain any portal or payment changes to
+          clients, and preserve access to records under your practice’s
+          retention obligations. Close an old account only after the responsible
+          owner has accepted the transfer and confirmed continued record access.
+        </p>
+      </section>
+      <a class="button" href="/waitlist/">
+        Talk to us about your workflow ↗
+      </a>
+    </div>
+    <section class="cta-section">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Make more room for the work you love.</h2>
+            <p>
+              See how Otto brings notes, scheduling, telehealth, and payments
+              into your practice day.
+            </p>
+          </div>
+          <a class="button light" href="/waitlist/">
+            Join the waitlist <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

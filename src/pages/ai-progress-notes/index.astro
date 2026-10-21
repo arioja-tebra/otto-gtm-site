@@ -1,0 +1,330 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import pages from "../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/ai-progress-notes/"]}>
+  <main id="main" class="ed-page">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <a href="/mental-health-ehr/">Mental health EHR</a>{" "}
+        <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">
+          AI Progress Notes for Therapists: SOAP &amp; DAP
+        </span>
+      </nav>
+      <section class="ed-hero">
+        <div>
+          <div class="eyebrow">AI progress notes for mental health</div>
+          <h1>
+            Start with the conversation.
+            <br />
+            <em>Finish with your note.</em>
+          </h1>
+          <p class="ed-dek">
+            Otto turns session audio into a SOAP or DAP draft. Review the
+            details, make it your own, and sign a note that reflects the care
+            you provided.
+          </p>
+          <div class="ed-actions">
+            <a class="button" href="/waitlist/">
+              Join the waitlist ↗
+            </a>
+            <a class="text-link" href="/demo/#watch">
+              Watch the 2-minute demo ↗
+            </a>
+          </div>
+          <p class="micro">
+            For independent mental health practices · Built by Tebra
+          </p>
+        </div>
+        <div class="ed-hero-art">
+          <div class="art">
+            <svg
+              viewBox="0 0 640 500"
+              preserveAspectRatio="xMidYMid slice"
+              aria-hidden="true"
+            >
+              <rect width="640" height="500" fill="#dce7de" />
+              <circle cx="490" cy="80" r="200" fill="#c5d7ce" />
+              <g transform="translate(165 55) rotate(-7 145 180)">
+                <rect
+                  x="14"
+                  y="16"
+                  width="290"
+                  height="350"
+                  rx="14"
+                  fill="#004852"
+                  opacity=".1"
+                />
+                <rect width="290" height="350" rx="14" fill="#fffdf8" />
+                <path
+                  d="M28 42h95"
+                  stroke="#004852"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+                <g fill="#004852">
+                  <rect x="28" y="80" width="34" height="34" rx="10" />
+                  <rect x="28" y="143" width="34" height="34" rx="10" />
+                  <rect x="28" y="206" width="34" height="34" rx="10" />
+                  <rect x="28" y="269" width="34" height="34" rx="10" />
+                </g>
+                <g stroke="#a6bfb2" stroke-width="4" stroke-linecap="round">
+                  <path d="M80 91h170m-170 15h130M80 154h170m-170 15h110M80 217h170m-170 15h145M80 280h170m-170 15h120" />
+                </g>
+                <g
+                  fill="#f6f3eb"
+                  font-family="sans-serif"
+                  font-size="17"
+                  text-anchor="middle"
+                >
+                  <text x="45" y="103">
+                    S
+                  </text>
+                  <text x="45" y="166">
+                    O
+                  </text>
+                  <text x="45" y="229">
+                    A
+                  </text>
+                  <text x="45" y="292">
+                    P
+                  </text>
+                </g>
+              </g>
+              <circle cx="480" cy="365" r="48" fill="#b85c38" />
+              <path
+                d="m460 365 15 15 27-32"
+                fill="none"
+                stroke="#fffdf8"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="ed-section">
+        <div class="ed-section-head">
+          <div>
+            <span class="eyebrow">Documentation that carries forward</span>
+            <h2>There is useful work after the draft.</h2>
+          </div>
+          <p>
+            Once you sign, Otto proposes structured chart updates from the final
+            note. You decide what belongs in the record before the next visit.
+          </p>
+        </div>
+        <div class="ed-facts">
+          <section>
+            <span class="tag">01</span>
+            <h3>Capture with consent</h3>
+            <p>
+              Use the appropriate patient-consent process before recording. Otto
+              uses session audio to prepare the draft.
+            </p>
+          </section>
+          <section>
+            <span class="tag">02</span>
+            <h3>Review and sign</h3>
+            <p>
+              Check the account of the visit, clinical interpretation, and plan.
+              Edit the note before adding your signature.
+            </p>
+          </section>
+          <section>
+            <span class="tag">03</span>
+            <h3>Confirm the chart changes</h3>
+            <p>
+              Review proposed diagnoses, treatment-plan items, and medication
+              updates. Accept or dismiss each item.
+            </p>
+          </section>
+        </div>
+      </section>
+      <section class="ed-section ed-story">
+        <div>
+          <span class="eyebrow">Two familiar formats</span>
+          <h2>
+            SOAP or DAP.
+            <br />
+            Your way of documenting.
+          </h2>
+          <p>
+            Use the structure that fits your practice. SOAP separates subjective
+            reports, observations, assessment, and plan. DAP brings the visit
+            information together under data, assessment, and plan.
+          </p>
+          <p>
+            Explore our examples and editable templates to see the difference
+            before trying Otto’s documentation workflow.
+          </p>
+          <div class="ed-resources">
+            <a href="/templates/soap-notes/">SOAP template ↗</a>
+            <a href="/templates/dap-notes/">DAP template ↗</a>
+            <a href="/blog/soap-vs-dap-notes/">Compare formats ↗</a>
+          </div>
+        </div>
+        <div class="ed-visual">
+          <div class="ed-note">
+            <div class="ed-note-top">
+              <img
+                src="/assets/otto-logo.svg"
+                alt="Otto"
+                width="58"
+                height="30"
+              />
+              <span>Draft for review</span>
+            </div>
+            <h3>The conversation, organized.</h3>
+            <p class="micro">Fictional example · SOAP structure</p>
+            <div class="ed-note-row">
+              <b>S</b>
+              <div>
+                <strong>Subjective</strong>
+                <p>
+                  Client described difficulty setting boundaries around work
+                  messages.
+                </p>
+              </div>
+            </div>
+            <div class="ed-note-row">
+              <b>O</b>
+              <div>
+                <strong>Objective</strong>
+                <p>
+                  Client practiced a response to an after-hours request during
+                  the session.
+                </p>
+              </div>
+            </div>
+            <div class="ed-note-row">
+              <b>A</b>
+              <div>
+                <strong>Assessment</strong>
+                <p>
+                  Add your clinical assessment after reviewing the encounter.
+                </p>
+              </div>
+            </div>
+            <div class="ed-note-row">
+              <b>P</b>
+              <div>
+                <strong>Plan</strong>
+                <p>
+                  Revisit the boundary-setting practice at the next appointment.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ed-approval">
+            <p>You review, edit, and sign the final note.</p>
+            <span aria-hidden="true">✓</span>
+          </div>
+          <p>
+            Illustrative excerpt, not a clinical record or product screenshot.
+          </p>
+        </div>
+      </section>
+      <section class="ed-section">
+        <div class="ed-section-head">
+          <div>
+            <span class="eyebrow">Your record, your review</span>
+            <h2>Keep the clinical decisions visible.</h2>
+          </div>
+          <p>
+            A useful draft needs a clear path for correction. Otto’s note
+            workflow includes an editor, signature, and addenda, with separate
+            confirmation for structured chart updates.
+          </p>
+        </div>
+        <div class="ed-facts">
+          <section>
+            <span class="tag">01</span>
+            <h3>See the draft’s origin</h3>
+            <p>
+              An AI provenance badge identifies the draft. Read the entire note
+              and correct anything the encounter does not support.
+            </p>
+          </section>
+          <section>
+            <span class="tag">02</span>
+            <h3>Preserve your judgment</h3>
+            <p>
+              You decide what the note says and when it is ready to sign.
+              Suggested clinical changes require your confirmation.
+            </p>
+          </section>
+          <section>
+            <span class="tag">03</span>
+            <h3>Carry context into next time</h3>
+            <p>
+              The patient summary and last-session highlights connect
+              documentation with preparation for the next encounter.
+            </p>
+          </section>
+        </div>
+      </section>
+      <section class="ed-section ed-faq">
+        <div>
+          <span class="eyebrow">A few useful answers</span>
+          <h2>Get to know the details.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Can I edit the AI-generated note?</summary>
+            <p>
+              Yes. Otto provides a draft for your review. You can edit it before
+              signing and use the available addendum workflow for later
+              corrections.
+            </p>
+          </details>
+          <details>
+            <summary>Does Otto support custom note templates?</summary>
+            <p>
+              The formats described in this preview are SOAP and DAP. Confirm
+              any need for reusable custom templates, specialty-specific forms,
+              or other formats with the team.
+            </p>
+          </details>
+          <details>
+            <summary>What happens after I sign?</summary>
+            <p>
+              Otto proposes structured updates from the signed note. Review and
+              confirm the items you want in the patient record, then continue
+              through the payment workflow.
+            </p>
+          </details>
+          <details>
+            <summary>How are recording and patient data handled?</summary>
+            <p>
+              Review the <a href="/security/">security and data questions</a>{" "}
+              with the Otto team, including the applicable BAA, recording
+              consent, retention, and AI processing terms.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="ed-close">
+        <div>
+          <h2>See what a connected practice day can feel like.</h2>
+          <p>
+            Watch Otto carry a visit from preparation through documentation and
+            payment. Then tell us about the way you practice.
+          </p>
+        </div>
+        <a class="button light" href="/waitlist/">
+          Join the waitlist ↗
+        </a>
+      </section>
+      <p class="ed-source">
+        Product details checked against{" "}
+        <a href="https://otto.tebra.com/">Otto’s public website</a> on October
+        16, 2026. Confirm availability and service terms for your practice.
+        Workflow examples are illustrative and use fictional information.
+      </p>
+    </div>
+  </main>
+</SiteLayout>

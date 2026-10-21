@@ -1,0 +1,49 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import pages from "../../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/authors/otto-editorial/"]}>
+  <main id="main">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">Otto Editorial</span>
+      </nav>
+      <article class="content-narrow prose">
+        <div class="eyebrow">Otto by Tebra</div>
+        <h1>Otto Editorial</h1>
+        <p class="lead">
+          Resources for the work of running an independent mental health
+          practice.
+        </p>
+        <p>
+          Otto editorial is the organizational byline proposed for this
+          collection. These drafts build on Mateo Jimenez’s article package and
+          use named sources for billing and regulatory information.
+        </p>
+        <p>
+          No individual clinician, legal reviewer, or financial adviser is
+          represented as having reviewed these drafts. Specialist review and
+          byline approval remain part of the launch process.
+        </p>
+        <h2>In this collection</h2>
+        <p>
+          <a href="/blog/how-much-to-charge-for-therapy/">
+            How much should you charge for therapy? ↗
+          </a>
+        </p>
+        <p>
+          <a href="/blog/superbill-for-therapy/">
+            A practical guide to superbills for therapy ↗
+          </a>
+        </p>
+        <p>
+          <a href="/blog/good-faith-estimate-for-therapy/">
+            Good Faith Estimates for therapy, explained ↗
+          </a>
+        </p>
+      </article>
+    </div>
+  </main>
+</SiteLayout>

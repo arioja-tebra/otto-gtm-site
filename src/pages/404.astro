@@ -1,0 +1,21 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import pages from "../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/404.html"]}>
+  <main id="main" class="wrap">
+    <section class="tool-hero">
+      <div class="eyebrow">404 · Page not found</div>
+      <h1>Let’s get you back to your practice.</h1>
+      <p>The page you’re looking for isn’t here.</p>
+      <a class="button" href="/blog/">
+        Explore the journal ↗
+      </a>
+      <div class="tool-support">
+        <a href="/tools/">Browse free tools</a>
+        <a href="/mental-health-ehr/">Explore Otto</a>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

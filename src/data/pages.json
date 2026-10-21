@@ -1,0 +1,1876 @@
+{
+  "/404.html": {
+    "title": "Page Not Found | Otto",
+    "description": "Find Otto’s journal, tools, and product information.",
+    "type": "website",
+    "noindex": true,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/404/#webpage",
+        "url": "/404/",
+        "name": "Page Not Found | Otto",
+        "description": "Find Otto’s journal, tools, and product information.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      }
+    ]
+  },
+  "/about/": {
+    "title": "About Otto by Tebra | Otto",
+    "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/about/#webpage",
+        "url": "/about/",
+        "name": "About Otto by Tebra | Otto",
+        "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Otto by Tebra",
+            "item": "/about/"
+          }
+        ]
+      }
+    ]
+  },
+  "/ai-progress-notes/": {
+    "title": "AI Progress Notes for Therapists: SOAP & DAP | Otto",
+    "description": "Draft SOAP and DAP notes from session audio, review and sign, then approve proposed chart updates. Explore Otto’s connected mental health documentation workflow.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/ai-progress-notes/#webpage",
+        "url": "/ai-progress-notes/",
+        "name": "AI Progress Notes for Therapists: SOAP & DAP | Otto",
+        "description": "Draft SOAP and DAP notes from session audio, review and sign, then approve proposed chart updates. Explore Otto’s connected mental health documentation workflow.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AI Progress Notes for Therapists: SOAP & DAP",
+            "item": "/ai-progress-notes/"
+          }
+        ]
+      }
+    ]
+  },
+  "/authors/otto-editorial/": {
+    "title": "Otto Editorial | Otto",
+    "description": "Practical guides from Otto editorial for independent mental health practices.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/authors/otto-editorial/#webpage",
+        "url": "/authors/otto-editorial/",
+        "name": "Otto Editorial | Otto",
+        "description": "Practical guides from Otto editorial for independent mental health practices.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Otto Editorial",
+            "item": "/authors/otto-editorial/"
+          }
+        ]
+      }
+    ]
+  },
+  "/blog/good-faith-estimate-for-therapy/": {
+    "title": "Good Faith Estimate for Therapy + Free Generator | Otto",
+    "description": "Learn when therapy Good Faith Estimates are due, how recurring sessions work, and what to include. Use Otto’s free single-provider estimate generator.",
+    "type": "article",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/blog/good-faith-estimate-for-therapy/#webpage",
+        "url": "/blog/good-faith-estimate-for-therapy/",
+        "name": "Good Faith Estimate for Therapy + Free Generator | Otto",
+        "description": "Learn when therapy Good Faith Estimates are due, how recurring sessions work, and what to include. Use Otto’s free single-provider estimate generator.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "/blog/good-faith-estimate-for-therapy/#article",
+        "headline": "Good Faith Estimates for therapy, explained",
+        "description": "Learn when therapy Good Faith Estimates are due, how recurring sessions work, and what to include. Use Otto’s free single-provider estimate generator.",
+        "datePublished": "2026-10-16T09:00:00-05:00",
+        "dateModified": "2026-10-16T09:00:00-05:00",
+        "author": {
+          "@type": "Organization",
+          "name": "Otto editorial",
+          "url": "/authors/otto-editorial/"
+        },
+        "publisher": {
+          "@id": "/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "/blog/good-faith-estimate-for-therapy/#webpage"
+        },
+        "image": "/assets/social-card.png",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Journal",
+            "item": "/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Good Faith Estimates for therapy, explained",
+            "item": "/blog/good-faith-estimate-for-therapy/"
+          }
+        ]
+      }
+    ]
+  },
+  "/blog/how-much-to-charge-for-therapy/": {
+    "title": "How Much to Charge for Therapy + Rate Calculator | Otto",
+    "description": "Calculate a therapy session rate using income goals, expenses, time off, completed sessions, and collections. Includes a worked example and free calculator.",
+    "type": "article",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/blog/how-much-to-charge-for-therapy/#webpage",
+        "url": "/blog/how-much-to-charge-for-therapy/",
+        "name": "How Much to Charge for Therapy + Rate Calculator | Otto",
+        "description": "Calculate a therapy session rate using income goals, expenses, time off, completed sessions, and collections. Includes a worked example and free calculator.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "/blog/how-much-to-charge-for-therapy/#article",
+        "headline": "How much should you charge for therapy?",
+        "description": "Calculate a therapy session rate using income goals, expenses, time off, completed sessions, and collections. Includes a worked example and free calculator.",
+        "datePublished": "2026-10-16T09:00:00-05:00",
+        "dateModified": "2026-10-16T09:00:00-05:00",
+        "author": {
+          "@type": "Organization",
+          "name": "Otto editorial",
+          "url": "/authors/otto-editorial/"
+        },
+        "publisher": {
+          "@id": "/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "/blog/how-much-to-charge-for-therapy/#webpage"
+        },
+        "image": "/assets/social-card.png",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Journal",
+            "item": "/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How much should you charge for therapy?",
+            "item": "/blog/how-much-to-charge-for-therapy/"
+          }
+        ]
+      }
+    ]
+  },
+  "/blog/": {
+    "title": "Therapy Practice Guides & Free Tools | Otto Journal",
+    "description": "Practical guides for independent mental health providers. Explore therapy fees, superbills, Good Faith Estimates, and free practice tools.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/blog/#webpage",
+        "url": "/blog/",
+        "name": "Therapy Practice Guides & Free Tools | Otto Journal",
+        "description": "Practical guides for independent mental health providers. Explore therapy fees, superbills, Good Faith Estimates, and free practice tools.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Journal",
+            "item": "/blog/"
+          }
+        ]
+      }
+    ]
+  },
+  "/blog/soap-vs-dap-notes/": {
+    "title": "SOAP vs. DAP Notes: Differences & Free Templates | Otto",
+    "description": "Compare SOAP and DAP documentation structures, see fictional examples, and download free templates for clinical review.",
+    "type": "article",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/blog/soap-vs-dap-notes/#webpage",
+        "url": "/blog/soap-vs-dap-notes/",
+        "name": "SOAP vs. DAP Notes: Differences & Free Templates | Otto",
+        "description": "Compare SOAP and DAP documentation structures, see fictional examples, and download free templates for clinical review.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "SOAP or DAP? Work through the format.",
+            "item": "/blog/soap-vs-dap-notes/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "SOAP or DAP? Work through the format.",
+        "datePublished": "2026-10-16T09:00:00-05:00",
+        "dateModified": "2026-10-16T09:00:00-05:00",
+        "author": {
+          "@type": "Organization",
+          "name": "Otto editorial",
+          "url": "/authors/otto-editorial/"
+        },
+        "image": "/assets/social-card.png",
+        "mainEntityOfPage": "/blog/soap-vs-dap-notes/"
+      }
+    ]
+  },
+  "/blog/superbill-for-therapy/": {
+    "title": "Superbill for Therapy: Guide + Free Generator | Otto",
+    "description": "Learn what a therapy superbill includes, how clients submit it, and why coverage matters. Create a printable draft with Otto’s free superbill generator.",
+    "type": "article",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/blog/superbill-for-therapy/#webpage",
+        "url": "/blog/superbill-for-therapy/",
+        "name": "Superbill for Therapy: Guide + Free Generator | Otto",
+        "description": "Learn what a therapy superbill includes, how clients submit it, and why coverage matters. Create a printable draft with Otto’s free superbill generator.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "/blog/superbill-for-therapy/#article",
+        "headline": "A practical guide to superbills for therapy",
+        "description": "Learn what a therapy superbill includes, how clients submit it, and why coverage matters. Create a printable draft with Otto’s free superbill generator.",
+        "datePublished": "2026-10-16T09:00:00-05:00",
+        "dateModified": "2026-10-16T09:00:00-05:00",
+        "author": {
+          "@type": "Organization",
+          "name": "Otto editorial",
+          "url": "/authors/otto-editorial/"
+        },
+        "publisher": {
+          "@id": "/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "/blog/superbill-for-therapy/#webpage"
+        },
+        "image": "/assets/social-card.png",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Journal",
+            "item": "/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "A practical guide to superbills for therapy",
+            "item": "/blog/superbill-for-therapy/"
+          }
+        ]
+      }
+    ]
+  },
+  "/compare/": {
+    "title": "Compare Mental Health EHRs: Find Your Fit | Otto",
+    "description": "Find the best mental health EHR for your practice. Compare Otto with SimplePractice and TherapyNotes, explore the connected visit, and evaluate total software cost.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/compare/#webpage",
+        "url": "/compare/",
+        "name": "Compare Mental Health EHRs: Find Your Fit | Otto",
+        "description": "Find the best mental health EHR for your practice. Compare Otto with SimplePractice and TherapyNotes, explore the connected visit, and evaluate total software cost.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Compare EHRs",
+            "item": "/compare/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Compare Mental Health EHRs",
+            "item": "/compare/"
+          }
+        ]
+      }
+    ]
+  },
+  "/compare/otto-vs-simplepractice/": {
+    "title": "Otto vs. SimplePractice: A Connected Mental Health EHR",
+    "description": "Compare Otto and SimplePractice across the full visit: preparation, AI notes, chart updates, telehealth, payments, pricing, and switching requirements.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/compare/otto-vs-simplepractice/#webpage",
+        "url": "/compare/otto-vs-simplepractice/",
+        "name": "Otto vs. SimplePractice: A Connected Mental Health EHR",
+        "description": "Compare Otto and SimplePractice across the full visit: preparation, AI notes, chart updates, telehealth, payments, pricing, and switching requirements.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Compare EHRs",
+            "item": "/compare/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Otto vs. SimplePractice",
+            "item": "/compare/otto-vs-simplepractice/"
+          }
+        ]
+      }
+    ]
+  },
+  "/compare/otto-vs-therapynotes/": {
+    "title": "Otto vs. TherapyNotes: Workflow, AI Notes & Costs",
+    "description": "Evaluate Otto and TherapyNotes across clinical documentation, preparation, insurance needs, software costs, and migration. See Otto’s connected visit workflow.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/compare/otto-vs-therapynotes/#webpage",
+        "url": "/compare/otto-vs-therapynotes/",
+        "name": "Otto vs. TherapyNotes: Workflow, AI Notes & Costs",
+        "description": "Evaluate Otto and TherapyNotes across clinical documentation, preparation, insurance needs, software costs, and migration. See Otto’s connected visit workflow.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Compare EHRs",
+            "item": "/compare/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Otto vs. TherapyNotes",
+            "item": "/compare/otto-vs-therapynotes/"
+          }
+        ]
+      }
+    ]
+  },
+  "/demo/": {
+    "title": "Watch the Otto Demo | Mental Health EHR",
+    "description": "Watch a 2-minute Otto product walkthrough, then explore visit preparation, AI note review, confirmed chart updates, and payment.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/demo/#webpage",
+        "url": "/demo/",
+        "name": "Watch the Otto Demo | Mental Health EHR",
+        "description": "Watch a 2-minute Otto product walkthrough, then explore visit preparation, AI note review, confirmed chart updates, and payment.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "/demo/#video",
+        "name": "Otto product walkthrough, July 2026",
+        "description": "A 2-minute product walkthrough of Otto. Recorded July 2026; added to this review site October 16, 2026.",
+        "thumbnailUrl": "/assets/demo-poster.svg",
+        "duration": "PT2M12.33S",
+        "uploadDate": "2026-10-16T09:00:00-05:00",
+        "contentUrl": "/media/otto-demo.mp4",
+        "publisher": {
+          "@id": "/#organization"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Otto demo",
+            "item": "/demo/"
+          }
+        ]
+      }
+    ]
+  },
+  "/editorial-policy/": {
+    "title": "Editorial Policy & Source Standards | Otto",
+    "description": "How Otto’s practice guides use sources, distinguish examples from claims, and approach updates and professional review.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/editorial-policy/#webpage",
+        "url": "/editorial-policy/",
+        "name": "Editorial Policy & Source Standards | Otto",
+        "description": "How Otto’s practice guides use sources, distinguish examples from claims, and approach updates and professional review.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Editorial Policy & Source Standards",
+            "item": "/editorial-policy/"
+          }
+        ]
+      }
+    ]
+  },
+  "/faq/": {
+    "title": "Otto FAQs: Notes, Pricing, Tools & Practice Fit",
+    "description": "Answers to common questions about Otto’s mental health EHR, AI notes, free tools, trial, and practice evaluation.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/faq/#webpage",
+        "url": "/faq/",
+        "name": "Otto FAQs: Notes, Pricing, Tools & Practice Fit",
+        "description": "Answers to common questions about Otto’s mental health EHR, AI notes, free tools, trial, and practice evaluation.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Otto FAQs: Notes, Pricing, Tools & Practice Fit",
+            "item": "/faq/"
+          }
+        ]
+      }
+    ]
+  },
+  "/": {
+    "title": "Otto Resources for Mental Health Providers",
+    "description": "Explore Otto’s mental health EHR, practice guides, and free tools for independent therapy practices.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/#webpage",
+        "url": "/",
+        "name": "Otto Resources for Mental Health Providers",
+        "description": "Explore Otto’s mental health EHR, practice guides, and free tools for independent therapy practices.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      }
+    ]
+  },
+  "/mental-health-ehr/": {
+    "title": "Mental Health EHR for Therapists & Independent Practices | Otto",
+    "description": "A connected mental health EHR for independent practices. Explore session prep, SOAP and DAP drafts, clinician-approved chart updates, telehealth, and payments.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/mental-health-ehr/#webpage",
+        "url": "/mental-health-ehr/",
+        "name": "Mental Health EHR for Therapists & Independent Practices | Otto",
+        "description": "A connected mental health EHR for independent practices. Explore session prep, SOAP and DAP drafts, clinician-approved chart updates, telehealth, and payments.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Mental Health EHR for Therapists & Independent Practices",
+            "item": "/mental-health-ehr/"
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "/#software",
+        "name": "Otto",
+        "url": "/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web browser",
+        "description": "A connected mental health EHR for independent practices. Explore session prep, SOAP and DAP drafts, clinician-approved chart updates, telehealth, and payments.",
+        "featureList": [
+          "SOAP and DAP note drafts",
+          "Clinician-approved chart updates",
+          "Patient summaries",
+          "Scheduling",
+          "Integrated telehealth",
+          "Cash-pay payments"
+        ]
+      }
+    ]
+  },
+  "/mental-health-patient-records/": {
+    "title": "Mental Health Patient Records & Session Preparation | Otto",
+    "description": "Bring last-session highlights, clinical notes, appointment history, and billing into view. Otto helps connect what happened in one visit with the preparation for the next.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/mental-health-patient-records/#webpage",
+        "url": "/mental-health-patient-records/",
+        "name": "Mental Health Patient Records & Session Preparation | Otto",
+        "description": "Bring last-session highlights, clinical notes, appointment history, and billing into view. Otto helps connect what happened in one visit with the preparation for the next.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Mental Health Patient Records & Session Preparation",
+            "item": "/mental-health-patient-records/"
+          }
+        ]
+      }
+    ]
+  },
+  "/security/": {
+    "title": "Otto Security, AI Review & Data Questions | Otto",
+    "description": "Review Otto’s published clinician-control workflow and the privacy, recording, BAA, retention, and access questions to verify before adoption.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/security/#webpage",
+        "url": "/security/",
+        "name": "Otto Security, AI Review & Data Questions | Otto",
+        "description": "Review Otto’s published clinician-control workflow and the privacy, recording, BAA, retention, and access questions to verify before adoption.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Otto Security, AI Review & Data Questions",
+            "item": "/security/"
+          }
+        ]
+      }
+    ]
+  },
+  "/switch/from-simplepractice/": {
+    "title": "Switch from SimplePractice: Export & Migration Planning | Otto",
+    "description": "Prepare for a move from SimplePractice with sourced export guidance, an interactive checklist, and Otto import questions to confirm.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/switch/from-simplepractice/#webpage",
+        "url": "/switch/from-simplepractice/",
+        "name": "Switch from SimplePractice: Export & Migration Planning | Otto",
+        "description": "Prepare for a move from SimplePractice with sourced export guidance, an interactive checklist, and Otto import questions to confirm.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "A plan for your SimplePractice records.",
+            "item": "/switch/from-simplepractice/"
+          }
+        ]
+      }
+    ]
+  },
+  "/switch/from-therapynotes/": {
+    "title": "Switch from TherapyNotes: Export & Migration Planning | Otto",
+    "description": "Prepare for a move from TherapyNotes with sourced export guidance, an interactive checklist, and Otto import questions to confirm.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/switch/from-therapynotes/#webpage",
+        "url": "/switch/from-therapynotes/",
+        "name": "Switch from TherapyNotes: Export & Migration Planning | Otto",
+        "description": "Prepare for a move from TherapyNotes with sourced export guidance, an interactive checklist, and Otto import questions to confirm.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "A plan for your TherapyNotes records.",
+            "item": "/switch/from-therapynotes/"
+          }
+        ]
+      }
+    ]
+  },
+  "/switch/": {
+    "title": "Switching EHRs: Mental Health Practice Migration Checklist | Otto",
+    "description": "Plan an EHR change with export checklists for SimplePractice and TherapyNotes, validation steps, and questions for Otto onboarding.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/switch/#webpage",
+        "url": "/switch/",
+        "name": "Switching EHRs: Mental Health Practice Migration Checklist | Otto",
+        "description": "Plan an EHR change with export checklists for SimplePractice and TherapyNotes, validation steps, and questions for Otto onboarding.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Plan the move before you move the records.",
+            "item": "/switch/"
+          }
+        ]
+      }
+    ]
+  },
+  "/telehealth-for-therapists/": {
+    "title": "Telehealth for Therapists & Mental Health Practices | Otto",
+    "description": "Otto brings video visits into the same workspace as session preparation, clinical notes, and the patient record. Move through the encounter with the information you need nearby.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/telehealth-for-therapists/#webpage",
+        "url": "/telehealth-for-therapists/",
+        "name": "Telehealth for Therapists & Mental Health Practices | Otto",
+        "description": "Otto brings video visits into the same workspace as session preparation, clinical notes, and the patient record. Move through the encounter with the information you need nearby.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Telehealth for Therapists & Mental Health Practices",
+            "item": "/telehealth-for-therapists/"
+          }
+        ]
+      }
+    ]
+  },
+  "/templates/dap-notes/": {
+    "title": "Free DAP Note Template for Therapists | Otto",
+    "description": "DAP groups the session information under Data, followed by your assessment and plan. Download a blank template or work through a fictional example.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/templates/dap-notes/#webpage",
+        "url": "/templates/dap-notes/",
+        "name": "Free DAP Note Template for Therapists | Otto",
+        "description": "DAP groups the session information under Data, followed by your assessment and plan. Download a blank template or work through a fictional example.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "DAP notes, with room for your judgment.",
+            "item": "/templates/dap-notes/"
+          }
+        ]
+      }
+    ]
+  },
+  "/templates/": {
+    "title": "Therapy Note Templates: SOAP & DAP | Otto",
+    "description": "Free SOAP and DAP note templates with fictional worked examples, printable downloads, and a guide to choosing a format.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/templates/#webpage",
+        "url": "/templates/",
+        "name": "Therapy Note Templates: SOAP & DAP | Otto",
+        "description": "Free SOAP and DAP note templates with fictional worked examples, printable downloads, and a guide to choosing a format.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "A useful starting point for your notes.",
+            "item": "/templates/"
+          }
+        ]
+      }
+    ]
+  },
+  "/templates/soap-notes/": {
+    "title": "Free SOAP Note Template for Therapists | Otto",
+    "description": "SOAP separates the client’s report from your observations, then connects both to your assessment and plan. Download a blank template or work through a fictional example.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/templates/soap-notes/#webpage",
+        "url": "/templates/soap-notes/",
+        "name": "Free SOAP Note Template for Therapists | Otto",
+        "description": "SOAP separates the client’s report from your observations, then connects both to your assessment and plan. Download a blank template or work through a fictional example.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "SOAP notes, with room for your judgment.",
+            "item": "/templates/soap-notes/"
+          }
+        ]
+      }
+    ]
+  },
+  "/therapy-billing-software/": {
+    "title": "Cash-Pay Therapy Billing & Payments | Otto",
+    "description": "Otto carries the visit into cash-pay billing with a prefilled procedure code, fee review, and payment collection. Keep the payment step connected to the work you have already done.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/therapy-billing-software/#webpage",
+        "url": "/therapy-billing-software/",
+        "name": "Cash-Pay Therapy Billing & Payments | Otto",
+        "description": "Otto carries the visit into cash-pay billing with a prefilled procedure code, fee review, and payment collection. Keep the payment step connected to the work you have already done.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Cash-Pay Therapy Billing & Payments",
+            "item": "/therapy-billing-software/"
+          }
+        ]
+      }
+    ]
+  },
+  "/therapy-scheduling-software/": {
+    "title": "Therapy Scheduling Software for Independent Practices | Otto",
+    "description": "Plan your recurring week, adjust appointments, and keep patient context close. Otto connects the calendar with the work of preparing for and completing each visit.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/therapy-scheduling-software/#webpage",
+        "url": "/therapy-scheduling-software/",
+        "name": "Therapy Scheduling Software for Independent Practices | Otto",
+        "description": "Plan your recurring week, adjust appointments, and keep patient context close. Otto connects the calendar with the work of preparing for and completing each visit.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Therapy Scheduling Software for Independent Practices",
+            "item": "/therapy-scheduling-software/"
+          }
+        ]
+      }
+    ]
+  },
+  "/tools/ehr-cost-calculator/": {
+    "title": "Mental Health EHR Cost Calculator | Otto",
+    "description": "Compare the monthly and first-year cost of two EHR plans with provider seats, AI notes, card payments, claims, usage limits, and setup fees.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/tools/ehr-cost-calculator/#webpage",
+        "url": "/tools/ehr-cost-calculator/",
+        "name": "Mental Health EHR Cost Calculator | Otto",
+        "description": "Compare the monthly and first-year cost of two EHR plans with provider seats, AI notes, card payments, claims, usage limits, and setup fees.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "What will your EHR really cost?",
+            "item": "/tools/ehr-cost-calculator/"
+          }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Mental health EHR cost calculator",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web browser",
+        "url": "/tools/ehr-cost-calculator/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  },
+  "/tools/good-faith-estimate/": {
+    "title": "Good Faith Estimate for Therapists | Otto",
+    "description": "Prepare a clear estimate for self-pay care. Free to use. Review the live preview and print or save your document. No signup required.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/tools/good-faith-estimate/#webpage",
+        "url": "/tools/good-faith-estimate/",
+        "name": "Good Faith Estimate for Therapists | Otto",
+        "description": "Prepare a clear estimate for self-pay care. Free to use. Review the live preview and print or save your document. No signup required.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Good Faith Estimate",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "url": "/tools/good-faith-estimate/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Good Faith Estimate",
+            "item": "/tools/good-faith-estimate/"
+          }
+        ]
+      }
+    ]
+  },
+  "/tools/": {
+    "title": "Free Tools for Therapists & Mental Health Practices | Otto",
+    "description": "Free superbill and Good Faith Estimate generators, a therapy session rate calculator, and an out-of-network therapy cost estimator.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/tools/#webpage",
+        "url": "/tools/",
+        "name": "Free Tools for Therapists & Mental Health Practices | Otto",
+        "description": "Free superbill and Good Faith Estimate generators, a therapy session rate calculator, and an out-of-network therapy cost estimator.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      }
+    ]
+  },
+  "/tools/session-rate-calculator/": {
+    "title": "Session rate calculator for Therapists | Otto",
+    "description": "Find a fee that supports your practice and your time. Free to use. Review the live preview and print or save your document. No signup required.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/tools/session-rate-calculator/#webpage",
+        "url": "/tools/session-rate-calculator/",
+        "name": "Session rate calculator for Therapists | Otto",
+        "description": "Find a fee that supports your practice and your time. Free to use. Review the live preview and print or save your document. No signup required.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Session rate calculator",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "url": "/tools/session-rate-calculator/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Session rate calculator",
+            "item": "/tools/session-rate-calculator/"
+          }
+        ]
+      }
+    ]
+  },
+  "/tools/superbill/": {
+    "title": "Superbill generator for Therapists | Otto",
+    "description": "Create an itemized document for out-of-network claims. Free to use. Review the live preview and print or save your document. No signup required.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/tools/superbill/#webpage",
+        "url": "/tools/superbill/",
+        "name": "Superbill generator for Therapists | Otto",
+        "description": "Create an itemized document for out-of-network claims. Free to use. Review the live preview and print or save your document. No signup required.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Superbill generator",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "url": "/tools/superbill/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Superbill generator",
+            "item": "/tools/superbill/"
+          }
+        ]
+      }
+    ]
+  },
+  "/tools/therapy-cost-estimator/": {
+    "title": "Therapy Cost Estimator: Out-of-Network Benefits | Otto",
+    "description": "Estimate a client’s therapy cost using session fees, allowed amounts, deductible, and coinsurance. Includes a session-by-session breakdown.",
+    "type": "website",
+    "noindex": false,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/tools/therapy-cost-estimator/#webpage",
+        "url": "/tools/therapy-cost-estimator/",
+        "name": "Therapy Cost Estimator: Out-of-Network Benefits | Otto",
+        "description": "Estimate a client’s therapy cost using session fees, allowed amounts, deductible, and coinsurance. Includes a session-by-session breakdown.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Therapy cost estimator",
+            "item": "/tools/therapy-cost-estimator/"
+          }
+        ]
+      }
+    ]
+  },
+  "/waitlist/": {
+    "title": "Join the Otto Waitlist | Mental Health Practice Software",
+    "description": "Join the Otto waitlist. Leave your email, then tell us about your mental health practice, payment model, and current EHR.",
+    "type": "website",
+    "noindex": true,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/waitlist/#webpage",
+        "url": "/waitlist/",
+        "name": "Join the Otto Waitlist | Mental Health Practice Software",
+        "description": "Join the Otto waitlist. Leave your email, then tell us about your mental health practice, payment model, and current EHR.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+---
+import ArticleDemoCallout from "../../../components/ArticleDemoCallout.astro";
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import pages from "../../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/blog/soap-vs-dap-notes/"]}>
+  <main id="main" class="growth-page">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
+        <a href="/tools/">Resources</a> <span aria-hidden="true">/</span>{" "}
+        <span aria-current="page">SOAP or DAP? Work through the format.</span>
+      </nav>
+      <header class="growth-hero">
+        <div class="eyebrow">Documentation · By Otto editorial</div>
+        <h1>SOAP or DAP? Work through the format.</h1>
+        <p>
+          We compare how each format organizes the same information, so you can
+          choose an approach that fits your practice’s documentation
+          requirements.
+        </p>
+      </header>
+      <div class="byline">
+        <span>
+          By <a href="/authors/otto-editorial/">Otto editorial</a> ·{" "}
+          <time datetime="2026-10-16">October 16, 2026</time> · 4 min read
+        </span>
+      </div>
+      <div class="post-layout">
+        <aside class="toc">
+          <div class="toc-inner">
+            <h2>Companion resources</h2>
+            <a href="/templates/soap-notes/">SOAP note template</a>
+            <a href="/templates/dap-notes/">DAP note template</a>
+            <ArticleDemoCallout />
+          </div>
+        </aside>
+        <article>
+          <div class="growth-answer">
+            <strong>The practical difference</strong>
+            <p>
+              SOAP separates Subjective and Objective information. DAP brings
+              those observations and reports together under Data. Both include
+              an Assessment and Plan.
+            </p>
+          </div>
+          <div class="growth-section prose">
+            <h2>We start with the information you need to document.</h2>
+            <p>
+              A format gives the note a structure. Your clinical setting,
+              documentation policy, payer requirements, and the encounter
+              determine what the record needs to contain. We’d choose the
+              structure that helps you make those distinctions consistently.
+            </p>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Information</th>
+                    <th>SOAP</th>
+                    <th>DAP</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Client-reported experience</td>
+                    <td>Subjective</td>
+                    <td>Data</td>
+                  </tr>
+                  <tr>
+                    <td>Observations, measures, interventions, and response</td>
+                    <td>
+                      Objective or the appropriate section under your
+                      documentation policy
+                    </td>
+                    <td>Data</td>
+                  </tr>
+                  <tr>
+                    <td>Clinical interpretation and progress</td>
+                    <td>Assessment</td>
+                    <td>Assessment</td>
+                  </tr>
+                  <tr>
+                    <td>Agreed next steps</td>
+                    <td>Plan</td>
+                    <td>Plan</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2>Try the same fictional session in both.</h2>
+            <p>
+              Our examples follow a fictional client practicing a response to
+              work messages. In SOAP, we separate what the client reports from
+              what happens in the session. In DAP, those details share a Data
+              section. The assessment still needs the clinician’s reasoning in
+              either format.
+            </p>
+          </div>
+          <div class="resource-cards">
+            <a class="resource-card" href="/templates/soap-notes/">
+              <span class="tag">Four-part format</span>
+              <h3>SOAP note template</h3>
+              <p>
+                Separate subjective and objective information, then document
+                your assessment and plan.
+              </p>
+              <span class="text-link">Explore SOAP ↗</span>
+            </a>
+            <a class="resource-card" href="/templates/dap-notes/">
+              <span class="tag">Three-part format</span>
+              <h3>DAP note template</h3>
+              <p>Organize the session into Data, Assessment, and Plan.</p>
+              <span class="text-link">Explore DAP ↗</span>
+            </a>
+          </div>
+          <div class="growth-section prose">
+            <h2>Three questions we would use to choose</h2>
+            <ol>
+              <li>
+                Does the format meet the documentation requirements that apply
+                to your work?
+              </li>
+              <li>
+                Can another authorized clinician follow the encounter and the
+                next steps?
+              </li>
+              <li>
+                Can you distinguish the client’s account, observed information,
+                and your assessment without duplicating whole paragraphs?
+              </li>
+            </ol>
+            <p>
+              There is no universal winning format. Test a fictional encounter
+              in each, review it with the appropriate clinical owner, and use
+              the structure your practice approves.
+            </p>
+            <h2>How this relates to Otto</h2>
+            <p>
+              Otto’s public workflow describes SOAP and DAP drafts from session
+              audio, followed by clinician review and signature. A draft still
+              needs checking against the encounter. Our template examples are
+              editorial illustrations; they are not generated by the Otto
+              product.
+            </p>
+            <a class="button" href="/demo/#watch">
+              Watch Otto’s workflow ↗
+            </a>
+          </div>
+          <div class="sources">
+            <h2>Sources and review</h2>
+            <p>
+              Sources checked October 16, 2026. Confirm current product terms
+              before choosing software.
+            </p>
+            <ul>
+              <li>
+                <a href="https://www.simplepractice.com/resource/soap-note-examples/">
+                  SOAP note format
+                </a>
+              </li>
+              <li>
+                <a href="https://www.mentalyc.com/blog/dap-notes">
+                  DAP note format
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+    <section class="cta-section">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Make more room for the work you love.</h2>
+            <p>
+              See how Otto brings notes, scheduling, telehealth, and payments
+              into your practice day.
+            </p>
+          </div>
+          <a class="button light" href="/waitlist/">
+            Join the waitlist <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</SiteLayout>
