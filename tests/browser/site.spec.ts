@@ -4,6 +4,12 @@ import { readFileSync } from 'node:fs';
 
 const pages = JSON.parse(readFileSync('src/data/pages.json', 'utf8'));
 
+test.beforeEach(async ({ context }) => {
+  // Keep browser fixtures out of the live analytics property.
+  await context.route(/^https:\/\/(?:[^/]+\.)?(?:googletagmanager|google-analytics)\.com\//,
+    route => route.abort());
+});
+
 test('all routes render without script errors, broken images, or page overflow', async ({ page }) => {
   test.setTimeout(120_000);
   const errors: string[] = [];
