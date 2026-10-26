@@ -1,4 +1,5 @@
 ---
+import ArticleShare from "../../../components/ArticleShare.astro";
 import ArticleDemoCallout from "../../../components/ArticleDemoCallout.astro";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
 import pages from "../../../data/pages.json";
@@ -27,6 +28,7 @@ import pages from "../../../data/pages.json";
           <time datetime="2026-10-16">October 16, 2026</time> · 4 min read
         </span>
       </div>
+      <ArticleShare title={pages["/blog/soap-vs-dap-notes/"].title} />
       <div class="post-layout">
         <aside class="toc">
           <div class="toc-inner">

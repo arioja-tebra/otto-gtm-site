@@ -1,4 +1,5 @@
 ---
+import ArticleShare from "../../../components/ArticleShare.astro";
 import ArticleDemoCallout from "../../../components/ArticleDemoCallout.astro";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
 import pages from "../../../data/pages.json";
@@ -35,6 +36,9 @@ import pages from "../../../data/pages.json";
           </span>
         </div>
       </header>
+      <ArticleShare
+        title={pages["/blog/good-faith-estimate-for-therapy/"].title}
+      />
       <div class="art post-cover">
         <svg
           viewBox="0 0 640 500"

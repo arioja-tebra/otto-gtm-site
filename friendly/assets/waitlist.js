@@ -5,14 +5,14 @@
   let demo=true;
   let token='', requestId=crypto.randomUUID(), started=Date.now();
   const params=new URLSearchParams(location.search);
-  const source={page:params.get('from')||'/otto-previews/friendly/waitlist/'};
+  const source={page:params.get('from')||'/otto-gtm-site/friendly/waitlist/'};
   for (const key of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']) {
     if(params.has(key)) source[key]=params.get(key).slice(0,120);
   }
   async function send() { return {ok:true,token:'preview-only'}; }
   emailForm.addEventListener('submit',async event=>{
     event.preventDefault(); if(!emailForm.reportValidity())return;
-    const result=await send('/otto-previews/friendly/api/waitlist',{email:$('waitlist-email').value.trim(),requestId,source,website:$('waitlist-website').value,elapsed:Date.now()-started},emailForm);
+    const result=await send('/otto-gtm-site/friendly/api/waitlist',{email:$('waitlist-email').value.trim(),requestId,source,website:$('waitlist-website').value,elapsed:Date.now()-started},emailForm);
     if(!result)return;
     token=result.token;
     if(!demo)document.querySelector('.waitlist-demo').hidden=true;
@@ -41,7 +41,7 @@
   practiceForm.addEventListener('submit',async event=>{
     event.preventDefault();if(!practiceForm.reportValidity())return;
     const data=Object.fromEntries(new FormData(practiceForm));
-    const result=await send('/otto-previews/friendly/api/waitlist/details',{...data,token},practiceForm);
+    const result=await send('/otto-gtm-site/friendly/api/waitlist/details',{...data,token},practiceForm);
     if(result)finish(false);
   });
   $('waitlist-demo-fill').addEventListener('click',()=>{
