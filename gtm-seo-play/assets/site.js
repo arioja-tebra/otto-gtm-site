@@ -13,3 +13,32 @@ document.querySelectorAll('a[href="/otto-gtm-site/gtm-seo-play/waitlist/"]').for
 
 // Horizontally scrollable comparison tables remain reachable by keyboard.
 document.querySelectorAll('.table-scroll').forEach(region=>{region.tabIndex=0;region.setAttribute('role','region');region.setAttribute('aria-label',region.querySelector('table')?.getAttribute('aria-label')||'Scrollable data table');});
+
+// Share only the public article path; omit query parameters and fragments.
+(() => {
+  const share = document.querySelector('[data-article-share]');
+  if (!share) return;
+  const url = new URL(location.pathname, location.origin).href;
+  const title = document.querySelector('h1')?.textContent.trim() || document.title;
+  share.querySelector('[data-share-linkedin]').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+  share.querySelector('[data-share-facebook]').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+  share.querySelector('[data-share-email]').href = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`;
+  const button = share.querySelector('[data-share-copy]');
+  const status = share.querySelector('[role=status]');
+  button.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(url);
+      status.textContent = 'Link copied.';
+    } catch {
+      status.textContent = 'Copy the article link below.';
+      const field = document.createElement('input');
+      field.type = 'text';
+      field.readOnly = true;
+      field.value = url;
+      field.setAttribute('aria-label', 'Article link');
+      status.append(field);
+      field.focus();
+      field.select();
+    }
+  });
+})();

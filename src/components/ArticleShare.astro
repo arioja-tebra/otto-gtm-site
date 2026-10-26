@@ -1,0 +1,43 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<section
+  class="article-share"
+  aria-label="Share this article"
+  data-article-share
+>
+  <p class="article-share-label">Share this article</p>
+  <div class="article-share-links">
+    <button type="button" data-share-copy>
+      Copy link
+    </button>
+    <a
+      data-share-linkedin
+      href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+    </a>
+    <a
+      data-share-facebook
+      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Facebook<span class="sr-only"> (opens in a new tab)</span>
+    </a>
+    <a
+      data-share-email
+      href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`}
+    >
+      Email
+    </a>
+  </div>
+  <p class="article-share-status" role="status" aria-live="polite"></p>
+</section>

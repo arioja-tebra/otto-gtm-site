@@ -90,3 +90,40 @@ test('video loads and unknown routes return 404', async ({ page, request }) => {
   await expect.poll(() => page.locator('video').evaluate((video: HTMLVideoElement) => video.duration)).toBeGreaterThan(130);
   expect((await request.get('/not-a-real-page/')).status()).toBe(404);
 });
+
+test('article share links use the current article URL without query parameters or fragments', async ({ page, context }) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  const articles = Object.keys(pages).filter(path => path.startsWith('/blog/') && path !== '/blog/');
+  expect(articles).toHaveLength(4);
+  for (const route of articles) {
+    await page.goto(`${route}?campaign=preview#main`);
+    const share = page.getByRole('region', { name: 'Share this article' });
+    await expect(share).toBeVisible();
+    const cleanURL = new URL(route, page.url()).href;
+    const linkedin = new URL((await share.locator('[data-share-linkedin]').getAttribute('href'))!);
+    const facebook = new URL((await share.locator('[data-share-facebook]').getAttribute('href'))!);
+    const email = new URL((await share.locator('[data-share-email]').getAttribute('href'))!);
+    expect(linkedin.searchParams.get('url')).toBe(cleanURL);
+    expect(facebook.searchParams.get('u')).toBe(cleanURL);
+    expect(email.searchParams.get('body')).toBe(cleanURL);
+    expect(email.searchParams.get('subject')).toBe((await page.locator('h1').textContent())!.trim());
+    await share.getByRole('button', { name: 'Copy link', exact: true }).click();
+    await expect(share.getByRole('status')).toHaveText('Link copied.');
+    expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(cleanURL);
+  }
+});
+
+test('article sharing offers a selectable link when clipboard access fails', async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, 'clipboard', {
+      value: { writeText: async () => { throw new Error('Clipboard unavailable'); } },
+      configurable: true,
+    });
+  });
+  await page.goto('/blog/soap-vs-dap-notes/?campaign=preview#main');
+  const share = page.getByRole('region', { name: 'Share this article' });
+  await share.getByRole('button', { name: 'Copy link', exact: true }).click();
+  const field = share.getByRole('textbox', { name: 'Article link' });
+  await expect(field).toHaveValue(new URL('/blog/soap-vs-dap-notes/', page.url()).href);
+  await expect(field).toBeFocused();
+});
