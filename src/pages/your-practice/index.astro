@@ -1,6 +1,6 @@
 ---
 import SiteLayout from "../../layouts/SiteLayout.astro";
-import PracticeVideos from "../../components/PracticeVideos.astro";
+import PracticeFeatureScene from "../../components/PracticeFeatureScene.astro";
 import { features } from "../../data/practice";
 import pages from "../../data/pages.json";
 ---
@@ -9,50 +9,74 @@ import pages from "../../data/pages.json";
   <link rel="stylesheet" href="/assets/practice.css" />
   <main id="main" class="practice-page practice-teaser">
     <div class="wrap">
-      <div class="practice-subnav">
-        <span>OTTO BY TEBRA</span>
-        <span class="concept-tag">For independent mental health practices</span>
-      </div>
-      <section class="teaser-hero">
-        <div class="eyebrow">Your practice has a lot to do. Meet Otto.</div>
-        <h1>
-          See what Otto
-          <br />
-          can do <em>for you.</em>
-        </h1>
-        <p>
-          You’re there for your patients. Otto connects the work around every
-          visit, from session prep and clinical notes to telehealth and
-          payments.
-        </p>
-        <div class="teaser-actions">
-          <a class="button" href="/your-practice/build/">
-            See Otto for my practice <span aria-hidden="true">↗</span>
-          </a>
-          <a class="teaser-watch" href="#watch">
-            <span aria-hidden="true">▶</span> Watch Otto in action
-          </a>
+      <section class="teaser-hero teaser-hero-film">
+        <div class="teaser-hero-copy">
+          <div class="eyebrow">For independent mental health practices</div>
+          <h1>
+            See what Otto
+            <br />
+            can do <em>for you.</em>
+          </h1>
+          <p>
+            Give every session your attention. Otto connects the preparation,
+            notes, and payments around it.
+          </p>
+          <div class="teaser-actions">
+            <a class="button" href="/your-practice/build/">
+              See Otto for my practice <span aria-hidden="true">↗</span>
+            </a>
+            <a class="teaser-watch" href="#watch" data-play-overview>
+              Watch how it works <span aria-hidden="true">↘</span>
+            </a>
+          </div>
         </div>
-        <div class="teaser-proof">
-          <span>Built for mental health</span>
-          <span>Your clinical judgment stays central</span>
-          <span>Built by Tebra</span>
+        <div class="teaser-film" id="watch">
+          <video
+            id="hero-overview"
+            controls
+            playsinline
+            preload="none"
+            poster="/media/otto-overview-poster.jpg"
+            aria-label="Watch the Otto overview"
+          >
+            <source src="/media/otto-it-just-works.mp4" type="video/mp4" />
+            <p>
+              Your browser does not support this video.{" "}
+              <a href="/media/otto-it-just-works.mp4">
+                Open the Otto overview.
+              </a>
+            </p>
+          </video>
+          <button
+            class="teaser-film-play"
+            type="button"
+            aria-label="Play the Otto overview"
+            hidden
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m8 5 11 7-11 7Z" fill="currentColor" />
+            </svg>
+          </button>
         </div>
-        <div class="teaser-orbit" aria-hidden="true"></div>
+        <p class="teaser-film-status" role="status" aria-live="polite"></p>
+        <div class="teaser-workflows" aria-label="Connected Otto workflows">
+          <span>Session prep</span>
+          <i aria-hidden="true"></i>
+          <span>AI progress notes</span>
+          <i aria-hidden="true"></i>
+          <span>Telehealth</span>
+          <i aria-hidden="true"></i>
+          <span>Payments</span>
+        </div>
       </section>
-      <PracticeVideos />
-      <div class="practice-bridge">
-        <span>More room for care.</span>
-        <p>Before the session. After the conversation. Through to payment.</p>
-      </div>
       <section id="possibilities" class="practice-possibilities">
         <div class="practice-section-head">
           <div>
             <div class="eyebrow">One connected practice day</div>
             <h2>
-              The conversation is yours.
+              Be ready for the session.
               <br />
-              Let Otto help with what comes next.
+              Keep the work moving after it.
             </h2>
           </div>
           <p>
@@ -67,37 +91,11 @@ import pages from "../../data/pages.json";
                 <span>
                   {feature.number} / {feature.short}
                 </span>
-                <span aria-hidden="true">↗</span>
               </div>
-              <div class={`pc-art pc-art-${feature.slug}`} aria-hidden="true">
-                {feature.slug === "personalized" ? (
-                  <>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <b>Be ready.</b>
-                  </>
-                ) : feature.slug === "notes" ? (
-                  <>
-                    <b>SOAP / DAP</b>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                  </>
-                ) : (
-                  <>
-                    <b>Keep it moving.</b>
-                    <i>Visit</i>
-                    <i>Billing</i>
-                    <i>Payment</i>
-                  </>
-                )}
-              </div>
+              <PracticeFeatureScene feature={feature.slug} />
               <h3>{feature.label}</h3>
               <p>{feature.description}</p>
-              <span class="text-link">
-                See how it works <span aria-hidden="true">↗</span>
-              </span>
+              <span class="text-link">See how it works</span>
             </a>
           ))}
         </div>
@@ -135,9 +133,48 @@ import pages from "../../data/pages.json";
         </span>
       </section>
       <p class="practice-disclosure">
-        Product tour preview. Videos show product demonstrations. Signup is
+        Product tour preview. The video shows a product demonstration. Signup is
         demo-only; no information is submitted or saved.
       </p>
     </div>
   </main>
+  <script>
+    const video = document.querySelector<HTMLVideoElement>("#hero-overview");
+    const button =
+      document.querySelector<HTMLButtonElement>(".teaser-film-play");
+    const status = document.querySelector<HTMLElement>(".teaser-film-status");
+    if (video && button && status) {
+      video.controls = false;
+      button.hidden = false;
+      const play = async () => {
+        status.textContent = "";
+        video.controls = true;
+        button.hidden = true;
+        try {
+          await video.play();
+        } catch {
+          button.hidden = false;
+          status.textContent =
+            "Playback could not start. Try the play button or use the video controls.";
+        }
+      };
+      button.addEventListener("click", () => {
+        video.focus();
+        void play();
+      });
+      document
+        .querySelector("[data-play-overview]")
+        ?.addEventListener("click", () => {
+          video.focus({ preventScroll: true });
+          void play();
+        });
+      video.addEventListener("play", () => {
+        button.hidden = true;
+        video.controls = true;
+      });
+      video.addEventListener("ended", () => {
+        button.hidden = false;
+      });
+    }
+  </script>
 </SiteLayout>

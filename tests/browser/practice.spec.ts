@@ -81,31 +81,52 @@ test("priorities require a choice, back preserves edits, and concept dialog supp
   await expect(page.getByRole("dialog")).toBeHidden();
 });
 
-test("both supplied videos play with native controls and poster images", async ({
+test("hero shows one overview video and plays from its poster", async ({
   page,
 }) => {
   await page.goto("/your-practice/");
-  const videos = page.locator("video");
-  await expect(videos).toHaveCount(2);
-  for (const video of await videos.all()) {
-    await expect(video).toHaveAttribute("controls", "");
-    await expect(video).toHaveAttribute("preload", "none");
-    await expect(video).toHaveAttribute("poster", /poster\.jpg$/);
-    await video.evaluate(async (element: HTMLVideoElement) => {
-      element.muted = true;
-      element.load();
-      await element.play();
-    });
-    await expect
-      .poll(() =>
-        video.evaluate((element: HTMLVideoElement) => element.currentTime),
-      )
-      .toBeGreaterThan(0);
-    expect(
-      await video.evaluate((element: HTMLVideoElement) => element.duration),
-    ).toBeGreaterThan(150);
-    await video.evaluate((element: HTMLVideoElement) => element.pause());
-  }
+  const video = page.locator("video");
+  await expect(video).toHaveCount(1);
+  await expect(page.locator(".video-card-heading")).toHaveCount(0);
+  await expect(video).toHaveAttribute("preload", "none");
+  await expect(video).toHaveAttribute("poster", /overview-poster\.jpg$/);
+  await video.evaluate((element: HTMLVideoElement) => {
+    element.muted = true;
+  });
+  await page.getByRole("button", { name: "Play the Otto overview" }).click();
+  await expect
+    .poll(() =>
+      video.evaluate((element: HTMLVideoElement) => element.currentTime),
+    )
+    .toBeGreaterThan(0);
+  await expect(video).toHaveAttribute("controls", "");
+  await expect(
+    page.getByRole("button", { name: "Play the Otto overview" }),
+  ).toBeHidden();
+  expect(
+    await video.evaluate((element: HTMLVideoElement) => element.duration),
+  ).toBeGreaterThan(150);
+});
+
+test("billing walkthrough remains available on its feature page", async ({
+  page,
+}) => {
+  await page.goto("/your-practice/front-desk/");
+  const video = page.locator("video");
+  await expect(video).toHaveCount(1);
+  await video.evaluate(async (element: HTMLVideoElement) => {
+    element.muted = true;
+    element.load();
+    await element.play();
+  });
+  await expect
+    .poll(() =>
+      video.evaluate((element: HTMLVideoElement) => element.currentTime),
+    )
+    .toBeGreaterThan(0);
+  expect(
+    await video.evaluate((element: HTMLVideoElement) => element.duration),
+  ).toBeGreaterThan(210);
 });
 
 test("tour waits for its script before allowing the first step", async ({

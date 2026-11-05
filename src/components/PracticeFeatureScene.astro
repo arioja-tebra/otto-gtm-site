@@ -1,0 +1,87 @@
+---
+interface Props {
+  feature: string;
+}
+const { feature } = Astro.props;
+---
+
+<div class={`practice-scene practice-scene-${feature}`} aria-hidden="true">
+  {feature === "personalized" ? (
+    <div class="scene-window scene-prep">
+      <div class="scene-window-top">
+        <img src="/assets/otto-logo.svg" alt="" width="35" height="18" />
+        <span>YOUR DAY</span>
+      </div>
+      <div class="scene-prep-columns">
+        <div class="scene-calendar">
+          <span>TODAY</span>
+          <b>14</b>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+        <div class="scene-summary">
+          <span class="scene-kicker">NEXT SESSION</span>
+          <strong>
+            Pick up where
+            <br />
+            you left off.
+          </strong>
+          <div class="scene-rule"></div>
+          <span class="scene-label">Last-session highlights</span>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+      </div>
+    </div>
+  ) : feature === "notes" ? (
+    <div class="scene-window scene-note">
+      <div class="scene-window-top">
+        <img src="/assets/otto-logo.svg" alt="" width="35" height="18" />
+        <span>PROGRESS NOTE</span>
+      </div>
+      <div class="scene-note-title">
+        <strong>Your session, in focus.</strong>
+        <span>DAP</span>
+      </div>
+      {["Data", "Assessment", "Plan"].map((label) => (
+        <div class="scene-note-row">
+          <b>{label}</b>
+          <div>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+      ))}
+      <div class="scene-note-foot">
+        <span>Draft for your review</span>
+        <span>Review note</span>
+      </div>
+    </div>
+  ) : (
+    <div class="scene-window scene-billing">
+      <div class="scene-window-top">
+        <img src="/assets/otto-logo.svg" alt="" width="35" height="18" />
+        <span>BILLING & PAYMENTS</span>
+      </div>
+      <div class="scene-billing-title">
+        <span>✓</span>
+        <strong>The next step is ready.</strong>
+      </div>
+      <div class="scene-billing-row">
+        <span>Completed visit</span>
+        <b>✓</b>
+      </div>
+      <div class="scene-billing-row">
+        <span>Procedure code</span>
+        <i></i>
+      </div>
+      <div class="scene-billing-row">
+        <span>Session fee</span>
+        <i></i>
+      </div>
+      <div class="scene-billing-foot">Review billing details</div>
+    </div>
+  )}
+</div>
