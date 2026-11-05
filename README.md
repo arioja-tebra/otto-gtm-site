@@ -47,7 +47,23 @@ The migration preserves the reviewed page markup as readable Astro files. To edi
 
 For a new page, add its `.astro` file and metadata entry, use `SiteLayout`, and link it from the relevant navigation or related content. Keep schema URLs site-relative; the layout resolves them against `SITE_URL`.
 
-The root-level `gtm-seo-play/`, `friendly/`, `previous/`, `index.html`, and other historical HTML files are frozen GitHub Pages snapshots. They remain in place so existing review links keep working. Astro builds only `src/` and `public/` into `dist/`; it does not publish those snapshots. Edit `src/` for all new work.
+The root-level `gtm-seo-play/`, `friendly/`, `previous/`, `index.html`, and other historical HTML files are frozen GitHub Pages snapshots. They remain in Git as historical references and are excluded from deployment. Astro builds only `src/` and `public/` into `dist/`; it does not publish those snapshots. Edit `src/` for all new work.
+
+## GitHub Pages deployment
+
+Merges to `main` deploy automatically after Astro validation, the existing browser suite, and checks of the packaged Pages site pass. The workflow can also be run manually from GitHub Actions.
+
+The live site is at https://arioja-tebra.github.io/otto-gtm-site/. Only the current Astro build is deployed, including blog and tool disclaimers. `scripts/prepare-pages.mjs` prefixes the build’s links, assets, metadata, and runtime signup URLs for the repository path. It leaves `dist/` unchanged for Cloudflare. The design chooser and historical HTML snapshots are excluded from the deployed artifact.
+
+To verify the deployment artifact locally:
+
+```sh
+SITE_URL=https://arioja-tebra.github.io SEO_PRODUCTION=0 pnpm build:pages
+pnpm test:pages
+pnpm exec playwright test --config playwright.pages.config.ts
+```
+
+Pages stays a noindex preview, and signup stays demo-only. In repository Settings → Pages, the publishing source must be GitHub Actions.
 
 ## Cloudflare setup
 
@@ -62,7 +78,7 @@ pnpm deploy
 
 `pnpm deploy` runs validation before uploading. Wrangler will ask which account to use if needed. Start with the assigned `workers.dev` URL. No account ID, credentials, or custom-domain routes are committed.
 
-For Cloudflare’s Git integration, connect this repository, choose the approved branch, use `pnpm build` as the build command and `pnpm exec wrangler deploy` as the deploy command. Keep `SEO_PRODUCTION=0` for the first review deployment. The GitHub workflow in this repo only validates; it does not deploy.
+For Cloudflare’s Git integration, connect this repository, choose the approved branch, use `pnpm build` as the build command and `pnpm exec wrangler deploy` as the deploy command. Keep `SEO_PRODUCTION=0` for the first review deployment. The GitHub workflow validates pull requests and deploys the verified site to GitHub Pages after changes reach `main`. Cloudflare deployment remains a separate option.
 
 Record the deployed commit and Worker version for releases. Marketing rollbacks should use the previous GTM Worker version independently of application releases.
 
