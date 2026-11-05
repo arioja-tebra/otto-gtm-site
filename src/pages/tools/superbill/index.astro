@@ -17,13 +17,13 @@ import pages from "../../../data/pages.json";
         <h1>Superbill generator</h1>
         <p>Create an itemized document for out-of-network claims.</p>
         <a class="text-link" href="/blog/superbill-for-therapy/">
-          Read the companion guide ↗
+          Read the companion guide
         </a>
       </section>
       <ContentDisclaimer kind="tool" />
       <div class="tool-demo-bar">
         <button type="button" id="fill-demo" data-tool="superbill">
-          Fill with demo data <span aria-hidden="true">↗</span>
+          Fill with demo data <span aria-hidden="true"></span>
         </button>
         <span>See a finished example in one click.</span>
         <p id="demo-status" role="status"></p>
@@ -195,7 +195,7 @@ import pages from "../../../data/pages.json";
         </div>
         <div class="otto-hook-action">
           <a class="button light" href="/waitlist/">
-            Learn more <span aria-hidden="true">↗</span>
+            Learn more <span aria-hidden="true"></span>
           </a>
           <span>Join the Otto waitlist</span>
         </div>
@@ -306,3 +306,95 @@ import pages from "../../../data/pages.json";
   </script>
   <script is:inline src="/assets/tool-demo.js" defer></script>
 </SiteLayout>
+
+<style>
+  .tool-page { background: #fbf9f8; }
+  .tool-page > .wrap { display: grid; grid-template-columns: minmax(0,1.16fr) minmax(0,1fr); gap: 24px; grid-template-rows: auto auto auto auto max-content 1fr auto; align-items: start; max-width: 1200px; padding: 40px clamp(20px,4vw,56px) 64px; }
+  .breadcrumbs, .tool-hero, .tool-demo-bar, .otto-tool-hook { grid-column: 1 / -1; }
+  .tool-page > .wrap > :global(.content-disclaimer) { grid-column: 1 / -1; grid-row: 3; margin: 0; }
+  .breadcrumbs { margin: 0; font-size: 14px; }
+  .breadcrumbs a { color: #004852; text-decoration: none; }
+  .tool-hero { padding: 0 0 8px; }
+  .tool-hero .eyebrow { display: block; font-size: 10px; font-weight: 500; letter-spacing: .12em; color: #777; }
+  .tool-hero .eyebrow::before { display: none; }
+  .tool-hero h1 { margin: 10px 0 18px; font-size: clamp(40px,4.4vw,60px); line-height: 1.02; font-weight: 300; letter-spacing: -1.6px; }
+  .tool-hero p { margin-bottom: 18px; font-size: 20px; line-height: 28px; }
+  .tool-hero .text-link { min-height: 46px; align-items: center; padding: 0 24px; background: #dc785d; border-radius: 9999px; border: 0; color: #fff; font-weight: 600; }
+  .tool-hero .text-link:hover { background: #c9674e; }
+  .tool-demo-bar { grid-row: 4; gap: 16px; padding: 14px 18px; margin: 0; background: rgba(65,126,134,.14); border: 0; border-radius: 16px; }
+  .tool-demo-bar button { min-height: 40px; padding: 0 20px; background: #dc785d; color: #fff; border: 0; font-weight: 600; }
+  .tool-demo-bar button:hover { background: #c9674e; }
+  .tool-demo-bar > span { color: #545454; font-size: 14px; }
+  .tool-shell { display: contents; }
+  .tool-shell > div { grid-column: 1; grid-row: 5 / 7; min-width: 0; }
+  .panel { padding: 32px; border: 0; border-radius: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04),0 10px 28px -14px rgba(0,72,82,.16); }
+  .panel h2 { font-size: 30px; line-height: 36px; font-weight: 300; letter-spacing: -.6px; margin: 0 0 6px; }
+  .panel > .muted { font-size: 16px; line-height: 24px; margin-bottom: 24px; }
+  .panel h3 { margin: 24px 0 12px; font-size: 18px; line-height: 24px; font-weight: 600; letter-spacing: 0; }
+  .fields { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+  .tool-page :global(input), .tool-page :global(textarea) { margin-top: 6px; padding: 10px 12px; min-width: 0; border: 1px solid #d8d8d8; border-radius: 10px; font-size: 14px; line-height: 22px; }
+  .tool-page :global(label) { font-size: 14px; }
+  .tool-page :global(.repeat) { margin-bottom: 14px; padding: 16px; border: 1px solid #e1ded8; border-radius: 16px; background: #fff; }
+  .tool-page :global(.repeat .fields) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+  .tool-page :global(.rowhead) { margin-bottom: 12px; }
+  .tool-page :global(.remove) { color: #004852; }
+  .tool-page .button { min-height: 46px; font-size: 14px; padding: 0 22px; }
+  .tool-page .button.outline { color: #195b63; border-color: #195b63; }
+  #addItem { min-height: 40px; margin-bottom: 18px; padding: 0 18px; }
+  .actions { margin-top: 24px; }
+  .privacy { margin-bottom: 0; font-size: 12px; line-height: 20px; color: #777; }
+  .result-panel { grid-column: 2; grid-row: 6; position: static; padding: 24px; }
+  .result-panel h2 { font-size: 24px; line-height: 30px; }
+  .result-panel .muted { font-size: 14px; line-height: 22px; margin-bottom: 12px; }
+  .pill { background: rgba(65,126,134,.14); color: #004852; border: 0; font-size: 12px; }
+  .aside-note { padding: 16px; background: #f0eee8; border-radius: 12px; font-size: 14px; line-height: 22px; }
+  .result-panel a { color: #004852; font-weight: 600; }
+  .tool-page .preview-panel { grid-column: 2; grid-row: 5; padding: 24px; margin: 0; border-radius: 20px; background: rgba(65,126,134,.14); box-shadow: none; }
+  .document-preview-heading .eyebrow { color: #777; font-size: 10px; font-weight: 500; letter-spacing: .12em; }
+  .document-preview-heading .eyebrow::before { display: none; }
+  .document-preview-heading h2 { margin: 10px 0 4px; font-size: 26px !important; line-height: 32px; font-weight: 300; }
+  .tool-page .preview-panel > .muted { font-size: 16px; line-height: 24px; margin-bottom: 18px; }
+  .tool-page #preview { min-width: 0; overflow-x: auto; }
+  .tool-page #preview :global(.otto-document) { width: 100%; min-width: 0; padding: 28px; border-radius: 12px; }
+  .tool-page #preview :global(table) { table-layout: fixed; width: 100%; min-width: 0; }
+  .tool-page #preview :global(th), .tool-page #preview :global(td) { overflow-wrap: anywhere; }
+  .tool-page #preview :global(.otto-document) { border-top: 0; box-shadow: none; }
+  .tool-page #preview :global(.document-brand) { border-bottom-color: #004852; }
+  .tool-page #preview :global(.document-title) { font-size: 26px !important; line-height: 30px; font-weight: 300; }
+  .tool-page #preview :global(.document-info-grid) { grid-template-columns: 1fr; gap: 20px; }
+  .tool-page #preview :global(.document-info-grid > section) { padding: 0; border: 0; background: transparent; }
+  .tool-page #preview :global(thead th) { background: transparent !important; color: #777 !important; font-size: 10px; }
+  .tool-page #preview :global(.document-totals > div) { padding: 12px; background: #f0eee8; }
+  .tool-page #preview :global(.document-totals strong) { font-size: 16px; font-weight: 400; }
+  .otto-tool-hook { grid-row: 7; margin: 40px 0 0; }
+  .otto-tool-hook { grid-template-columns: 200px minmax(0,1fr) auto; gap: 32px; padding: 32px; }
+  .otto-hook-mark { height: 208px; padding: 24px; margin: -12px 0; background: #fff; border-radius: 16px; transform: rotate(-6deg); }
+  .otto-hook-mark img { width: 64px; }
+  .otto-hook-mark svg { right: 16px; bottom: 12px; }
+  .otto-tool-hook h2 { font-size: clamp(30px,3vw,42px); font-weight: 300; letter-spacing: -1px; }
+  .otto-tool-hook .eyebrow { display: block; font-size: 10px; font-weight: 500; letter-spacing: .12em; }
+  .otto-tool-hook .eyebrow::before { display: none; }
+  .otto-hook-features span { font-size: 14px; border-color: rgba(255,255,255,.3); }
+  @media (max-width: 850px) {
+    .tool-page > .wrap { grid-template-columns: minmax(0,1fr); grid-template-rows: none; padding-top: 32px; }
+    .breadcrumbs { grid-row: 1; flex-wrap: wrap; margin: 0; }
+    .tool-hero { grid-row: 2; margin: 0; }
+    .tool-hero h1 { font-size: 40px; letter-spacing: -1.4px; }
+    .tool-hero p { font-size: 18px; }
+    .tool-demo-bar { grid-row: 4; margin: 0; }
+    .tool-shell { display: contents; }
+    .tool-shell > div { grid-column: 1; grid-row: 5; }
+    .result-panel { grid-column: 1; grid-row: 7; }
+    .panel { padding: 24px; }
+    .tool-page .preview-panel { grid-column: 1; grid-row: 6; margin: 0; padding: 20px; }
+    .tool-page #preview :global(.otto-document) { padding: 24px 16px; }
+    .otto-tool-hook { grid-row: 8; grid-template-columns: 1fr; padding: 32px; gap: 20px; margin-top: 8px; }
+    .otto-hook-mark { display: none; }
+    .otto-hook-action { grid-column: 1; }
+  }
+  @media (max-width: 480px) {
+    .fields, .tool-page :global(.repeat .fields) { grid-template-columns: 1fr; }
+    .actions .button { width: 100%; }
+    .tool-page #preview :global(table) { font-size: 11px; }
+  }
+</style>
