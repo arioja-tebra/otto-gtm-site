@@ -2134,8 +2134,8 @@
     ]
   },
   "/your-practice/preview/": {
-    "title": "Your practice, with Otto | Otto",
-    "description": "Explore Otto workflows for your practice and watch the product demonstrations.",
+    "title": "Your place on the Otto waitlist | Otto",
+    "description": "Preview your place on the Otto waitlist for 2027 and invite colleagues to move up the queue.",
     "type": "website",
     "noindex": true,
     "graph": [
@@ -2180,8 +2180,8 @@
         ],
         "@id": "/your-practice/preview/#webpage",
         "url": "/your-practice/preview/",
-        "name": "Your practice, with Otto | Otto",
-        "description": "Explore Otto workflows for your practice and watch the product demonstrations."
+        "name": "Your place on the Otto waitlist | Otto",
+        "description": "Preview your place on the Otto waitlist for 2027 and invite colleagues to move up the queue."
       }
     ]
   }

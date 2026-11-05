@@ -1,136 +1,508 @@
 ---
-import PracticeVideos from "../../../components/PracticeVideos.astro";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
-import { features } from "../../../data/practice";
 import pages from "../../../data/pages.json";
 ---
 
 <SiteLayout metadata={pages["/your-practice/preview/"]}>
-  <link rel="stylesheet" href="/assets/practice.css" />
-  <main id="main" class="practice-page">
-    <div class="wrap">
-      <div class="practice-subnav">
-        <a href="/your-practice/build/" id="edit-practice">
-          ← Edit my preferences
-        </a>
-        <span class="concept-tag">Your Otto tour</span>
-      </div>
-      <section class="practice-result-intro">
-        <div class="eyebrow">Your practice, with Otto</div>
-        <h1>
-          See Otto for <em id="result-practice-name">your practice.</em>
-        </h1>
-        <p>
-          Explore how Otto connects the parts of your practice day you chose.
-        </p>
-        <div class="result-tags">
-          <span id="result-size">Solo practice</span>
-          <span id="result-setting">In person and online</span>
-        </div>
-      </section>
-      <section class="result-workspace" aria-label="Your Otto product tour">
-        <div class="result-sidebar">
-          <img src="/assets/otto-logo.svg" alt="Otto" width="65" height="34" />
-          <span class="result-sidebar-label">YOUR WORKSPACE</span>
-          <b>◷ &nbsp; My day</b>
-          <span>▤ &nbsp; My notes</span>
-          <span>☷ &nbsp; Payments</span>
-          <div class="result-sidebar-bottom">
-            Made for your practice.
-            <br />
-            <small>Product tour preview</small>
-          </div>
-        </div>
-        <div class="result-main">
-          <div class="result-heading">
-            <div>
-              <span class="tag">FROM PREPARATION TO PAYMENT</span>
-              <h2>More room for care.</h2>
-            </div>
-            <span class="concept-tag">Preview</span>
-          </div>
-          <p class="result-explainer">
-            Here are the workflows you chose. Take a closer look or watch Otto
-            in action.
-          </p>
-          <div class="result-feature-cards">
-            {features.map((feature) => (
-              <article data-result-feature={feature.slug}>
-                <span class="result-card-number">
-                  {feature.number} / YOUR PRACTICE
-                </span>
-                <h3>{feature.label}</h3>
-                <p>{feature.description}</p>
-                <button
-                  type="button"
-                  class="text-link"
-                  data-interest={feature.slug}
-                >
-                  Take a closer look <span aria-hidden="true">↗</span>
-                </button>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-      <PracticeVideos />
-      <section class="result-next">
-        <div>
-          <h2>Ready to see more?</h2>
-          <p>Choose a workflow above to preview joining the Otto waitlist.</p>
-        </div>
-        <a class="text-link" href="/your-practice/">
-          Explore more of Otto ↗
-        </a>
-      </section>
-      <p class="practice-disclosure">
-        Product tour preview. No appointments, clinical information, or leads
-        are collected.
-      </p>
-      <dialog id="interest-dialog" aria-labelledby="interest-title">
-        <button class="dialog-close" type="button" aria-label="Close">
-          ×
-        </button>
-        <div id="interest-form-step">
-          <div class="eyebrow">Meet Otto</div>
-          <h2 id="interest-title">Make more room for care.</h2>
-          <p>
-            <strong id="interest-feature-name">Session prep</strong> is part of
-            your Otto tour. Preview joining the waitlist to learn more.
-          </p>
-          <form id="interest-form">
-            <label for="interest-email">Demo email</label>
-            <input
-              type="email"
-              id="interest-email"
-              value="alex@example.com"
-              required
-              maxlength="254"
-              autocomplete="off"
+  <main id="main" class="queue-page">
+    <div class="wrap queue-wrap">
+      <header class="queue-intro">
+        <span class="queue-demo-tag">Demo waitlist preview</span>
+        <div class="queue-check" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <path
+              d="m8 16 5 5 11-12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             />
-            <button class="button" type="submit">
-              Preview waitlist signup ↗
-            </button>
-          </form>
-          <p class="practice-fine">
-            Demo only. Nothing is submitted or saved, and no email will be sent.
-          </p>
+          </svg>
         </div>
-        <div id="interest-complete" hidden>
-          <div class="eyebrow">Preview complete</div>
-          <h2 tabindex="-1" id="interest-complete-title">
-            Thanks for exploring.
+        <h1>Your spot is saved.</h1>
+        <p>
+          Otto launches in <strong>2027.</strong>
+          <br />
+          You’re on the list for a practice day with more room for care.
+        </p>
+      </header>
+      <div class="queue-grid">
+        <section
+          class="queue-position"
+          aria-labelledby="queue-position-heading"
+        >
+          <div class="queue-card-eyebrow" id="queue-position-heading">
+            Your place in line
+          </div>
+          <div class="queue-number" aria-live="polite" aria-atomic="true">
+            <span>#</span>
+            <strong id="queue-number">234</strong>
+          </div>
+          <p>You’re in good company.</p>
+          <div class="queue-track" aria-hidden="true">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i class="queue-you"></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div class="queue-stats">
+            <div>
+              <strong id="queue-referrals">0</strong>
+              <span>Demo referral signups</span>
+            </div>
+            <div>
+              <strong>2027</strong>
+              <span>Otto’s launch year</span>
+            </div>
+          </div>
+        </section>
+        <section class="queue-invite" aria-labelledby="queue-invite-heading">
+          <div class="queue-card-eyebrow">Good things are worth sharing</div>
+          <h2 id="queue-invite-heading">
+            Invite a colleague.
+            <br />
+            <em>Move up the list.</em>
           </h2>
           <p>
-            You’ve reached the end of the waitlist demo. Nothing was submitted
-            or saved.
+            Know someone who would love a little more room for care? Invite them
+            to Otto. Signups through your link move you closer to the front.
           </p>
-          <button class="button" type="button" id="interest-return">
-            Back to my practice ↗
-          </button>
+          <label for="referral-link">Your invite link</label>
+          <div class="queue-link-row">
+            <input
+              id="referral-link"
+              type="text"
+              readonly
+              value="Demo invite link"
+            />
+            <button type="button" class="button" id="copy-referral">
+              Copy link
+            </button>
+          </div>
+          <p
+            class="queue-copy-status"
+            id="referral-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <a
+            class="queue-email"
+            id="email-referral"
+            href="mailto:?subject=Join%20me%20on%20the%20Otto%20waitlist"
+          >
+            Invite by email{" "}
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4 6h16v12H4zM4 7l8 6 8-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+          </a>
+          <div class="queue-referral-demo">
+            <span>This is a demo invite link. Referrals aren’t tracked.</span>
+            <button type="button" id="preview-referral">
+              Preview a referral moving you up
+            </button>
+          </div>
+        </section>
+      </div>
+      <section class="queue-next" aria-labelledby="queue-next-heading">
+        <div>
+          <div class="queue-card-eyebrow">Until then</div>
+          <h2 id="queue-next-heading">
+            Get a feel for your next practice day.
+          </h2>
+          <p>
+            Explore Otto’s session prep, AI progress notes, and payments while
+            you wait.
+          </p>
         </div>
-      </dialog>
+        <a class="button queue-outline" href="/your-practice/">
+          Explore Otto
+        </a>
+      </section>
+      <div class="queue-bottom">
+        <a href="/your-practice/build/" id="edit-practice">
+          Edit my preferences
+        </a>
+        <p>
+          Demo only. This screen previews a saved spot and referral flow. No
+          information has been submitted or saved.
+        </p>
+      </div>
     </div>
   </main>
-  <script is:inline defer src="/assets/practice.js"></script>
+  <script>
+    const link = document.querySelector<HTMLInputElement>("#referral-link");
+    const copy = document.querySelector<HTMLButtonElement>("#copy-referral");
+    const status = document.querySelector<HTMLElement>("#referral-status");
+    const email = document.querySelector<HTMLAnchorElement>("#email-referral");
+    const edit = document.querySelector<HTMLAnchorElement>("#edit-practice");
+    const explore = document.querySelector<HTMLAnchorElement>(".queue-next a");
+    if (link && copy && status && email && explore) {
+      const invite = new URL(explore.href);
+      invite.searchParams.set("ref", "demo234");
+      link.value = invite.href;
+      email.href = `mailto:?subject=${encodeURIComponent("Join me on the Otto waitlist")}&body=${encodeURIComponent("Otto launches in 2027. Take a look at what it can do for your practice: " + invite.href)}`;
+      copy.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(invite.href);
+          status.textContent = "Invite link copied.";
+          copy.textContent = "Copied";
+        } catch {
+          link.focus();
+          link.select();
+          status.textContent = "Select and copy your invite link above.";
+        }
+      });
+      let referrals = 0;
+      document
+        .querySelector("#preview-referral")
+        ?.addEventListener("click", () => {
+          referrals = Math.min(233, referrals + 1);
+          document.querySelector("#queue-referrals")!.textContent =
+            String(referrals);
+          document.querySelector("#queue-number")!.textContent = String(
+            234 - referrals,
+          );
+          status.textContent = `Demo referral added. Your preview spot is now #${234 - referrals}.`;
+        });
+    }
+    if (edit) {
+      const url = new URL(edit.href);
+      url.search = location.search;
+      edit.href = url.href;
+    }
+  </script>
+  <style>
+    .queue-page {
+      color: var(--ink);
+      background: var(--paper);
+      padding: 48px 0 28px;
+    }
+    .queue-wrap {
+      max-width: 1112px;
+    }
+    .queue-intro {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 38px;
+    }
+    .queue-demo-tag {
+      display: inline-block;
+      color: var(--ink-secondary);
+      font-size: 11px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .queue-check {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin: 22px auto 20px;
+      border-radius: 50%;
+      color: var(--secondary);
+      background: color-mix(in srgb, var(--growth-2) 12%, var(--white));
+    }
+    .queue-check svg {
+      width: 29px;
+      height: 29px;
+    }
+    .queue-intro h1 {
+      font-size: clamp(42px, 4.5vw, 60px);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      margin: 0 0 18px;
+    }
+    .queue-intro > p {
+      font-size: 19px;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .queue-intro strong {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+    .queue-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 24px;
+    }
+    .queue-position,
+    .queue-invite {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow:
+        0 1px 2px color-mix(in srgb, var(--ink) 4%, transparent),
+        0 12px 30px -18px color-mix(in srgb, var(--deep-teal) 16%, transparent);
+      min-width: 0;
+    }
+    .queue-card-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-secondary);
+    }
+    .queue-position {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    .queue-number {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      color: var(--deep-teal);
+      line-height: 1;
+      margin: 29px 0 14px;
+    }
+    .queue-number > span {
+      color: var(--growth-2);
+      font-size: 47px;
+      font-weight: 300;
+      margin-right: 3px;
+    }
+    .queue-number > strong {
+      font-size: 106px;
+      font-weight: 400;
+      letter-spacing: -0.065em;
+    }
+    .queue-position > p {
+      color: var(--ink-secondary);
+      font-size: 15px;
+      margin: 0;
+    }
+    .queue-track {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin: 32px 0;
+    }
+    .queue-track i {
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--growth-2) 17%, var(--white));
+    }
+    .queue-track .queue-you {
+      background: var(--attention);
+      width: 17px;
+      height: 17px;
+      box-shadow: 0 0 0 5px
+        color-mix(in srgb, var(--attention) 12%, transparent);
+      margin: 0 5px;
+    }
+    .queue-stats {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      gap: 15px;
+    }
+    .queue-stats strong {
+      display: block;
+      font-weight: 400;
+      font-size: 28px;
+      color: var(--secondary);
+    }
+    .queue-stats span {
+      font-size: 11px;
+      color: var(--ink-secondary);
+    }
+    .queue-invite h2 {
+      font-size: 37px;
+      font-weight: 400;
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+      margin: 19px 0 18px;
+    }
+    .queue-invite em {
+      color: var(--growth-2);
+      font-style: normal;
+    }
+    .queue-invite > p {
+      font-size: 16px;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+    }
+    .queue-invite > label {
+      display: block;
+      font-size: 12px;
+      color: var(--secondary);
+      margin: 24px 0 9px;
+    }
+    .queue-link-row {
+      display: flex;
+      gap: 10px;
+    }
+    .queue-link-row input {
+      flex: 1;
+      width: 0;
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      background: var(--paper);
+      color: var(--ink-secondary);
+      font-size: 12px;
+    }
+    .queue-link-row .button {
+      flex-shrink: 0;
+      font-size: 14px;
+      padding: 0 20px;
+    }
+    .queue-invite .queue-copy-status {
+      min-height: 1.5em;
+      font-size: 12px;
+      margin: 7px 0 8px;
+      color: var(--secondary);
+    }
+    .queue-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--attention);
+    }
+    .queue-email svg {
+      width: 17px;
+      height: 17px;
+    }
+    .queue-referral-demo {
+      border-top: 1px solid var(--line);
+      margin-top: 25px;
+      padding-top: 17px;
+      font-size: 11px;
+      color: var(--ink-secondary);
+    }
+    .queue-referral-demo > span {
+      display: block;
+    }
+    .queue-referral-demo button {
+      padding: 6px 0 0;
+      border: 0;
+      background: none;
+      color: var(--secondary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-size: 11px;
+    }
+    .queue-next {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      padding: 34px 0;
+      margin-top: 15px;
+    }
+    .queue-next h2 {
+      font-size: 27px;
+      margin: 13px 0 10px;
+      line-height: 1.15;
+    }
+    .queue-next p {
+      font-size: 15px;
+      color: var(--ink-secondary);
+      margin: 0;
+    }
+    .queue-outline {
+      flex-shrink: 0;
+      border: 1px solid var(--secondary);
+      background: transparent;
+      color: var(--secondary);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .queue-outline:hover {
+      background: color-mix(in srgb, var(--growth-2) 10%, var(--white));
+    }
+    .queue-bottom {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      align-items: start;
+      border-top: 1px solid var(--line);
+      padding: 19px 0 25px;
+    }
+    .queue-bottom a {
+      flex-shrink: 0;
+      font-size: 12px;
+      color: var(--secondary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .queue-bottom p {
+      text-align: right;
+      font-size: 11px;
+      color: var(--ink-secondary);
+      max-width: 530px;
+      margin: 0;
+    }
+    @media (max-width: 700px) {
+      .queue-page {
+        padding-top: 33px;
+      }
+      .queue-intro {
+        margin-bottom: 28px;
+      }
+      .queue-intro h1 {
+        font-size: 42px;
+      }
+      .queue-intro > p {
+        font-size: 17px;
+      }
+      .queue-check {
+        margin-top: 18px;
+      }
+      .queue-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .queue-position,
+      .queue-invite {
+        padding: 28px 24px;
+        border-radius: 16px;
+      }
+      .queue-number {
+        margin-top: 23px;
+      }
+      .queue-number strong {
+        font-size: 90px;
+      }
+      .queue-track {
+        margin: 25px 0;
+      }
+      .queue-invite h2 {
+        font-size: 33px;
+      }
+      .queue-next {
+        display: block;
+        padding: 28px 0;
+      }
+      .queue-next .button {
+        margin-top: 20px;
+      }
+      .queue-bottom {
+        display: block;
+      }
+      .queue-bottom p {
+        margin-top: 15px;
+        text-align: left;
+      }
+    }
+  </style>
 </SiteLayout>
