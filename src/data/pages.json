@@ -1872,5 +1872,317 @@
         }
       }
     ]
+  },
+  "/your-practice/": {
+    "title": "See what Otto can do for you | Otto",
+    "description": "See how Otto connects session prep, AI progress notes, telehealth, and payments for independent mental health practices.",
+    "type": "website",
+    "noindex": true,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/about/#webpage",
+        "url": "/about/",
+        "name": "About Otto by Tebra | Otto",
+        "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Otto by Tebra",
+            "item": "/about/"
+          }
+        ],
+        "@id": "/your-practice/#webpage",
+        "url": "/your-practice/",
+        "name": "See what Otto can do for you | Otto",
+        "description": "See how Otto connects session prep, AI progress notes, telehealth, and payments for independent mental health practices."
+      }
+    ]
+  },
+  "/your-practice/personalized/": {
+    "title": "Be ready for the conversation | Otto",
+    "description": "Explore patient summaries and session prep with Otto.",
+    "type": "website",
+    "noindex": true,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/about/#webpage",
+        "url": "/about/",
+        "name": "About Otto by Tebra | Otto",
+        "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Otto by Tebra",
+            "item": "/about/"
+          }
+        ],
+        "@id": "/your-practice/personalized/#webpage",
+        "url": "/your-practice/personalized/",
+        "name": "Be ready for the conversation | Otto",
+        "description": "Explore patient summaries and session prep with Otto."
+      }
+    ]
+  },
+  "/your-practice/notes/": {
+    "title": "Let Otto draft the note | Otto",
+    "description": "See how Otto turns session audio into SOAP or DAP drafts you review, edit, and sign.",
+    "type": "website",
+    "noindex": true,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/about/#webpage",
+        "url": "/about/",
+        "name": "About Otto by Tebra | Otto",
+        "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Otto by Tebra",
+            "item": "/about/"
+          }
+        ],
+        "@id": "/your-practice/notes/#webpage",
+        "url": "/your-practice/notes/",
+        "name": "Let Otto draft the note | Otto",
+        "description": "See how Otto turns session audio into SOAP or DAP drafts you review, edit, and sign."
+      }
+    ]
+  },
+  "/your-practice/front-desk/": {
+    "title": "Keep payment moving | Otto",
+    "description": "Watch the Otto billing workflow and explore the steps from visit to payment.",
+    "type": "website",
+    "noindex": true,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/about/#webpage",
+        "url": "/about/",
+        "name": "About Otto by Tebra | Otto",
+        "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Otto by Tebra",
+            "item": "/about/"
+          }
+        ],
+        "@id": "/your-practice/front-desk/#webpage",
+        "url": "/your-practice/front-desk/",
+        "name": "Keep payment moving | Otto",
+        "description": "Watch the Otto billing workflow and explore the steps from visit to payment."
+      }
+    ]
+  },
+  "/your-practice/build/": {
+    "title": "See Otto for your practice | Otto",
+    "description": "Choose the parts of your practice day you would like help with and explore Otto.",
+    "type": "website",
+    "noindex": true,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/about/#webpage",
+        "url": "/about/",
+        "name": "About Otto by Tebra | Otto",
+        "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Otto by Tebra",
+            "item": "/about/"
+          }
+        ],
+        "@id": "/your-practice/build/#webpage",
+        "url": "/your-practice/build/",
+        "name": "See Otto for your practice | Otto",
+        "description": "Choose the parts of your practice day you would like help with and explore Otto."
+      }
+    ]
+  },
+  "/your-practice/preview/": {
+    "title": "Your practice, with Otto | Otto",
+    "description": "Explore Otto workflows for your practice and watch the product demonstrations.",
+    "type": "website",
+    "noindex": true,
+    "graph": [
+      {
+        "@type": "Organization",
+        "@id": "/#organization",
+        "name": "Otto",
+        "url": "/",
+        "logo": "/assets/otto-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#website",
+        "name": "Otto by Tebra",
+        "url": "/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "/about/#webpage",
+        "url": "/about/",
+        "name": "About Otto by Tebra | Otto",
+        "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+        "isPartOf": {
+          "@id": "/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Otto by Tebra",
+            "item": "/about/"
+          }
+        ],
+        "@id": "/your-practice/preview/#webpage",
+        "url": "/your-practice/preview/",
+        "name": "Your practice, with Otto | Otto",
+        "description": "Explore Otto workflows for your practice and watch the product demonstrations."
+      }
+    ]
   }
 }

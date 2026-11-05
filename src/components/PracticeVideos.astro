@@ -1,0 +1,57 @@
+---
+interface Props {
+  billingOnly?: boolean;
+}
+const { billingOnly = false } = Astro.props;
+const videos = [
+  {
+    title: "Otto. It just works.",
+    label: "MEET OTTO · 2:40",
+    src: "/media/otto-it-just-works.mp4",
+    poster: "/media/otto-overview-poster.jpg",
+    description:
+      "See how Otto connects the work around a visit, from the first conversation to the next step.",
+  },
+  {
+    title: "Follow the visit through to billing.",
+    label: "THE BILLING WALKTHROUGH · 3:33",
+    src: "/media/otto-billing-walkthrough.mp4",
+    poster: "/media/otto-billing-poster.jpg",
+    description:
+      "Take a closer look at the billing workflow in this product demonstration.",
+  },
+];
+const shown = billingOnly ? videos.slice(1) : videos;
+---
+
+<section
+  class:list={["practice-videos", { "billing-video-only": billingOnly }]}
+  id="watch"
+  aria-label="Watch Otto in action"
+>
+  {shown.map((video) => (
+    <article class="practice-video-card">
+      <div class="video-card-heading">
+        <span class="tag">{video.label}</span>
+        <span class="video-play-label">PRESS PLAY ↗</span>
+      </div>
+      <video
+        controls
+        playsinline
+        preload="none"
+        poster={video.poster}
+        aria-label={video.title}
+      >
+        <source src={video.src} type="video/mp4" />
+        <p>
+          Your browser does not support this video.{" "}
+          <a href={video.src}>Open the video.</a>
+        </p>
+      </video>
+      <div class="video-card-copy">
+        <h2>{video.title}</h2>
+        <p>{video.description}</p>
+      </div>
+    </article>
+  ))}
+</section>

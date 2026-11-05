@@ -12,6 +12,7 @@ if (!['https:', 'http:'].includes(url.protocol) || url.pathname !== '/' || url.s
 export default defineConfig({
   site: url.origin,
   output: 'static',
+  devToolbar: { enabled: false },
   trailingSlash: 'always',
   build: { format: 'directory' },
 });
