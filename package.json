@@ -13,6 +13,8 @@
     "test": "node --test tests/*.test.mjs",
     "validate": "pnpm check && pnpm build && pnpm test",
     "preview:cloudflare": "pnpm build && wrangler dev",
+    "build:pages": "astro build && node scripts/prepare-pages.mjs",
+    "test:pages": "node --test tests/pages-artifact.mjs",
     "deploy": "pnpm validate && wrangler deploy",
     "format": "prettier --write src"
   },

@@ -1,5 +1,6 @@
-name: Astro validation
+name: Astro validation and Pages deployment
 on:
+  workflow_dispatch:
   pull_request:
     branches: [main]
   push:
@@ -27,8 +28,38 @@ jobs:
         env:
           SEO_PRODUCTION: "1"
           SITE_URL: https://release-check.example
+      - name: Build and verify GitHub Pages preview
+        run: pnpm build:pages && pnpm test:pages
+        env:
+          SITE_URL: https://arioja-tebra.github.io
+          SEO_PRODUCTION: "0"
+      - name: Check the packaged site in desktop and mobile browsers
+        run: pnpm exec playwright test --config playwright.pages.config.ts
+      - name: Upload Pages site
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .pages/otto-gtm-site
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: browser-failures
           path: test-results/
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy verified site to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
