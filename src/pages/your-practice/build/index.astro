@@ -29,11 +29,13 @@ import pages from "../../../data/pages.json";
               <span>2</span>Your priorities
             </li>
             <li data-step-label="3">
-              <span>3</span>Your spot
+              <span>3</span>Your preview
             </li>
           </ol>
           <p class="practice-fine">
-            Use fictional details. Nothing is submitted or saved.
+            Use fictional details. This previews signup; it does not create an
+            account, reserve access, or send an email.{" "}
+            <a href="/faq/#getting-started">Access and setup questions</a>
           </p>
         </aside>
         <div class="builder-panel">
@@ -136,7 +138,7 @@ import pages from "../../../data/pages.json";
                   ← Back
                 </button>
                 <button class="button" type="submit">
-                  Save my waitlist spot <span aria-hidden="true">↗</span>
+                  Preview my waitlist spot <span aria-hidden="true">↗</span>
                 </button>
               </div>
             </section>
@@ -153,3 +155,7 @@ import pages from "../../../data/pages.json";
   </main>
   <script is:inline defer src="/assets/practice.js"></script>
 </SiteLayout>
+
+<style>
+  .practice-fine a { text-decoration: underline; text-underline-offset: 3px; }
+</style>

@@ -24,8 +24,8 @@ test("practice funnel reaches the demo waitlist and preserves preferences", asyn
   await page.getByLabel("How do you see clients?").selectOption("Online");
   await page.getByRole("button", { name: "Choose my priorities" }).click();
   await expect(page.locator("[name=feature][value=notes]")).toBeChecked();
-  await page.getByRole("button", { name: "Save my waitlist spot" }).click();
-  await expect(page.locator("h1")).toHaveText("Your spot is saved.");
+  await page.getByRole("button", { name: "Preview my waitlist spot" }).click();
+  await expect(page.locator("h1")).toHaveText("Preview your waitlist spot.");
   await expect(page.locator(".queue-intro")).toContainText("2027");
   await expect(page.locator("#queue-number")).toHaveText("234");
   await expect(page.locator(".queue-demo-tag")).toHaveText(
@@ -63,7 +63,7 @@ test("priorities require a choice and a failed clipboard offers a selectable inv
   await page.goto("/your-practice/build/");
   await page.getByRole("button", { name: "Choose my priorities" }).click();
   await page.locator("[name=feature][value=personalized]").uncheck();
-  await page.getByRole("button", { name: "Save my waitlist spot" }).click();
+  await page.getByRole("button", { name: "Preview my waitlist spot" }).click();
   await expect(page.getByRole("alert")).toHaveText(
     "Choose at least one workflow for your tour.",
   );

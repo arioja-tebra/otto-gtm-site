@@ -14,23 +14,39 @@ import pages from "../../data/pages.json";
           for <em>care.</em>
         </h1>
         <p class="waitlist-dek">
-          Join the waitlist for Otto, built for independent mental health
-          practices.
+          Explore Otto for independent mental health practices, with an early
+          focus on solo, self-pay care. Try the signup preview to see the
+          questions about your practice.
         </p>
         <div class="waitlist-points">
           <p>
-            <span>01</span> AI-assisted notes you review and sign.
+            <span>01</span> Review and edit a SOAP or DAP draft, then sign.
           </p>
           <p>
             <span>02</span> Scheduling, telehealth, and payments together.
           </p>
           <p>
-            <span>03</span> A practice day with fewer moving parts.
+            <span>03</span> Confirm access and setup before your first session.
           </p>
         </div>
         <a class="text-link" href="/mental-health-ehr/">
           Take a closer look at Otto
         </a>
+        <div class="waitlist-expectations">
+          <h2>What happens next?</h2>
+          <p>
+            This signup is a demo. It does not reserve access, create an
+            account, or send a confirmation or follow-up email.
+          </p>
+          <p>
+            You can watch the demo and use the free tools today. Before using
+            Otto with clients, confirm availability, pricing, setup, and
+            support for your practice.
+          </p>
+          <a class="text-link" href="/faq/#getting-started">
+            Access, switching, and support questions
+          </a>
+        </div>
         <div class="waitlist-flower" aria-hidden="true">
           <svg viewBox="0 0 300 180">
             <path d="M150 180V50" stroke="#004852" stroke-width="3" />
@@ -61,15 +77,15 @@ import pages from "../../data/pages.json";
             Fill with demo data
           </button>
           <p id="waitlist-demo-status" role="status">
-            Demo only. The Google Sheet-connected signup runs in the local
-            version.
+            Demo only. Use the fictional email provided. Nothing is submitted
+            or saved.
           </p>
           <a id="waitlist-demo-reset" href="/waitlist/" hidden>
             Restart preview
           </a>
         </div>
         <div id="email-step">
-          <h2>Meet Otto.</h2>
+          <h2>Preview the signup.</h2>
           <p>
             Try the signup flow with fictional details. This preview does not
             collect leads.
@@ -83,7 +99,7 @@ import pages from "../../data/pages.json";
               autocomplete="email"
               inputmode="email"
               maxlength="254"
-              placeholder="you@yourpractice.com"
+              placeholder="jordan@example.com"
               required
             />
             <div class="bot-trap" aria-hidden="true">
@@ -101,7 +117,7 @@ import pages from "../../data/pages.json";
               Continue preview <span aria-hidden="true"></span>
             </button>
             <p class="waitlist-fine">
-              No information is sent or saved in this GitHub Pages preview.{" "}
+              This preview does not add you to a waitlist or send an email.{" "}
               <a
                 href="https://www.tebra.com/platform-privacy-policy"
                 target="_blank"
@@ -119,7 +135,10 @@ import pages from "../../data/pages.json";
           <h2 tabindex="-1" id="practice-heading">
             A little about your practice.
           </h2>
-          <p>Help us make our first conversation useful.</p>
+          <p>
+            These questions help identify practice fit. Use fictional answers
+            for this preview.
+          </p>
           <form id="waitlist-practice-form">
             <div class="fields">
               <label>
@@ -221,6 +240,11 @@ import pages from "../../data/pages.json";
           <p id="complete-copy">
             Preview complete. Nothing was submitted or saved.
           </p>
+          <p>
+            You will not receive an email from this preview. Explore the demo
+            next, or review the questions to ask before getting started.
+          </p>
+          <a class="text-link" href="/demo/#watch">Watch the product demo</a>
           <div class="waitlist-next">
             <span class="tag">While you’re here</span>
             <h3>Give your practice a head start.</h3>
@@ -250,6 +274,9 @@ import pages from "../../data/pages.json";
 </SiteLayout>
 
 <style>
+  .waitlist-expectations { margin-top: 28px; }
+  .waitlist-expectations h2 { font-size: 24px; line-height: 30px; font-weight: 400; }
+  .waitlist-expectations p { font-size: 16px; line-height: 24px; }
   .waitlist-page { position: relative; isolation: isolate; min-height: 0; overflow: hidden; background: #d9cfc3; }
   .waitlist-page::before { content: ""; position: absolute; z-index: -1; inset: -60px; background: url('/media/hero-photo.png') 70% 0 / cover; filter: blur(32px); }
   .waitlist-layout { max-width: 1240px; padding: 126px 20px 72px; grid-template-columns: minmax(0,1fr) minmax(0,520px); gap: 24px; align-items: stretch; }

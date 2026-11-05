@@ -20,11 +20,10 @@ import pages from "../../../data/pages.json";
             />
           </svg>
         </div>
-        <h1>Your spot is saved.</h1>
+        <h1>Preview your waitlist spot.</h1>
         <p>
-          Otto launches in <strong>2027.</strong>
-          <br />
-          You’re on the list for a practice day with more room for care.
+          This demo shows a <strong>2027</strong> launch and a sample place in line.
+          No spot is reserved, and no confirmation or follow-up email is sent.
         </p>
       </header>
       <div class="queue-grid">
@@ -33,13 +32,13 @@ import pages from "../../../data/pages.json";
           aria-labelledby="queue-position-heading"
         >
           <div class="queue-card-eyebrow" id="queue-position-heading">
-            Your place in line
+            Your demo place in line
           </div>
           <div class="queue-number" aria-live="polite" aria-atomic="true">
             <span>#</span>
             <strong id="queue-number">234</strong>
           </div>
-          <p>You’re in good company.</p>
+          <p>This position is for illustration only.</p>
           <div class="queue-track" aria-hidden="true">
             <i></i>
             <i></i>
@@ -57,7 +56,7 @@ import pages from "../../../data/pages.json";
             </div>
             <div>
               <strong>2027</strong>
-              <span>Otto’s launch year</span>
+              <span>Launch year shown in demo</span>
             </div>
           </div>
         </section>
@@ -69,8 +68,9 @@ import pages from "../../../data/pages.json";
             <em>Move up the list.</em>
           </h2>
           <p>
-            Know someone who would love a little more room for care? Invite them
-            to Otto. Signups through your link move you closer to the front.
+            Share the product tour with a colleague. The demo below shows how
+            a referral could change a sample position; referrals are not tracked
+            and do not affect access.
           </p>
           <label for="referral-link">Your invite link</label>
           <div class="queue-link-row">
@@ -120,8 +120,9 @@ import pages from "../../../data/pages.json";
             Get a feel for your next practice day.
           </h2>
           <p>
-            Explore Otto’s session prep, AI progress notes, and payments while
-            you wait.
+            Explore session prep, notes, and payments. Before getting started,
+            review <a href="/faq/#getting-started">access, onboarding, and support
+            questions</a>. Confirm timing and practice fit before planning a move.
           </p>
         </div>
         <a class="button queue-outline" href="/your-practice/">
@@ -145,12 +146,12 @@ import pages from "../../../data/pages.json";
     const status = document.querySelector<HTMLElement>("#referral-status");
     const email = document.querySelector<HTMLAnchorElement>("#email-referral");
     const edit = document.querySelector<HTMLAnchorElement>("#edit-practice");
-    const explore = document.querySelector<HTMLAnchorElement>(".queue-next a");
+    const explore = document.querySelector<HTMLAnchorElement>(".queue-next > a");
     if (link && copy && status && email && explore) {
       const invite = new URL(explore.href);
       invite.searchParams.set("ref", "demo234");
       link.value = invite.href;
-      email.href = `mailto:?subject=${encodeURIComponent("Join me on the Otto waitlist")}&body=${encodeURIComponent("Otto launches in 2027. Take a look at what it can do for your practice: " + invite.href)}`;
+      email.href = `mailto:?subject=${encodeURIComponent("Join me on the Otto waitlist")}&body=${encodeURIComponent("Take a look at the Otto product tour. Signup on this site is a demo: " + invite.href)}`;
       copy.addEventListener("click", async () => {
         try {
           await navigator.clipboard.writeText(invite.href);
@@ -182,6 +183,7 @@ import pages from "../../../data/pages.json";
     }
   </script>
   <style>
+    .queue-next p a { text-decoration: underline; text-underline-offset: 3px; }
     .queue-page {
       color: var(--ink);
       background: var(--paper);

@@ -53,7 +53,7 @@
     practiceForm.elements.ehr.value='Switching';
     practiceForm.elements.system.value='SimplePractice';
     updateConditional();
-    $('waitlist-demo-status').textContent='Demo mode. Fictional details are filled in. Nothing will be sent to the sheet.';
+    $('waitlist-demo-status').textContent='Demo mode. Fictional details are filled in. Nothing will be submitted or saved.';
     $('waitlist-demo-fill').hidden=true;
     $('waitlist-demo-reset').hidden=false;
     document.querySelector('.saved-note').textContent='✓ Demo email step complete.';
