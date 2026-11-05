@@ -31,7 +31,7 @@ pnpm exec playwright test
 
 ## Editing the site
 
-The product teaser starts at `/your-practice/`. Watch the overview and billing videos, explore session prep, notes, and payment workflows, then choose **See Otto for my practice** for a short tour based on your priorities. Signup is demo-only. All six routes remain noindex in production builds as well as previews.
+The product teaser starts at `/your-practice/`. Watch the overview and billing videos, explore session prep, notes, and payment workflows, then choose **See Otto for my practice** for a short tour based on your priorities. The confirmation at `/your-practice/preview/` shows a 2027 launch and demo spot #234, with invite copying, email composition, and a simulated referral. Signup and queue positions are demo-only; nothing is stored. All six routes remain noindex in production builds as well as previews.
 
 The supplied videos are compressed for web playback in `public/media/`. They use native controls, poster images, and no automatic download until playback. Copy lives in `src/data/practice.ts`; the pages are in `src/pages/your-practice/`.
 

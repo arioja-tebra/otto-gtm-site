@@ -7,45 +7,45 @@ test.beforeEach(async ({ context }) => {
   );
 });
 
-test("personalized practice funnel preserves choices and completes the demo without submitting", async ({
+test("practice funnel reaches the demo waitlist and preserves preferences", async ({
   page,
+  context,
 }) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   const posts: string[] = [];
   page.on("request", (request) => {
     if (request.method() === "POST") posts.push(request.url());
   });
   await page.goto("/your-practice/");
   await page.getByRole("link", { name: "See how it works" }).nth(1).click();
-  await expect(page.locator("h1")).toHaveText(
-    "Stay with the conversation. Otto can start the note.",
-  );
   await page.getByRole("link", { name: "See this for my practice" }).click();
   await page.getByLabel("Give your preview a name").fill("Willow Therapy");
   await page.getByRole("radio", { name: "A team" }).check();
   await page.getByLabel("How do you see clients?").selectOption("Online");
   await page.getByRole("button", { name: "Choose my priorities" }).click();
   await expect(page.locator("[name=feature][value=notes]")).toBeChecked();
-  await expect(
-    page.locator("[name=feature][value=personalized]"),
-  ).not.toBeChecked();
-  await page.locator("[name=feature][value=front-desk]").check();
-  await page.getByRole("button", { name: "Show me Otto" }).click();
-  await expect(page.locator("h1")).toHaveText("See Otto for Willow Therapy");
-  await expect(page.locator("#result-size")).toHaveText("Group practice");
-  await expect(page.locator("#result-setting")).toHaveText("Online");
-  await expect(page.locator("[data-result-feature=personalized]")).toBeHidden();
-  await expect(page.locator("[data-result-feature=notes]")).toBeVisible();
-  await page.locator("[data-interest=notes]").click();
-  await expect(page.getByRole("dialog")).toBeVisible();
-  await expect(page.locator("#interest-feature-name")).toHaveText(
-    "Let Otto draft the note",
+  await page.getByRole("button", { name: "Save my waitlist spot" }).click();
+  await expect(page.locator("h1")).toHaveText("Your spot is saved.");
+  await expect(page.locator(".queue-intro")).toContainText("2027");
+  await expect(page.locator("#queue-number")).toHaveText("234");
+  await expect(page.locator(".queue-demo-tag")).toHaveText(
+    "Demo waitlist preview",
   );
-  await page.getByRole("button", { name: "Preview waitlist signup" }).click();
-  await expect(page.locator("#interest-complete")).toContainText(
-    "Nothing was submitted or saved.",
+  const invite = new URL("/your-practice/?ref=demo234", page.url()).href;
+  await page.getByRole("button", { name: "Copy link", exact: true }).click();
+  await expect(page.getByRole("status")).toHaveText("Invite link copied.");
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
+    invite,
   );
-  await page.getByRole("button", { name: "Back to my practice" }).click();
-  await expect(page.getByRole("dialog")).toBeHidden();
+  const email = new URL(
+    (await page.locator("#email-referral").getAttribute("href"))!,
+  );
+  expect(email.searchParams.get("body")).toContain(invite);
+  await page
+    .getByRole("button", { name: "Preview a referral moving you up" })
+    .click();
+  await expect(page.locator("#queue-number")).toHaveText("233");
+  await expect(page.locator("#queue-referrals")).toHaveText("1");
   await page.getByRole("link", { name: "Edit my preferences" }).click();
   await expect(page.getByLabel("Give your preview a name")).toHaveValue(
     "Willow Therapy",
@@ -57,28 +57,36 @@ test("personalized practice funnel preserves choices and completes the demo with
   expect(posts).toEqual([]);
 });
 
-test("priorities require a choice, back preserves edits, and concept dialog supports Escape", async ({
+test("priorities require a choice and a failed clipboard offers a selectable invite", async ({
   page,
 }) => {
   await page.goto("/your-practice/build/");
   await page.getByRole("button", { name: "Choose my priorities" }).click();
   await page.locator("[name=feature][value=personalized]").uncheck();
-  await page.getByRole("button", { name: "Show me Otto" }).click();
+  await page.getByRole("button", { name: "Save my waitlist spot" }).click();
   await expect(page.getByRole("alert")).toHaveText(
     "Choose at least one workflow for your tour.",
   );
-  await page.getByRole("button", { name: "Back", exact: false }).click();
-  await expect(page.locator('[data-builder-step="1"]')).toBeVisible();
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "clipboard", {
+      value: {
+        writeText: async () => {
+          throw new Error("No clipboard");
+        },
+      },
+      configurable: true,
+    });
+  });
   await page.goto(
     "/your-practice/preview/?practice=%3Cscript%3E&feature=unknown",
   );
-  await expect(page.locator("#result-practice-name")).toHaveText("<script>");
-  await expect(
-    page.locator("[data-result-feature=personalized]"),
-  ).toBeVisible();
-  await page.getByRole("button", { name: "Take a closer look" }).click();
-  await page.keyboard.press("Escape");
-  await expect(page.getByRole("dialog")).toBeHidden();
+  await expect(page.locator("#queue-number")).toHaveText("234");
+  await page.getByRole("button", { name: "Copy link", exact: true }).click();
+  await expect(page.getByLabel("Your invite link")).toBeFocused();
+  await expect(page.getByRole("status")).toHaveText(
+    "Select and copy your invite link above.",
+  );
+  await expect(page.getByLabel("Your invite link")).not.toHaveValue(/script/);
 });
 
 test("hero shows one overview video and plays from its poster", async ({
