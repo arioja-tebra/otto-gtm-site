@@ -46,6 +46,7 @@
     document
       .querySelector("#builder-next")
       .addEventListener("click", () => showStep(2));
+    document.querySelector("#builder-next").disabled = false;
     document
       .querySelector("#builder-back")
       .addEventListener("click", () => showStep(1));

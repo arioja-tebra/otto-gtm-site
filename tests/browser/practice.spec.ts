@@ -107,3 +107,23 @@ test("both supplied videos play with native controls and poster images", async (
     await video.evaluate((element: HTMLVideoElement) => element.pause());
   }
 });
+
+test("tour waits for its script before allowing the first step", async ({
+  page,
+}) => {
+  let releaseScript!: () => void;
+  const scriptReady = new Promise<void>((resolve) => {
+    releaseScript = resolve;
+  });
+  await page.route("**/assets/practice.js", async (route) => {
+    await scriptReady;
+    await route.continue();
+  });
+  await page.goto("/your-practice/build/", { waitUntil: "commit" });
+  const next = page.getByRole("button", { name: "Choose my priorities" });
+  await expect(next).toBeDisabled();
+  releaseScript();
+  await expect(next).toBeEnabled();
+  await next.click();
+  await expect(page.locator('[data-builder-step="2"]')).toBeVisible();
+});
