@@ -1,4 +1,5 @@
 ---
+import ContentDisclaimer from "../../../components/ContentDisclaimer.astro";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
 import pages from "../../../data/pages.json";
 ---
@@ -19,6 +20,7 @@ import pages from "../../../data/pages.json";
           deductibles and out-of-network benefits.
         </p>
       </section>
+      <ContentDisclaimer kind="tool" />
       <div class="tool-demo-bar">
         <button type="button" id="fill-demo" data-tool="therapy-cost-estimator">
           Fill with demo data <span aria-hidden="true">↗</span>

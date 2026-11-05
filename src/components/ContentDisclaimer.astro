@@ -1,0 +1,57 @@
+---
+interface Props {
+  kind: "article" | "tool";
+}
+
+const { kind } = Astro.props;
+---
+
+<aside
+  class="content-disclaimer"
+  aria-label={kind === "article" ? "Article disclaimer" : "Tool disclaimer"}
+>
+  <p>
+    <em>
+      {kind === "article" ? (
+        <>
+          Disclaimer: This article is for general informational purposes only.
+          It is not medical, legal, financial, tax, or other professional
+          advice. Laws and requirements vary by state and change often. Please
+          consult a qualified professional licensed in your jurisdiction before
+          acting on any information here.
+        </>
+      ) : (
+        <>
+          <strong>For informational purposes only</strong>. This tool generates
+          estimates based on the information you provide and general market
+          data. Results may be inaccurate, incomplete, or out of date, and are
+          not financial, tax, legal, accounting, or billing advice. Rates you
+          set for your services are your decision alone. Before you rely on any
+          result, please consult a qualified professional licensed in your
+          jurisdiction.
+        </>
+      )}{" "}
+      Read our Website Terms of Use{" "}
+      <a href="https://www.tebra.com/terms-conditions">here</a>.
+    </em>
+  </p>
+</aside>
+
+<style>
+  .content-disclaimer {
+    margin-block: 2rem;
+    padding-block-start: 1.25rem;
+    border-block-start: 1px solid currentColor;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .content-disclaimer a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .content-disclaimer p {
+    margin: 0;
+  }
+</style>
