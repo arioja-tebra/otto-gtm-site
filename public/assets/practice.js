@@ -1,8 +1,8 @@
 (() => {
   const labels = {
-    personalized: "Your practice, personalized",
-    notes: "Notes in your style",
-    "front-desk": "A little front-desk help",
+    personalized: "Walk into each session prepared",
+    notes: "Let Otto draft the note",
+    "front-desk": "Keep payment moving",
   };
   const query = new URLSearchParams(location.search);
   const selected = query
@@ -53,7 +53,7 @@
       if (!builder.querySelector("[name=feature]:checked")) {
         event.preventDefault();
         document.querySelector("#builder-error").textContent =
-          "Choose at least one idea for your preview.";
+          "Choose at least one workflow for your tour.";
       }
     });
     builder.addEventListener("change", () => {

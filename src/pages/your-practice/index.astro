@@ -1,62 +1,72 @@
 ---
 import SiteLayout from "../../layouts/SiteLayout.astro";
-import PracticeVisual from "../../components/PracticeVisual.astro";
+import PracticeVideos from "../../components/PracticeVideos.astro";
 import { features } from "../../data/practice";
 import pages from "../../data/pages.json";
 ---
 
 <SiteLayout metadata={pages["/your-practice/"]}>
   <link rel="stylesheet" href="/assets/practice.css" />
-  <main id="main" class="practice-page">
+  <main id="main" class="practice-page practice-teaser">
     <div class="wrap">
       <div class="practice-subnav">
-        <span>THE NEXT CHAPTER OF OTTO</span>
-        <span class="concept-tag">An early look</span>
+        <span>OTTO BY TEBRA</span>
+        <span class="concept-tag">For independent mental health practices</span>
       </div>
-      <section class="practice-hero">
-        <div class="practice-intro">
-          <div class="eyebrow">Built around you</div>
-          <h1>
-            Your practice,
-            <br />
-            <em>personalized.</em>
-          </h1>
-          <p>
-            You bring your own way of caring. Help shape an Otto that fits the
-            way you work, from your first appointment to your last note.
-          </p>
+      <section class="teaser-hero">
+        <div class="eyebrow">Your practice has a lot to do. Meet Otto.</div>
+        <h1>
+          See what Otto
+          <br />
+          can do <em>for you.</em>
+        </h1>
+        <p>
+          You’re there for your patients. Otto connects the work around every
+          visit, from session prep and clinical notes to telehealth and
+          payments.
+        </p>
+        <div class="teaser-actions">
           <a class="button" href="/your-practice/build/">
-            Make it yours <span aria-hidden="true">↗</span>
+            See Otto for my practice <span aria-hidden="true">↗</span>
           </a>
-          <a class="practice-secondary" href="#possibilities">
-            Explore the possibilities ↓
+          <a class="teaser-watch" href="#watch">
+            <span aria-hidden="true">▶</span> Watch Otto in action
           </a>
-          <div class="practice-fine">
-            About a minute. Preview with fictional details.
-          </div>
         </div>
-        <PracticeVisual />
+        <div class="teaser-proof">
+          <span>Built for mental health</span>
+          <span>Your clinical judgment stays central</span>
+          <span>Built by Tebra</span>
+        </div>
+        <div class="teaser-orbit" aria-hidden="true"></div>
       </section>
+      <PracticeVideos />
       <div class="practice-bridge">
-        <span>A practice is personal.</span>
-        <p>So are the details that make a workday feel right.</p>
+        <span>More room for care.</span>
+        <p>Before the session. After the conversation. Through to payment.</p>
       </div>
       <section id="possibilities" class="practice-possibilities">
         <div class="practice-section-head">
           <div>
-            <div class="eyebrow">A few things we’re exploring</div>
-            <h2>What would make Otto yours?</h2>
+            <div class="eyebrow">One connected practice day</div>
+            <h2>
+              The conversation is yours.
+              <br />
+              Let Otto help with what comes next.
+            </h2>
           </div>
           <p>
-            Take a closer look, then choose what belongs in your practice
-            preview.
+            Explore the work Otto can help you move forward, one visit at a
+            time.
           </p>
         </div>
         <div class="practice-cards">
           {features.map((feature) => (
             <a class="practice-card" href={`/your-practice/${feature.slug}/`}>
               <div class="pc-top">
-                <span>{feature.number}</span>
+                <span>
+                  {feature.number} / {feature.short}
+                </span>
                 <span aria-hidden="true">↗</span>
               </div>
               <div class={`pc-art pc-art-${feature.slug}`} aria-hidden="true">
@@ -65,44 +75,68 @@ import pages from "../../data/pages.json";
                     <i></i>
                     <i></i>
                     <i></i>
-                    <b>Yours.</b>
+                    <b>Be ready.</b>
                   </>
                 ) : feature.slug === "notes" ? (
                   <>
-                    <b>DAP</b>
+                    <b>SOAP / DAP</b>
                     <i></i>
                     <i></i>
                     <i></i>
                   </>
                 ) : (
                   <>
-                    <b>Good morning.</b>
-                    <i>Appointments</i>
-                    <i>Intake</i>
-                    <i>Follow-ups</i>
+                    <b>Keep it moving.</b>
+                    <i>Visit</i>
+                    <i>Billing</i>
+                    <i>Payment</i>
                   </>
                 )}
               </div>
               <h3>{feature.label}</h3>
               <p>{feature.description}</p>
               <span class="text-link">
-                Explore this idea <span aria-hidden="true">↗</span>
+                See how it works <span aria-hidden="true">↗</span>
               </span>
             </a>
           ))}
         </div>
       </section>
-      <section class="practice-close">
-        <div class="eyebrow">Start with your practice</div>
-        <h2>See what your version could look like.</h2>
-        <p>Choose your setup and the ideas you would use most.</p>
-        <a class="button light" href="/your-practice/build/">
-          Build my practice preview ↗
+      <section class="teaser-care">
+        <div class="eyebrow">You stay in charge of the care</div>
+        <h2>
+          Otto starts the draft.
+          <br />
+          <em>You make the clinical decisions.</em>
+        </h2>
+        <p>
+          Review the note. Make your edits. Approve what belongs in the chart.
+          Your judgment stays at the center of every visit.
+        </p>
+        <a class="text-link" href="/your-practice/notes/">
+          Take a closer look at AI notes ↗
         </a>
       </section>
+      <section class="practice-close">
+        <div class="eyebrow">Your practice, with Otto</div>
+        <h2>
+          What would you like
+          <br />a hand with first?
+        </h2>
+        <p>
+          Tell us a little about your practice. Explore the parts of Otto that
+          matter to your day.
+        </p>
+        <a class="button light" href="/your-practice/build/">
+          See Otto for my practice <span aria-hidden="true">↗</span>
+        </a>
+        <span class="teaser-close-note">
+          A short, interactive product tour.
+        </span>
+      </section>
       <p class="practice-disclosure">
-        These are early concepts for feedback. Features and availability are not
-        confirmed. This preview does not collect or save information.
+        Product tour preview. Videos show product demonstrations. Signup is
+        demo-only; no information is submitted or saved.
       </p>
     </div>
   </main>

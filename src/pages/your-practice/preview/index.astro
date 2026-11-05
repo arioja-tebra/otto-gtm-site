@@ -1,4 +1,5 @@
 ---
+import PracticeVideos from "../../../components/PracticeVideos.astro";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
 import { features } from "../../../data/practice";
 import pages from "../../../data/pages.json";
@@ -12,43 +13,45 @@ import pages from "../../../data/pages.json";
         <a href="/your-practice/build/" id="edit-practice">
           ← Edit my preferences
         </a>
-        <span class="concept-tag">Your personalized concept</span>
+        <span class="concept-tag">Your Otto tour</span>
       </div>
       <section class="practice-result-intro">
-        <div class="eyebrow">A little more you</div>
+        <div class="eyebrow">Your practice, with Otto</div>
         <h1>
-          Welcome to <em id="result-practice-name">your practice.</em>
+          See Otto for <em id="result-practice-name">your practice.</em>
         </h1>
-        <p>A first look at an Otto shaped around your choices.</p>
+        <p>
+          Explore how Otto connects the parts of your practice day you chose.
+        </p>
         <div class="result-tags">
           <span id="result-size">Solo practice</span>
           <span id="result-setting">In person and online</span>
         </div>
       </section>
-      <section class="result-workspace" aria-label="Your practice concept">
+      <section class="result-workspace" aria-label="Your Otto product tour">
         <div class="result-sidebar">
           <img src="/assets/otto-logo.svg" alt="Otto" width="65" height="34" />
           <span class="result-sidebar-label">YOUR WORKSPACE</span>
           <b>◷ &nbsp; My day</b>
           <span>▤ &nbsp; My notes</span>
-          <span>☷ &nbsp; Front desk</span>
+          <span>☷ &nbsp; Payments</span>
           <div class="result-sidebar-bottom">
             Made for your practice.
             <br />
-            <small>Illustrative concept</small>
+            <small>Product tour preview</small>
           </div>
         </div>
         <div class="result-main">
           <div class="result-heading">
             <div>
-              <span class="tag">YOUR NEXT CHAPTER</span>
-              <h2>Make room for your day.</h2>
+              <span class="tag">FROM PREPARATION TO PAYMENT</span>
+              <h2>More room for care.</h2>
             </div>
             <span class="concept-tag">Preview</span>
           </div>
           <p class="result-explainer">
-            Here are the ideas you chose. Open one to tell us whether you would
-            use it.
+            Here are the workflows you chose. Take a closer look or watch Otto
+            in action.
           </p>
           <div class="result-feature-cards">
             {features.map((feature) => (
@@ -63,38 +66,37 @@ import pages from "../../../data/pages.json";
                   class="text-link"
                   data-interest={feature.slug}
                 >
-                  Try this idea <span aria-hidden="true">↗</span>
+                  Take a closer look <span aria-hidden="true">↗</span>
                 </button>
               </article>
             ))}
           </div>
         </div>
       </section>
+      <PracticeVideos />
       <section class="result-next">
         <div>
-          <h2>Which idea would you try first?</h2>
-          <p>Open a feature above to preview the early-access flow.</p>
+          <h2>Ready to see more?</h2>
+          <p>Choose a workflow above to preview joining the Otto waitlist.</p>
         </div>
         <a class="text-link" href="/your-practice/">
-          Explore all three ideas ↗
+          Explore more of Otto ↗
         </a>
       </section>
       <p class="practice-disclosure">
-        This is a concept preview. Features and availability are not confirmed.
-        No appointments, clinical information, or leads are collected.
+        Product tour preview. No appointments, clinical information, or leads
+        are collected.
       </p>
       <dialog id="interest-dialog" aria-labelledby="interest-title">
         <button class="dialog-close" type="button" aria-label="Close">
           ×
         </button>
         <div id="interest-form-step">
-          <div class="eyebrow">Help shape Otto</div>
-          <h2 id="interest-title">This idea is still taking shape.</h2>
+          <div class="eyebrow">Meet Otto</div>
+          <h2 id="interest-title">Make more room for care.</h2>
           <p>
-            <strong id="interest-feature-name">
-              Your practice, personalized
-            </strong>{" "}
-            is an early concept. Let us know if you would want to try it.
+            <strong id="interest-feature-name">Session prep</strong> is part of
+            your Otto tour. Preview joining the waitlist to learn more.
           </p>
           <form id="interest-form">
             <label for="interest-email">Demo email</label>
@@ -107,7 +109,7 @@ import pages from "../../../data/pages.json";
               autocomplete="off"
             />
             <button class="button" type="submit">
-              Preview early-access signup ↗
+              Preview waitlist signup ↗
             </button>
           </form>
           <p class="practice-fine">
@@ -120,8 +122,8 @@ import pages from "../../../data/pages.json";
             Thanks for exploring.
           </h2>
           <p>
-            You’ve reached the end of the early-access demo. Nothing was
-            submitted or saved.
+            You’ve reached the end of the waitlist demo. Nothing was submitted
+            or saved.
           </p>
           <button class="button" type="button" id="interest-return">
             Back to my practice ↗

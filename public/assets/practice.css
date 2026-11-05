@@ -1068,3 +1068,276 @@
     transform: none;
   }
 }
+/* Product teaser: video first, with a direct path into the tour. */
+.practice-teaser .practice-subnav {
+  padding-top: 24px;
+}
+.teaser-hero {
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  padding: 34px 0 48px;
+  overflow: hidden;
+}
+.teaser-hero .eyebrow {
+  justify-content: center;
+  font-size: 11px;
+}
+.teaser-hero h1 {
+  font-size: clamp(66px, 7.5vw, 104px);
+  line-height: 0.99;
+  letter-spacing: -0.055em;
+  max-width: 1000px;
+  margin: 27px auto;
+}
+.teaser-hero h1 em {
+  color: #417e86;
+}
+.teaser-hero > p {
+  font-size: 22px;
+  line-height: 1.5;
+  max-width: 650px;
+  margin: 0 auto 28px;
+}
+.teaser-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 29px;
+}
+.teaser-actions .button {
+  font-size: 18px;
+  padding: 17px 28px;
+}
+.teaser-watch {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.teaser-watch > span {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #9cb3a7;
+  border-radius: 50%;
+  font-size: 10px;
+}
+.teaser-proof {
+  display: flex;
+  gap: 27px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 27px;
+  font-size: 12px;
+  color: #50685d;
+}
+.teaser-proof > span:before {
+  content: "✓";
+  color: #417e86;
+  margin-right: 7px;
+}
+.teaser-orbit {
+  position: absolute;
+  top: 32px;
+  right: -110px;
+  width: 280px;
+  height: 280px;
+  border: 1px solid #c6d4c6;
+  border-radius: 50%;
+  z-index: -1;
+}
+.teaser-orbit:before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border: 1px solid #c6d4c6;
+  border-radius: 50%;
+}
+.practice-videos {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 23px;
+  margin: 5px 0 50px;
+  scroll-margin-top: 24px;
+}
+.practice-video-card {
+  border: 1px solid #b8c9bd;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fffdf9;
+  min-width: 0;
+}
+.video-card-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 22px;
+  background: #004852;
+  color: #f6f3eb;
+  gap: 12px;
+  align-items: center;
+}
+.video-card-heading .tag {
+  font-size: 10px;
+}
+.video-play-label {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: #d3e2d6;
+}
+.practice-video-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #004852;
+  object-fit: contain;
+}
+.video-card-copy {
+  padding: 24px 26px;
+}
+.video-card-copy h2 {
+  font-size: 29px;
+  line-height: 1.1;
+  margin-bottom: 13px;
+}
+.video-card-copy p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+.billing-video-only {
+  grid-template-columns: 1fr;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.teaser-care {
+  text-align: center;
+  padding: 15px 20px 65px;
+  max-width: 900px;
+  margin: auto;
+}
+.teaser-care .eyebrow {
+  justify-content: center;
+}
+.teaser-care h2 {
+  font-size: 48px;
+  line-height: 1.08;
+  margin: 24px 0;
+}
+.teaser-care > p {
+  font-size: 19px;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+.practice-teaser .practice-close {
+  padding: 58px 30px;
+}
+.practice-teaser .practice-close h2 {
+  font-size: 57px;
+  line-height: 1.04;
+}
+.practice-teaser .practice-close p {
+  font-size: 19px;
+  max-width: 550px;
+  margin: 0 auto 28px;
+}
+.teaser-close-note {
+  display: block;
+  margin-top: 17px;
+  font-size: 12px;
+  color: #c9ddd0;
+}
+.practice-teaser .practice-section-head h2 {
+  font-size: 41px;
+  line-height: 1.1;
+}
+.practice-teaser .pc-art-personalized b {
+  font-size: 26px;
+}
+.practice-teaser .practice-card h3 {
+  line-height: 1.1;
+}
+.practice-result-intro + .result-workspace {
+  margin-bottom: 40px;
+}
+@media (max-width: 700px) {
+  .practice-teaser .practice-subnav {
+    font-size: 9px;
+  }
+  .practice-teaser .practice-subnav .concept-tag {
+    font-size: 8px;
+    white-space: normal;
+    max-width: 190px;
+    text-align: center;
+  }
+  .teaser-hero {
+    padding: 25px 0 35px;
+  }
+  .teaser-hero .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+  .teaser-hero h1 {
+    font-size: 59px;
+    margin: 25px auto;
+    line-height: 1.02;
+  }
+  .teaser-hero > p {
+    font-size: 18px;
+  }
+  .teaser-actions {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .teaser-actions .button {
+    font-size: 16px;
+    padding: 16px 24px;
+  }
+  .teaser-proof {
+    gap: 9px 15px;
+    font-size: 10px;
+    margin-top: 23px;
+  }
+  .teaser-orbit {
+    right: -210px;
+    top: 70px;
+  }
+  .practice-videos {
+    grid-template-columns: 1fr;
+    gap: 21px;
+    margin-bottom: 35px;
+  }
+  .video-card-heading {
+    padding: 14px 18px;
+  }
+  .video-card-copy {
+    padding: 22px;
+  }
+  .video-card-copy h2 {
+    font-size: 29px;
+  }
+  .practice-teaser .practice-section-head h2 {
+    font-size: 33px;
+  }
+  .teaser-care {
+    padding: 8px 0 40px;
+  }
+  .teaser-care h2 {
+    font-size: 35px;
+  }
+  .teaser-care > p {
+    font-size: 17px;
+  }
+  .practice-teaser .practice-close {
+    padding: 38px 24px;
+  }
+  .practice-teaser .practice-close h2 {
+    font-size: 39px;
+  }
+  .practice-teaser .practice-close p {
+    font-size: 17px;
+  }
+}

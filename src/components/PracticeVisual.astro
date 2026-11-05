@@ -4,11 +4,11 @@ interface Props {
   rows?: string[];
 }
 const {
-  title = "A day that feels like yours",
+  title = "Your practice day, connected",
   rows = [
     "Your schedule, at a glance",
-    "Notes in your preferred format",
-    "A little front-desk help",
+    "AI-assisted SOAP and DAP drafts",
+    "Billing and payments",
   ],
 } = Astro.props;
 ---
@@ -43,7 +43,7 @@ const {
       ))}
     </div>
     <div class="pv-bottom">
-      <span class="pv-dot"></span> Shaped around the way you practice.
+      <span class="pv-dot"></span> From preparation to payment.
     </div>
   </div>
   <div class="pv-sticker">
@@ -51,5 +51,5 @@ const {
     <br />
     room for <em>care.</em>
   </div>
-  <p class="pv-caption">Illustrative concept · Fictional practice</p>
+  <p class="pv-caption">Illustration · Fictional practice</p>
 </div>

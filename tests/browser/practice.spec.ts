@@ -15,11 +15,11 @@ test("personalized practice funnel preserves choices and completes the demo with
     if (request.method() === "POST") posts.push(request.url());
   });
   await page.goto("/your-practice/");
-  await page.getByRole("link", { name: "Explore this idea" }).nth(1).click();
+  await page.getByRole("link", { name: "See how it works" }).nth(1).click();
   await expect(page.locator("h1")).toHaveText(
-    "Your notes should sound like you.",
+    "Stay with the conversation. Otto can start the note.",
   );
-  await page.getByRole("link", { name: "I’d use this" }).click();
+  await page.getByRole("link", { name: "See this for my practice" }).click();
   await page.getByLabel("Give your preview a name").fill("Willow Therapy");
   await page.getByRole("radio", { name: "A team" }).check();
   await page.getByLabel("How do you see clients?").selectOption("Online");
@@ -29,8 +29,8 @@ test("personalized practice funnel preserves choices and completes the demo with
     page.locator("[name=feature][value=personalized]"),
   ).not.toBeChecked();
   await page.locator("[name=feature][value=front-desk]").check();
-  await page.getByRole("button", { name: "Show my practice" }).click();
-  await expect(page.locator("h1")).toHaveText("Welcome to Willow Therapy");
+  await page.getByRole("button", { name: "Show me Otto" }).click();
+  await expect(page.locator("h1")).toHaveText("See Otto for Willow Therapy");
   await expect(page.locator("#result-size")).toHaveText("Group practice");
   await expect(page.locator("#result-setting")).toHaveText("Online");
   await expect(page.locator("[data-result-feature=personalized]")).toBeHidden();
@@ -38,11 +38,9 @@ test("personalized practice funnel preserves choices and completes the demo with
   await page.locator("[data-interest=notes]").click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.locator("#interest-feature-name")).toHaveText(
-    "Notes in your style",
+    "Let Otto draft the note",
   );
-  await page
-    .getByRole("button", { name: "Preview early-access signup" })
-    .click();
+  await page.getByRole("button", { name: "Preview waitlist signup" }).click();
   await expect(page.locator("#interest-complete")).toContainText(
     "Nothing was submitted or saved.",
   );
@@ -65,9 +63,9 @@ test("priorities require a choice, back preserves edits, and concept dialog supp
   await page.goto("/your-practice/build/");
   await page.getByRole("button", { name: "Choose my priorities" }).click();
   await page.locator("[name=feature][value=personalized]").uncheck();
-  await page.getByRole("button", { name: "Show my practice" }).click();
+  await page.getByRole("button", { name: "Show me Otto" }).click();
   await expect(page.getByRole("alert")).toHaveText(
-    "Choose at least one idea for your preview.",
+    "Choose at least one workflow for your tour.",
   );
   await page.getByRole("button", { name: "Back", exact: false }).click();
   await expect(page.locator('[data-builder-step="1"]')).toBeVisible();
@@ -78,7 +76,34 @@ test("priorities require a choice, back preserves edits, and concept dialog supp
   await expect(
     page.locator("[data-result-feature=personalized]"),
   ).toBeVisible();
-  await page.getByRole("button", { name: "Try this idea" }).click();
+  await page.getByRole("button", { name: "Take a closer look" }).click();
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).toBeHidden();
+});
+
+test("both supplied videos play with native controls and poster images", async ({
+  page,
+}) => {
+  await page.goto("/your-practice/");
+  const videos = page.locator("video");
+  await expect(videos).toHaveCount(2);
+  for (const video of await videos.all()) {
+    await expect(video).toHaveAttribute("controls", "");
+    await expect(video).toHaveAttribute("preload", "none");
+    await expect(video).toHaveAttribute("poster", /poster\.jpg$/);
+    await video.evaluate(async (element: HTMLVideoElement) => {
+      element.muted = true;
+      element.load();
+      await element.play();
+    });
+    await expect
+      .poll(() =>
+        video.evaluate((element: HTMLVideoElement) => element.currentTime),
+      )
+      .toBeGreaterThan(0);
+    expect(
+      await video.evaluate((element: HTMLVideoElement) => element.duration),
+    ).toBeGreaterThan(150);
+    await video.evaluate((element: HTMLVideoElement) => element.pause());
+  }
 });
