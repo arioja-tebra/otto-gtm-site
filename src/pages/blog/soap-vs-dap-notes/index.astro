@@ -278,10 +278,11 @@ import pages from "../../../data/pages.json";
   }
   .byline {
     justify-content: flex-start;
-    min-height: 70px;
+    min-height: 0;
     margin: 24px 0 0;
-    padding: 16px 0;
+    padding: 16px 0 8px;
     border-block: 1px solid #e1ded8;
+    border-bottom: 0;
     color: var(--ink-secondary);
     font-size: 14px;
     line-height: 20px;
@@ -654,9 +655,6 @@ import pages from "../../../data/pages.json";
     }
     .format-art svg {
       width: 100%;
-    }
-    .byline {
-      min-height: 54px;
     }
     .growth-page .post-layout .resource-cards {
       grid-template-columns: 1fr;
