@@ -1,6 +1,6 @@
 # Otto GTM site
 
-Otto’s standalone marketing and editorial site, built with Astro and prepared for Cloudflare Workers Static Assets. It uses the selected `gtm-seo-play` design and includes 35 pages: product pages, comparisons, switching guides, four articles, free tools, note templates, a demo, and a waitlist preview.
+Otto’s standalone marketing and editorial site, built with Astro and prepared for Cloudflare Workers Static Assets. It uses the selected `gtm-seo-play` design and includes 41 pages: product pages, comparisons, switching guides, four articles, free tools, note templates, a demo, a waitlist preview, and a personalized practice concept funnel.
 
 This repository owns its content, styles, tests, and deployment. It has no dependency on `ai-native-next`, its authentication, or its release pipeline.
 
@@ -30,6 +30,10 @@ pnpm exec playwright test
 ```
 
 ## Editing the site
+
+The concept funnel starts at `/your-practice/`. Explore one of three feature pages, choose **I’d use this**, enter fictional practice preferences, and select the ideas to include. The resulting preview preserves those choices in the URL. **Try this idea** opens an explicit concept disclosure and demo early-access signup. No leads are submitted or saved. These six routes remain noindex in production builds as well as previews.
+
+For a short presentation, start at `/your-practice/notes/`, select **I’d use this**, name the fictional practice, choose two priorities, and open a feature in the resulting workspace. Copy lives in `src/data/practice.ts`; the pages are in `src/pages/your-practice/`.
 
 | Location | Purpose |
 | --- | --- |

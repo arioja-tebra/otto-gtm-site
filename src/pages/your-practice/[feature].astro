@@ -1,0 +1,81 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PracticeVisual from "../../components/PracticeVisual.astro";
+import { features } from "../../data/practice";
+import pages from "../../data/pages.json";
+export function getStaticPaths() {
+  return features.map((feature) => ({
+    params: { feature: feature.slug },
+    props: { feature },
+  }));
+}
+const { feature } = Astro.props;
+---
+
+<SiteLayout
+  metadata={pages[`/your-practice/${feature.slug}/` as keyof typeof pages]}
+>
+  <link rel="stylesheet" href="/assets/practice.css" />
+  <main id="main" class="practice-page">
+    <div class="wrap">
+      <div class="practice-subnav">
+        <a href="/your-practice/">← Your practice, personalized</a>
+        <span class="concept-tag">Feature concept {feature.number}</span>
+      </div>
+      <section class="practice-hero practice-feature-hero">
+        <div class="practice-intro">
+          <div class="eyebrow">{feature.label}</div>
+          <h1>{feature.title}</h1>
+          <p>{feature.description}</p>
+          <a
+            class="button"
+            href={`/your-practice/build/?feature=${feature.slug}`}
+          >
+            I’d use this <span aria-hidden="true">↗</span>
+          </a>
+          <div class="practice-fine">
+            Explore it in your personalized practice preview.
+          </div>
+        </div>
+        <PracticeVisual title={feature.visualTitle} rows={feature.visualRows} />
+      </section>
+      <section class="practice-feature-detail">
+        <div>
+          <div class="eyebrow">Imagine your day</div>
+          <h2>{feature.question}</h2>
+          <p>{feature.detail}</p>
+        </div>
+        <ol>
+          {feature.examples.map((example, i) => (
+            <li>
+              <span>0{i + 1}</span>
+              {example}
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section class="practice-close">
+        <span class="concept-tag">Help shape what comes next</span>
+        <h2>Put this idea in your practice.</h2>
+        <p>Choose your preferences and see a personalized concept.</p>
+        <a
+          class="button light"
+          href={`/your-practice/build/?feature=${feature.slug}`}
+        >
+          Make it yours ↗
+        </a>
+      </section>
+      <div class="practice-related">
+        {features
+          .filter((item) => item.slug !== feature.slug)
+          .map((item) => (
+            <a href={`/your-practice/${item.slug}/`}>{item.label} ↗</a>
+          ))}
+      </div>
+      <p class="practice-disclosure">
+        An early concept for feedback. Features and availability are not
+        confirmed. This preview does not collect or save information.
+      </p>
+    </div>
+  </main>
+</SiteLayout>

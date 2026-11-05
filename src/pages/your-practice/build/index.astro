@@ -1,0 +1,154 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import { features } from "../../../data/practice";
+import pages from "../../../data/pages.json";
+---
+
+<SiteLayout metadata={pages["/your-practice/build/"]}>
+  <link rel="stylesheet" href="/assets/practice.css" />
+  <main id="main" class="practice-page">
+    <div class="wrap">
+      <div class="practice-subnav">
+        <a href="/your-practice/">← Explore the ideas</a>
+        <span class="concept-tag">Your practice preview</span>
+      </div>
+      <section class="practice-builder">
+        <aside>
+          <div class="eyebrow">A few details. A little more you.</div>
+          <h1>
+            Let’s make
+            <br />
+            Otto <em>yours.</em>
+          </h1>
+          <p>Tell us how you practice and what you would like a hand with.</p>
+          <ol class="builder-steps" aria-label="Preview progress">
+            <li aria-current="step" data-step-label="1">
+              <span>1</span>Your practice
+            </li>
+            <li data-step-label="2">
+              <span>2</span>Your priorities
+            </li>
+            <li data-step-label="3">
+              <span>3</span>Your preview
+            </li>
+          </ol>
+          <p class="practice-fine">
+            Use fictional details. Nothing is submitted or saved.
+          </p>
+        </aside>
+        <div class="builder-panel">
+          <form
+            id="practice-builder"
+            action="/your-practice/preview/"
+            method="get"
+          >
+            <section data-builder-step="1">
+              <span class="tag">STEP 01 / 02</span>
+              <h2>How do you practice?</h2>
+              <p>Start with the basics. You can change these later.</p>
+              <label class="builder-label" for="practice-name">
+                Give your preview a name <span>(optional)</span>
+              </label>
+              <input
+                id="practice-name"
+                name="practice"
+                maxlength="60"
+                placeholder="e.g. Willow Therapy"
+                autocomplete="off"
+              />
+              <fieldset>
+                <legend>Your practice</legend>
+                <div class="builder-options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="size"
+                      value="Solo practice"
+                      checked
+                    />
+                    <span>
+                      Just me<small>A solo practice</small>
+                    </span>
+                  </label>
+                  <label>
+                    <input type="radio" name="size" value="Group practice" />
+                    <span>
+                      A team<small>A group practice</small>
+                    </span>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="size"
+                      value="Starting a practice"
+                    />
+                    <span>
+                      Getting started<small>Building my practice</small>
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+              <label class="builder-label" for="practice-setting">
+                How do you see clients?
+              </label>
+              <select id="practice-setting" name="setting">
+                <option>In person and online</option>
+                <option>Online</option>
+                <option>In person</option>
+              </select>
+              <button
+                class="button builder-next"
+                type="button"
+                id="builder-next"
+              >
+                Choose my priorities <span aria-hidden="true">→</span>
+              </button>
+            </section>
+            <section data-builder-step="2" hidden>
+              <span class="tag">STEP 02 / 02</span>
+              <h2>Where could Otto help?</h2>
+              <p>
+                Select the ideas you would want to explore. Choose at least one.
+              </p>
+              <fieldset>
+                <legend class="builder-label">Your priorities</legend>
+                <div class="builder-priorities">
+                  {features.map((feature) => (
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="feature"
+                        value={feature.slug}
+                        checked={feature.slug === "personalized"}
+                      />
+                      <span>
+                        <strong>{feature.label}</strong>
+                        <small>{feature.description}</small>
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+              <p id="builder-error" role="alert"></p>
+              <div class="builder-actions">
+                <button class="builder-back" type="button" id="builder-back">
+                  ← Back
+                </button>
+                <button class="button" type="submit">
+                  Show my practice <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </section>
+          </form>
+          <noscript>
+            <p>
+              JavaScript is needed for this interactive preview.{" "}
+              <a href="/your-practice/">Explore the feature concepts.</a>
+            </p>
+          </noscript>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script is:inline defer src="/assets/practice.js"></script>
+</SiteLayout>
