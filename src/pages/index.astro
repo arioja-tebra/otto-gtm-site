@@ -11,9 +11,9 @@ import pages from "../data/pages.json";
           <div class="eyebrow">Otto by Tebra · Practice resources</div>
           <h1>Care for your practice, too.</h1>
           <p>
-            Find clear guides, useful tools, and a closer look at Otto’s mental
-            health EHR. Make your next practice decision with the details in
-            front of you.
+            Work through session rates, prepare a sample superbill, or explore
+            how Otto drafts a note for your review. Free resources for
+            independent mental health practices, with no signup needed.
           </p>
           <a class="button" href="/blog/">
             Explore the journal
@@ -177,7 +177,13 @@ import pages from "../data/pages.json";
       </section>
       <section class="product-section">
         <div data-b5-content>
-          <h2>Take a closer look at Otto.</h2>
+          <h2>See how a visit comes together in Otto.</h2>
+          <p class="access-copy">
+            Otto’s early focus is solo, self-pay mental health care. Watch the
+            demo, then review <a href="/faq/#getting-started">access, setup, and
+            support</a> before planning your first session. Signup on this site
+            is a demo.
+          </p>
           <div class="product-grid">
             <a class="panel" href="/mental-health-ehr/">
               <h3>A mental health EHR</h3>
@@ -579,14 +585,14 @@ import pages from "../data/pages.json";
       <div class="wrap">
         <div class="cta">
           <div>
-            <h2>Make more room for the work you love.</h2>
+            <h2>Start with one visit.</h2>
             <p>
-              See how Otto brings notes, scheduling, telehealth, and payments
-              into your practice day.
+              Watch Otto prepare a note draft, then follow the clinician’s review
+              and payment steps. You can watch without signing up.
             </p>
           </div>
-          <a class="button light" href="/waitlist/">
-            Join the waitlist <span aria-hidden="true"></span>
+          <a class="button light" href="/demo/#watch">
+            Watch the demo <span aria-hidden="true"></span>
           </a>
         </div>
       </div>
@@ -595,6 +601,9 @@ import pages from "../data/pages.json";
 </SiteLayout>
 
 <style>
+  .access-copy { max-width: 760px; margin: 16px 0 0; }
+  .access-copy a { text-decoration: underline; }
+
   .editorial-home {
     background: var(--paper);
     font-size: 16px;

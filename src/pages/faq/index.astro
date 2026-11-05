@@ -9,7 +9,7 @@ import pages from "../../data/pages.json";
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <a href="/">Home</a> <span aria-hidden="true">/</span>{" "}
         <span aria-current="page">
-          Otto FAQs: Notes, Pricing, Tools &amp; Practice Fit
+          Otto FAQs: Access, Setup, Support &amp; Practice Fit
         </span>
       </nav>
       <section class="tool-hero">
@@ -21,9 +21,10 @@ import pages from "../../data/pages.json";
         <details>
           <summary>Who is Otto designed for?</summary>
           <p>
-            Otto’s public site describes an AI-native EHR for mental health
-            providers. Evaluate its current workflows against your practice
-            size, specialty, payment model, and record requirements.
+            Otto is designed for independent mental health practices, with an
+            early focus on solo, self-pay care. If you need insurance claims,
+            prescribing, supervision, or a multi-provider workflow, confirm
+            current support before planning a move.
           </p>
         </details>
         <details>
@@ -44,11 +45,12 @@ import pages from "../../data/pages.json";
           </p>
         </details>
         <details>
-          <summary>What does the advertised trial include?</summary>
+          <summary>What can I use on this site today?</summary>
           <p>
-            The current public offer is 10 signed notes or 30 days, whichever
-            comes first, with no card required. Contact the{" "}
-            <a href="/waitlist/">Otto team</a> to confirm billing details.
+            Watch the <a href="/demo/#watch">product demo</a> and use the{" "}
+            <a href="/tools/">free tools</a> and <a href="/templates/">note
+            templates</a> without signing up. The signup and product tour are
+            previews. They do not create an Otto account or grant product access.
           </p>
         </details>
         <details>
@@ -95,22 +97,79 @@ import pages from "../../data/pages.json";
           </p>
         </details>
       </div>
+      <section class="product-section" id="getting-started" aria-labelledby="getting-started-heading">
+        <h2 id="getting-started-heading">Access, setup, and support.</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What does joining the waitlist mean?</summary>
+            <p>
+              A waitlist expresses interest in future access. Access timing,
+              eligibility, pricing, and trial terms need to be confirmed before
+              you plan to use Otto with clients. This site’s signup is demo-only
+              and does not reserve a place.
+            </p>
+          </details>
+          <details>
+            <summary>What happens after I try the signup?</summary>
+            <p>
+              You see a preview confirmation. Nothing is submitted or saved,
+              and no confirmation or follow-up email is sent. You can continue
+              with the <a href="/demo/#watch">demo</a> or the free resources.
+              Follow-up timing for live signup has not been announced here.
+            </p>
+          </details>
+          <details>
+            <summary>What should I confirm before my first session?</summary>
+            <p>
+              Ask who will help with setup, what training is available, and how
+              to get help during a visit. Walk through a fictional session,
+              correct a note draft, and review the payment step. Confirm current
+              capabilities, data terms, and any setup fees before entering
+              patient information. Onboarding services and support hours for
+              Otto still need to be confirmed.
+            </p>
+          </details>
+          <details>
+            <summary>How should I plan a switch from my current EHR?</summary>
+            <p>
+              Use the <a href="/switch/">switching checklist</a> to identify the
+              records and workflows you need to carry over. Confirm import
+              formats, costs, timing, and who checks the transfer. Plan continued
+              access to your existing records before choosing a cutover date.
+            </p>
+          </details>
+          <details>
+            <summary>I’m already a customer. Where do I get help?</summary>
+            <p>
+              If you already use Otto, use the support contact provided with
+              your account. Existing Tebra customers can find contact options in
+              the <a href="https://helpme.tebra.com/Contact_Us">Tebra Help Center</a>.
+              The waitlist preview does not send support requests or change an
+              existing account.
+            </p>
+          </details>
+        </div>
+      </section>
     </div>
     <section class="cta-section">
       <div class="wrap">
         <div class="cta">
           <div>
-            <h2>Make more room for the work you love.</h2>
+            <h2>See what you would review in Otto.</h2>
             <p>
-              See how Otto brings notes, scheduling, telehealth, and payments
-              into your practice day.
+              Watch a visit move through note drafting, clinician review, and
+              payment. No signup is needed to watch.
             </p>
           </div>
-          <a class="button light" href="/waitlist/">
-            Join the waitlist <span aria-hidden="true">↗</span>
+          <a class="button light" href="/demo/#watch">
+            Watch the demo <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
     </section>
   </main>
 </SiteLayout>
+
+<style>
+  .faq-list a { text-decoration: underline; text-underline-offset: 3px; }
+</style>

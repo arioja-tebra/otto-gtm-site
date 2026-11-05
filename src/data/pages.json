@@ -786,8 +786,8 @@
     ]
   },
   "/faq/": {
-    "title": "Otto FAQs: Notes, Pricing, Tools & Practice Fit",
-    "description": "Answers to common questions about Otto’s mental health EHR, AI notes, free tools, trial, and practice evaluation.",
+    "title": "Otto FAQs: Access, Setup, Support & Practice Fit",
+    "description": "Answers about Otto practice fit, demo signup, access expectations, onboarding, switching, existing-customer support, and free tool data handling.",
     "type": "website",
     "noindex": false,
     "graph": [
@@ -808,8 +808,8 @@
         "@type": "WebPage",
         "@id": "/faq/#webpage",
         "url": "/faq/",
-        "name": "Otto FAQs: Notes, Pricing, Tools & Practice Fit",
-        "description": "Answers to common questions about Otto’s mental health EHR, AI notes, free tools, trial, and practice evaluation.",
+        "name": "Otto FAQs: Access, Setup, Support & Practice Fit",
+        "description": "Answers about Otto practice fit, demo signup, access expectations, onboarding, switching, existing-customer support, and free tool data handling.",
         "isPartOf": {
           "@id": "/#website"
         }
@@ -834,8 +834,8 @@
     ]
   },
   "/": {
-    "title": "Otto Resources for Mental Health Providers",
-    "description": "Explore Otto’s mental health EHR, practice guides, and free tools for independent therapy practices.",
+    "title": "Practice resources for independent mental health providers | Otto",
+    "description": "Free tools and guides for rates, superbills, estimates, and notes. Watch an Otto demo and review access, setup, and support questions.",
     "type": "website",
     "noindex": false,
     "graph": [
@@ -856,8 +856,8 @@
         "@type": "WebPage",
         "@id": "/#webpage",
         "url": "/",
-        "name": "Otto Resources for Mental Health Providers",
-        "description": "Explore Otto’s mental health EHR, practice guides, and free tools for independent therapy practices.",
+        "name": "Practice resources for independent mental health providers | Otto",
+        "description": "Free tools and guides for rates, superbills, estimates, and notes. Watch an Otto demo and review access, setup, and support questions.",
         "isPartOf": {
           "@id": "/#website"
         }
@@ -866,7 +866,7 @@
   },
   "/mental-health-ehr/": {
     "title": "Mental Health EHR for Therapists & Independent Practices | Otto",
-    "description": "A connected mental health EHR for independent practices. Explore session prep, SOAP and DAP drafts, clinician-approved chart updates, telehealth, and payments.",
+    "description": "Review patient context before a visit, edit and sign a note draft, and follow payment steps. Explore Otto for solo, self-pay mental health practices.",
     "type": "website",
     "noindex": false,
     "graph": [
@@ -888,7 +888,7 @@
         "@id": "/mental-health-ehr/#webpage",
         "url": "/mental-health-ehr/",
         "name": "Mental Health EHR for Therapists & Independent Practices | Otto",
-        "description": "A connected mental health EHR for independent practices. Explore session prep, SOAP and DAP drafts, clinician-approved chart updates, telehealth, and payments.",
+        "description": "Review patient context before a visit, edit and sign a note draft, and follow payment steps. Explore Otto for solo, self-pay mental health practices.",
         "isPartOf": {
           "@id": "/#website"
         }
@@ -1843,8 +1843,8 @@
     ]
   },
   "/waitlist/": {
-    "title": "Join the Otto Waitlist | Mental Health Practice Software",
-    "description": "Join the Otto waitlist. Leave your email, then tell us about your mental health practice, payment model, and current EHR.",
+    "title": "Preview the Otto Waitlist | Mental Health Practice Software",
+    "description": "Try the Otto signup with fictional details. This demo does not reserve access, create an account, or send email. Review setup and support questions.",
     "type": "website",
     "noindex": true,
     "graph": [
@@ -1865,8 +1865,8 @@
         "@type": "WebPage",
         "@id": "/waitlist/#webpage",
         "url": "/waitlist/",
-        "name": "Join the Otto Waitlist | Mental Health Practice Software",
-        "description": "Join the Otto waitlist. Leave your email, then tell us about your mental health practice, payment model, and current EHR.",
+        "name": "Preview the Otto Waitlist | Mental Health Practice Software",
+        "description": "Try the Otto signup with fictional details. This demo does not reserve access, create an account, or send email. Review setup and support questions.",
         "isPartOf": {
           "@id": "/#website"
         }
@@ -1875,7 +1875,7 @@
   },
   "/your-practice/": {
     "title": "See what Otto can do for you | Otto",
-    "description": "See how Otto connects session prep, AI progress notes, telehealth, and payments for independent mental health practices.",
+    "description": "Review patient context before a session, then edit and sign Otto’s note draft. Explore the demo for independent mental health practices.",
     "type": "website",
     "noindex": true,
     "graph": [
@@ -1894,10 +1894,10 @@
       },
       {
         "@type": "WebPage",
-        "@id": "/about/#webpage",
-        "url": "/about/",
-        "name": "About Otto by Tebra | Otto",
-        "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+        "@id": "/your-practice/#webpage",
+        "url": "/your-practice/",
+        "name": "See what Otto can do for you | Otto",
+        "description": "Review patient context before a session, then edit and sign Otto’s note draft. Explore the demo for independent mental health practices.",
         "isPartOf": {
           "@id": "/#website"
         }
@@ -2083,7 +2083,7 @@
   },
   "/your-practice/build/": {
     "title": "See Otto for your practice | Otto",
-    "description": "Choose the parts of your practice day you would like help with and explore Otto.",
+    "description": "Preview Otto signup with fictional practice details and workflow priorities. No account or waitlist spot is created, and no email is sent.",
     "type": "website",
     "noindex": true,
     "graph": [
@@ -2102,10 +2102,10 @@
       },
       {
         "@type": "WebPage",
-        "@id": "/about/#webpage",
-        "url": "/about/",
-        "name": "About Otto by Tebra | Otto",
-        "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+        "@id": "/your-practice/build/#webpage",
+        "url": "/your-practice/build/",
+        "name": "See Otto for your practice | Otto",
+        "description": "Preview Otto signup with fictional practice details and workflow priorities. No account or waitlist spot is created, and no email is sent.",
         "isPartOf": {
           "@id": "/#website"
         }
@@ -2134,8 +2134,8 @@
     ]
   },
   "/your-practice/preview/": {
-    "title": "Your place on the Otto waitlist | Otto",
-    "description": "Preview your place on the Otto waitlist for 2027 and invite colleagues to move up the queue.",
+    "title": "Your demo Otto waitlist spot | Otto",
+    "description": "Preview a sample waitlist position and referral flow. No access is reserved, no information is saved, and no confirmation or follow-up email is sent.",
     "type": "website",
     "noindex": true,
     "graph": [
@@ -2154,10 +2154,10 @@
       },
       {
         "@type": "WebPage",
-        "@id": "/about/#webpage",
-        "url": "/about/",
-        "name": "About Otto by Tebra | Otto",
-        "description": "Learn about Otto’s focus on mental health practice workflows and its journal of practical resources.",
+        "@id": "/your-practice/preview/#webpage",
+        "url": "/your-practice/preview/",
+        "name": "Your demo Otto waitlist spot | Otto",
+        "description": "Preview a sample waitlist position and referral flow. No access is reserved, no information is saved, and no confirmation or follow-up email is sent.",
         "isPartOf": {
           "@id": "/#website"
         }
