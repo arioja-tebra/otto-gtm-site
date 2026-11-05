@@ -30,12 +30,38 @@ import pages from "../../../data/pages.json";
         </span>
       </div>
       <ArticleShare title={pages["/blog/soap-vs-dap-notes/"].title} />
+      <div class="format-art" aria-hidden="true">
+        <svg viewBox="180 0 760 390" fill="none">
+          <g stroke="#417e86" stroke-width="2">
+            <rect x="240" y="70" width="120" height="76" rx="12" />
+            <rect x="414" y="70" width="120" height="76" rx="12" />
+            <rect x="588" y="70" width="120" height="76" rx="12" />
+            <rect x="762" y="70" width="120" height="76" rx="12" />
+            <path
+              d="M300 164v20q0 12 12 12h150q12 0 12-12v-20M648 164v50m174-50v50"
+              opacity=".45"
+            />
+            <rect x="327" y="242" width="120" height="76" rx="12" />
+            <rect x="588" y="242" width="120" height="76" rx="12" />
+            <rect x="762" y="242" width="120" height="76" rx="12" />
+          </g>
+          <path
+            d="M264 94h70m-70 20h45m129-20h70m-70 20h45m129-20h70m-70 20h45m129-20h70m-70 20h45M351 266h70m-70 20h45m216-20h70m-70 20h45m129-20h70m-70 20h45"
+            stroke="#417e86"
+            stroke-width="5"
+            stroke-linecap="round"
+            opacity=".45"
+          />
+        </svg>
+      </div>
       <div class="post-layout">
         <aside class="toc">
           <div class="toc-inner">
-            <h2>Companion resources</h2>
-            <a href="/templates/soap-notes/">SOAP note template</a>
-            <a href="/templates/dap-notes/">DAP note template</a>
+            <div class="companion-links">
+              <h2>Companion resources</h2>
+              <a href="/templates/soap-notes/">SOAP note template</a>
+              <a href="/templates/dap-notes/">DAP note template</a>
+            </div>
             <ArticleDemoCallout />
           </div>
         </aside>
@@ -109,13 +135,13 @@ import pages from "../../../data/pages.json";
                 Separate subjective and objective information, then document
                 your assessment and plan.
               </p>
-              <span class="text-link">Explore SOAP ↗</span>
+              <span class="text-link">Explore SOAP </span>
             </a>
             <a class="resource-card" href="/templates/dap-notes/">
               <span class="tag">Three-part format</span>
               <h3>DAP note template</h3>
               <p>Organize the session into Data, Assessment, and Plan.</p>
-              <span class="text-link">Explore DAP ↗</span>
+              <span class="text-link">Explore DAP </span>
             </a>
           </div>
           <div class="growth-section prose">
@@ -148,7 +174,7 @@ import pages from "../../../data/pages.json";
               product.
             </p>
             <a class="button" href="/demo/#watch">
-              Watch Otto’s workflow ↗
+              Watch Otto’s workflow
             </a>
           </div>
           <ContentDisclaimer kind="article" />
@@ -185,10 +211,461 @@ import pages from "../../../data/pages.json";
             </p>
           </div>
           <a class="button light" href="/waitlist/">
-            Join the waitlist <span aria-hidden="true">↗</span>
+            Join the waitlist <span aria-hidden="true"></span>
           </a>
         </div>
       </div>
     </section>
   </main>
 </SiteLayout>
+
+<style>
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  .growth-page > .wrap,
+  .cta-section .wrap {
+    max-width: 1200px;
+    padding: 0 clamp(20px, 4vw, 56px);
+  }
+  .growth-page {
+    padding-top: 40px;
+  }
+  .breadcrumbs {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .breadcrumbs a {
+    color: var(--deep-teal);
+    text-decoration: none;
+  }
+  .growth-hero {
+    max-width: none;
+    padding: 0;
+  }
+  .eyebrow {
+    margin-bottom: 12px;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 1.44px;
+    color: var(--ink-secondary);
+  }
+  .eyebrow::before {
+    display: none;
+  }
+  .growth-hero h1 {
+    max-width: 900px;
+    margin: 0;
+    font-size: clamp(40px, 4.4vw, 60px);
+    line-height: 1.04;
+    font-weight: 300;
+    letter-spacing: -1.4px;
+  }
+  .growth-hero > p {
+    max-width: 760px;
+    margin: 16px 0 0;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--ink-secondary);
+  }
+  .byline {
+    justify-content: flex-start;
+    min-height: 70px;
+    margin: 24px 0 0;
+    padding: 16px 0;
+    border-block: 1px solid #e1ded8;
+    color: var(--ink-secondary);
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .byline a {
+    color: var(--deep-teal);
+  }
+  .format-art {
+    margin-top: 28px;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #f0eee8;
+  }
+  .format-art svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .post-layout {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px 56px;
+    max-width: none;
+    margin: 40px 0 64px;
+  }
+  .toc {
+    flex: 1 1 260px;
+    max-width: 300px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .toc-inner {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .companion-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #e1ded8;
+    border-radius: 16px;
+    background: var(--white);
+  }
+  .toc h2 {
+    margin: 0 0 4px;
+    color: var(--ink-secondary);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .companion-links > a {
+    padding: 0;
+    border: 0;
+    color: var(--deep-teal);
+    font-weight: 600;
+  }
+  .post-layout > article {
+    flex: 999 1 560px;
+    min-width: 0;
+    max-width: 780px;
+    font-size: 18px;
+    line-height: 29px;
+  }
+  .growth-answer {
+    margin: 0 0 40px;
+    padding: 24px 28px;
+    border: 0;
+    border-radius: 16px;
+    background: rgba(65, 126, 134, 0.22);
+    color: var(--ink);
+  }
+  .growth-answer > strong {
+    margin-bottom: 6px;
+    color: var(--ink-secondary);
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 1.2px;
+  }
+  .growth-answer p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    color: var(--ink);
+  }
+  .growth-section.prose {
+    margin: 0;
+    max-width: none;
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 29px;
+  }
+  .growth-section.prose h2 {
+    margin: 40px 0 12px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 300;
+    letter-spacing: -0.6px;
+  }
+  .growth-section.prose > h2:first-child {
+    margin-top: 0;
+  }
+  .growth-section.prose p {
+    margin: 0 0 16px;
+  }
+  .table-scroll {
+    margin: 8px 0 24px;
+    border: 1px solid #e1ded8;
+    border-radius: 16px;
+    background: var(--white);
+    overflow-x: auto;
+  }
+  .prose table {
+    overflow-wrap: normal;
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .prose th,
+  .prose td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e1ded8;
+    background: transparent;
+    color: var(--ink);
+  }
+  .prose th {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .prose tbody tr:last-child td {
+    border: 0;
+  }
+  .table-scroll + h2 {
+    margin-top: 16px !important;
+  }
+  .growth-page .post-layout .resource-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 8px 0 40px;
+  }
+  .growth-page .post-layout .resource-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 20px 22px;
+    border: 1px solid #e1ded8;
+    border-radius: 16px;
+    background: var(--white);
+  }
+  .resource-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .resource-card .tag {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 1.44px;
+    font-weight: 500;
+    color: var(--ink-secondary);
+  }
+  .growth-page .post-layout .resource-card h3 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 300;
+    letter-spacing: -0.3px;
+  }
+  .resource-card p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 29px;
+  }
+  .resource-card .text-link {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 29px;
+  }
+  .prose ol {
+    margin: 0 0 16px;
+    padding-left: 22px;
+  }
+  .prose li {
+    margin: 0 0 8px;
+  }
+  .prose .button {
+    min-height: 44px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .growth-page .sources {
+    margin: 32px 0 0;
+    padding: 20px 24px;
+    border: 1px solid #e1ded8;
+    border-radius: 16px;
+    background: var(--white);
+  }
+  .sources h2 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .sources p {
+    margin: 0 0 10px;
+    color: var(--ink-secondary);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .sources ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .sources a {
+    color: var(--deep-teal);
+  }
+  .toc :global(.article-demo-callout) {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    border: 1px solid #e1ded8;
+    border-radius: 16px;
+    background: var(--white);
+  }
+  .toc :global(.article-demo-art) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 150px;
+    min-height: 0;
+    padding: 0;
+    background: var(--growth-2);
+  }
+  .toc :global(.article-demo-art::before) {
+    display: none;
+  }
+  .toc :global(.article-demo-art img) {
+    width: 64px;
+    height: auto;
+    margin: 0;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+  }
+  .toc :global(.demo-play-mark) {
+    position: static;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border: 0;
+    background: var(--attention);
+    color: var(--white);
+    font-size: 14px;
+  }
+  .toc :global(.demo-art-caption) {
+    position: static;
+    display: block;
+    font-size: 12px;
+    color: var(--white);
+  }
+  .toc :global(.article-demo-copy) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 20px;
+  }
+  .toc :global(.article-demo-copy .tag) {
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 1.44px;
+    color: var(--ink-secondary);
+  }
+  .toc :global(.article-demo-copy h3) {
+    margin: 0;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 300;
+    letter-spacing: -0.3px;
+  }
+  .toc :global(.article-demo-copy p) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--ink-secondary);
+  }
+  .toc :global(.article-demo-copy .button) {
+    min-height: 40px;
+    padding: 0 24px;
+    border-radius: 9999px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .toc :global(.demo-duration) {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--ink-secondary);
+  }
+  .cta-section {
+    padding: 64px 0;
+    background: var(--white);
+  }
+  .cta {
+    flex-wrap: wrap;
+    gap: 24px 48px;
+    padding: clamp(32px, 4vw, 48px) clamp(28px, 4vw, 56px);
+  }
+  .cta > div {
+    flex: 1 1 520px;
+    min-width: 0;
+  }
+  .cta h2 {
+    max-width: none;
+    margin: 0 0 10px;
+    font-size: clamp(30px, 3vw, 42px);
+    line-height: 1.08;
+    font-weight: 300;
+    letter-spacing: -0.8px;
+  }
+  .cta p {
+    max-width: none;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .cta .button {
+    border: 1px solid var(--white);
+  }
+  @media (max-width: 950px) {
+    .post-layout {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .toc {
+      order: 1;
+      flex: auto;
+      max-width: none;
+      margin-bottom: 16px;
+    }
+    .post-layout > article {
+      flex: auto;
+      width: 100%;
+      max-width: none;
+    }
+    .toc { width: 100%; }
+  }
+  @media (max-width: 680px) {
+    .growth-hero h1 {
+      font-size: 40px;
+    }
+    .format-art {
+      height: 300px;
+    }
+    .format-art svg {
+      width: 100%;
+    }
+    .byline {
+      min-height: 54px;
+    }
+    .growth-page .post-layout .resource-cards {
+      grid-template-columns: 1fr;
+    }
+    .cta {
+      align-items: flex-start;
+    }
+    .cta > div {
+      flex-basis: auto;
+    }
+  }
+</style>

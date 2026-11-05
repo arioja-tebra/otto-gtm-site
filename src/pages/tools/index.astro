@@ -19,7 +19,7 @@ import pages from "../../data/pages.json";
             rates, receipts, and clearer cost conversations.
           </p>
           <a class="button" href="#practice-tools">
-            Find your tool <span aria-hidden="true">↓</span>
+            Find your tool <span aria-hidden="true"></span>
           </a>
           <div class="tools-hub-promises">
             <span>No signup</span>
@@ -95,7 +95,7 @@ import pages from "../../data/pages.json";
                 </div>
                 <div class="mini-result">
                   <span>Built around your numbers</span>
-                  <b>↗</b>
+                  <b></b>
                 </div>
               </div>
               <div class="scene-token">
@@ -116,7 +116,7 @@ import pages from "../../data/pages.json";
               <h3>Session rate calculator</h3>
               <p>Find a fee that supports your practice and your time.</p>
               <span class="tool-gallery-action">
-                Calculate your rate <span aria-hidden="true">↗</span>
+                Calculate your rate <span aria-hidden="true"></span>
               </span>
             </div>
           </a>
@@ -165,7 +165,7 @@ import pages from "../../data/pages.json";
               <h3>Superbill generator</h3>
               <p>Create an itemized document for out-of-network claims.</p>
               <span class="tool-gallery-action">
-                Create a superbill <span aria-hidden="true">↗</span>
+                Create a superbill <span aria-hidden="true"></span>
               </span>
             </div>
           </a>
@@ -212,7 +212,7 @@ import pages from "../../data/pages.json";
               <h3>Good Faith Estimate</h3>
               <p>Prepare a clear estimate for self-pay care.</p>
               <span class="tool-gallery-action">
-                Prepare an estimate <span aria-hidden="true">↗</span>
+                Prepare an estimate <span aria-hidden="true"></span>
               </span>
             </div>
           </a>
@@ -260,15 +260,15 @@ import pages from "../../data/pages.json";
               <h3>Therapy cost estimator</h3>
               <p>Explore client costs with out-of-network benefits.</p>
               <span class="tool-gallery-action">
-                Explore client costs <span aria-hidden="true">↗</span>
+                Explore client costs <span aria-hidden="true"></span>
               </span>
             </div>
           </a>
         </div>
         <div class="growth-nav">
-          <a href="/tools/ehr-cost-calculator/">Compare EHR costs ↗</a>
-          <a href="/templates/">Free SOAP &amp; DAP templates ↗</a>
-          <a href="/switch/">Plan your EHR switch ↗</a>
+          <a href="/tools/ehr-cost-calculator/">Compare EHR costs </a>
+          <a href="/templates/">Free SOAP &amp; DAP templates </a>
+          <a href="/switch/">Plan your EHR switch </a>
         </div>
         <p class="tools-example-note">
           Illustrative examples shown. Each tool uses the details you enter.
@@ -298,7 +298,7 @@ import pages from "../../data/pages.json";
         </div>
         <div class="otto-hook-action">
           <a class="button light" href="/waitlist/">
-            Learn more <span aria-hidden="true">↗</span>
+            Learn more <span aria-hidden="true"></span>
           </a>
           <span>Join the Otto waitlist</span>
         </div>
@@ -343,7 +343,7 @@ import pages from "../../data/pages.json";
             <h2>Good questions. Practical guides.</h2>
           </div>
           <a class="text-link" href="/blog/">
-            Visit the journal ↗
+            Visit the journal
           </a>
         </div>
         <div class="article-grid">
@@ -448,7 +448,7 @@ import pages from "../../data/pages.json";
               </p>
               <div class="card-meta">
                 <span>Otto editorial</span>
-                <span>6 min read ↗</span>
+                <span>6 min read </span>
               </div>
             </a>
           </article>
@@ -525,7 +525,7 @@ import pages from "../../data/pages.json";
               </p>
               <div class="card-meta">
                 <span>Otto editorial</span>
-                <span>5 min read ↗</span>
+                <span>5 min read </span>
               </div>
             </a>
           </article>
@@ -610,7 +610,7 @@ import pages from "../../data/pages.json";
               </p>
               <div class="card-meta">
                 <span>Otto editorial</span>
-                <span>6 min read ↗</span>
+                <span>6 min read </span>
               </div>
             </a>
           </article>
@@ -688,7 +688,7 @@ import pages from "../../data/pages.json";
               </p>
               <div class="card-meta">
                 <span>Otto editorial</span>
-                <span>4 min read ↗</span>
+                <span>4 min read </span>
               </div>
             </a>
           </article>
@@ -720,3 +720,116 @@ import pages from "../../data/pages.json";
     </div>
   </main>
 </SiteLayout>
+
+<style>
+  .tools-hub { background: #fbf9f8; }
+  .tools-hub > .wrap { max-width: 1200px; padding: 0 clamp(20px, 4vw, 56px); }
+  .tools-hub .eyebrow { display: block; margin-bottom: 10px; color: #777; font-size: 10px; font-weight: 500; letter-spacing: .12em; }
+  .tools-hub .eyebrow::before { display: none; }
+  .tools-hub h2 { font-weight: 300; letter-spacing: -1px; }
+  .tools-hub-hero { grid-template-columns: 496fr 536fr; gap: 56px; padding: 48px 0 64px; }
+  .tools-hub-intro h1 { font-size: clamp(40px, 4.4vw, 60px); font-weight: 300; letter-spacing: -1.6px; margin: 0; }
+  .tools-hub-intro h1 em { font-style: italic; color: #004852; }
+  .tools-hub-intro > p { max-width: 520px; margin: 18px 0 24px; font-size: 18px; line-height: 28px; }
+  .tools-hub-intro .button { min-height: 46px; }
+  .tools-hub-promises { gap: 8px 20px; flex-wrap: wrap; margin-top: 20px; color: #545454; font-size: 14px; }
+  .tools-hub-promises span::before { color: #004852; }
+  .toolkit-cover { height: 400px; border-radius: 20px; background: #f0eee8; overflow: hidden; }
+  .toolkit-ring { display: none; }
+  .toolkit-sheet { width: 250px; height: 270px; padding: 26px; background: #fff; border: 1px solid #e8e5df; border-radius: 18px; box-shadow: 8px 8px 32px -16px rgba(15,23,42,.2); }
+  .sheet-behind { top: 68px; left: 4%; transform: rotate(-7deg); }
+  .sheet-behind img { width: 48px; height: auto; }
+  .cover-lines { margin-top: 34px; background: repeating-linear-gradient(to bottom, transparent 0 20px, #e8e5df 20px 26px, transparent 26px 36px); }
+  .sheet-front { right: 4%; top: 65px; transform: rotate(5deg); }
+  .sheet-front .tag { color: #417e86; font-size: 10px; }
+  .sheet-front h2 { margin-top: 12px; font-size: 34px; line-height: 1.05; color: #004852; letter-spacing: -.6px; }
+  .sheet-front > img { width: 48px; height: auto; bottom: 26px; }
+  .cover-stem { width: 72px; right: 26px; bottom: 26px; }
+  .toolkit-seal { left: 14%; bottom: 28px; width: 96px; height: 96px; background: #dc785d; color: #fff; font-size: 26px; box-shadow: none; }
+  .toolkit-seal span { max-width: 70px; text-align: center; line-height: 1.2; }
+  .tools-gallery, .toolkit-guides { position: relative; isolation: isolate; padding: 64px 0; border: 0; }
+  .tools-gallery::before, .toolkit-guides::before { content: ""; position: absolute; z-index: -1; inset: 0; left: calc(50% - 50vw); width: 100vw; background: #fff; }
+  .tools-gallery .section-head, .toolkit-guides .section-head { margin-bottom: 28px; gap: 12px 40px; }
+  .tools-gallery .section-head h2, .toolkit-guides .section-head h2 { font-size: clamp(30px, 3vw, 42px); line-height: 1.08; }
+  .tools-gallery .section-head > p { display: block; line-height: 24px; }
+  .tools-gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .tool-gallery-card { display: flex; flex-direction: column; background: #fff; border: 0; border-radius: 16px; box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 10px 28px -14px rgba(0,72,82,.16); }
+  .tool-gallery-card:hover { transform: none; }
+  .tool-scene { height: 176px; flex-shrink: 0; padding: 0; background: #f0eee8; }
+  .mini-report { position: absolute; left: 50%; top: 16px; width: 280px; min-height: 300px; padding: 24px; border: 1px solid #e8e5df; border-radius: 18px; background: #fff; transform-origin: top center; margin: 0; }
+  .rate-report, .gfe-report { transform: translateX(-50%) rotate(4deg) scale(.58); }
+  .bill-report, .cost-report { transform: translateX(-50%) rotate(-4deg) scale(.58); }
+  .mini-report img { margin-bottom: 10px; }
+  .mini-number { font-size: 44px; font-weight: 300; }
+  .mini-report h4 { font-size: 26px; font-weight: 300; }
+  .mini-report p { font-size: 14px; }
+  .mini-lines i { height: 6px; background: #e8e5df; }
+  .mini-result, .mini-total, .mini-estimate { background: #f0eee8; border: 0; border-radius: 12px; padding: 10px 12px; }
+  .rate-orbit, .bill-back, .scene-token { display: none; }
+  .tool-gallery-copy { display: flex; flex: 1; flex-direction: column; gap: 6px; padding: 18px 20px 22px; }
+  .tool-gallery-copy .tag { font-size: 10px; color: #777; font-weight: 500; }
+  .tool-gallery-copy h3 { font-size: 21px; line-height: 26px; font-weight: 300; letter-spacing: -.4px; margin: 0; }
+  .tool-gallery-copy p { min-height: 0; font-size: 16px; line-height: 24px; margin: 0; }
+  .tool-gallery-action { margin-top: auto; padding-top: 4px; border: 0; font-size: 16px; font-weight: 600; color: #dc785d; }
+  .tool-gallery-action > span { display: none; }
+  .tools-gallery .growth-nav { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 24px 0 12px; border: 0; padding: 0; }
+  .tools-gallery .growth-nav a { color: #dc785d; border: 0; padding: 0; font-size: 14px; font-weight: 600; }
+  .tools-example-note { margin: 0; font-size: 12px; color: #545454; }
+  .tools-hub .otto-tool-hook { margin: 64px 0 0; }
+  .toolkit-how { grid-template-columns: 356fr 676fr; gap: 56px; padding: 64px 0; border: 0; }
+  .toolkit-how h2 { font-size: clamp(30px, 3vw, 42px); line-height: 1.08; margin: 0; }
+  .toolkit-how ol { gap: 0; }
+  .toolkit-how li { padding: 20px 0; gap: 24px; border-top: 1px solid #e1ded8; }
+  .toolkit-how li:last-child { border-bottom: 1px solid #e1ded8; }
+  .toolkit-how li > span { color: #417e86; }
+  .toolkit-how h3 { font-size: 20px; font-weight: 400; letter-spacing: 0; margin-bottom: 4px; }
+  .toolkit-how p { font-size: 16px; line-height: 24px; max-width: none; }
+  .toolkit-guides .article-grid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; }
+  .toolkit-guides .story-card { overflow: hidden; }
+  .toolkit-guides .story-card > a { display: flex; flex-direction: column; height: 100%; }
+  .toolkit-guides .story-card .art { height: 176px; border-radius: 0; margin: 0 0 18px; }
+  .toolkit-guides .story-card :is(.tag,h3,p,.card-meta) { margin-left: 20px; margin-right: 20px; }
+  .toolkit-guides .story-card .tag { color: #777; font-size: 10px; font-weight: 500; }
+  .toolkit-guides .story-card h3 { font-size: 21px; line-height: 26px; font-weight: 300; letter-spacing: -.4px; margin-top: 6px; margin-bottom: 6px; }
+  .toolkit-guides .story-card p { font-size: 16px; line-height: 24px; margin-bottom: 10px; }
+  .toolkit-guides .card-meta { margin-top: auto; margin-bottom: 22px; padding-top: 0; border: 0; font-size: 12px; }
+  .toolkit-guides .card-meta span:last-child { color: #dc785d; font-weight: 600; }
+  .toolkit-note { margin: 64px 0; padding: 28px 32px; gap: 20px; border: 0; border-radius: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 10px 28px -14px rgba(0,72,82,.16); }
+  .toolkit-note .tool-icon { display: flex; width: 44px; height: 44px; background: #f0eee8; border: 0; margin: 0; }
+  .toolkit-note h2 { margin-bottom: 6px; font-size: 22px; font-weight: 400; letter-spacing: 0; }
+  .toolkit-note p { font-size: 16px; line-height: 24px; }
+  .toolkit-guides .art svg > :is(rect:first-child, circle, path, ellipse) { display: none; }
+  .tools-hub .otto-tool-hook { grid-template-columns: 200px minmax(0,1fr) auto; gap: 32px; padding: 32px; }
+  .tools-hub .otto-hook-mark { height: 208px; padding: 24px; margin: -12px 0; background: #fff; border-radius: 16px; transform: rotate(-6deg); }
+  .tools-hub .otto-hook-mark img { width: 64px; }
+  .tools-hub .otto-hook-mark svg { right: 16px; bottom: 12px; }
+  .tools-hub .otto-tool-hook h2 { font-size: clamp(30px,3vw,42px); font-weight: 300; letter-spacing: -1px; }
+  .tools-hub .otto-tool-hook .eyebrow { color: #fff; }
+  .tools-hub .otto-hook-features span { font-size: 14px; border-color: rgba(255,255,255,.3); }
+  @media (max-width: 1000px) {
+    .tools-hub-hero { grid-template-columns: 1fr; gap: 32px; }
+    .toolkit-cover { width: 100%; max-width: 560px; margin: 0 auto; }
+    .tools-gallery-grid, .toolkit-guides .article-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  }
+  @media (max-width: 850px) {
+    .tools-hub .otto-tool-hook { grid-template-columns: 1fr; padding: 32px; gap: 20px; }
+    .tools-hub .otto-hook-mark { display: none; }
+    .tools-hub .otto-hook-action { grid-column: 1; }
+  }
+  @media (max-width: 680px) {
+    .tools-hub-hero { padding-top: 40px; }
+    .tools-hub-intro h1 { font-size: 40px; letter-spacing: -1.4px; }
+    .toolkit-cover { height: 340px; }
+    .toolkit-sheet { width: 210px; height: 250px; top: 45px; padding: 22px; }
+    .sheet-behind { left: 2%; top: 30px; }
+    .sheet-front { right: 2%; }
+    .sheet-front h2 { font-size: 30px; }
+    .toolkit-seal { width: 80px; height: 80px; bottom: 18px; left: 9%; }
+    .tools-gallery-grid, .toolkit-guides .article-grid { grid-template-columns: 1fr; gap: 16px; }
+    .tools-gallery .section-head, .toolkit-guides .section-head { gap: 12px; }
+    .tool-scene, .toolkit-guides .story-card .art { height: 176px; }
+    .toolkit-how { grid-template-columns: 1fr; gap: 24px; }
+    .toolkit-note { padding: 24px; gap: 16px; }
+    .tools-hub-promises { gap: 8px 16px; }
+  }
+</style>

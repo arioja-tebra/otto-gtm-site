@@ -29,7 +29,7 @@ import pages from "../../data/pages.json";
           </p>
         </div>
         <a class="text-link" href="/mental-health-ehr/">
-          Take a closer look at Otto ↗
+          Take a closer look at Otto
         </a>
         <div class="waitlist-flower" aria-hidden="true">
           <svg viewBox="0 0 300 180">
@@ -98,7 +98,7 @@ import pages from "../../data/pages.json";
               </label>
             </div>
             <button class="button waitlist-submit" type="submit">
-              Continue preview <span aria-hidden="true">↗</span>
+              Continue preview <span aria-hidden="true"></span>
             </button>
             <p class="waitlist-fine">
               No information is sent or saved in this GitHub Pages preview.{" "}
@@ -204,7 +204,7 @@ import pages from "../../data/pages.json";
               />
             </label>
             <button class="button waitlist-submit" type="submit">
-              Finish preview <span aria-hidden="true">↗</span>
+              Finish preview <span aria-hidden="true"></span>
             </button>
             <button class="waitlist-skip" type="button" id="skip-practice">
               I’ll share this later
@@ -229,7 +229,7 @@ import pages from "../../data/pages.json";
               estimates.
             </p>
             <a class="text-link" href="/tools/">
-              Explore the free tools ↗
+              Explore the free tools
             </a>
           </div>
         </div>
@@ -248,3 +248,59 @@ import pages from "../../data/pages.json";
   </main>
   <script is:inline src="/assets/waitlist.js" defer></script>
 </SiteLayout>
+
+<style>
+  .waitlist-page { position: relative; isolation: isolate; min-height: 0; overflow: hidden; background: #d9cfc3; }
+  .waitlist-page::before { content: ""; position: absolute; z-index: -1; inset: -60px; background: url('/media/hero-photo.png') 70% 0 / cover; filter: blur(32px); }
+  .waitlist-layout { max-width: 1240px; padding: 126px 20px 72px; grid-template-columns: minmax(0,1fr) minmax(0,520px); gap: 24px; align-items: stretch; }
+  .waitlist-intro { min-width: 0; padding: 40px 44px; border: 1px solid rgba(255,255,255,.85); border-radius: 20px; background: rgba(255,255,255,.78); backdrop-filter: blur(24px); }
+  .waitlist-intro .eyebrow { display: block; margin-bottom: 10px; color: #545454; font-size: 10px; font-weight: 600; letter-spacing: .12em; }
+  .waitlist-intro .eyebrow::before { display: none; }
+  .waitlist-intro h1 { margin: 0; font-size: clamp(40px,4.4vw,60px); line-height: 1.02; font-weight: 300; letter-spacing: -1.6px; }
+  .waitlist-intro h1 em { font-style: italic; color: #004852; }
+  .waitlist-dek { max-width: none; margin: 22px 0 24px; font-size: 18px; line-height: 28px; }
+  .waitlist-points { display: block; margin: 24px 0; }
+  .waitlist-points p { font-size: 16px; line-height: 24px; gap: 12px; margin: 16px 0; }
+  .waitlist-points span { color: #417e86; border-color: #d8d8d8; }
+  .waitlist-intro > .text-link { display: inline-flex; min-height: 46px; padding: 0 24px; border: 0; border-radius: 9999px; background: #dc785d; color: #fff; font-weight: 600; }
+  .waitlist-intro > .text-link:hover { background: #c9674e; }
+  .waitlist-flower { display: block; position: relative; width: 230px; height: 160px; margin: 34px 0 0 24px; opacity: 1; }
+  .waitlist-flower svg { display: none; }
+  .waitlist-flower::before, .waitlist-flower::after { content: ""; position: absolute; width: 158px; height: 140px; border: 1px solid #e1ded8; border-radius: 12px; background: #fff; box-shadow: 4px 12px 24px -14px rgba(0,72,82,.3); }
+  .waitlist-flower::before { left: 2px; top: 0; transform: rotate(-8deg); }
+  .waitlist-flower::after { left: 52px; top: 12px; transform: rotate(6deg); background: url('/assets/otto-logo.svg') 20px 20px / 48px auto no-repeat, linear-gradient(#e8e5df,#e8e5df) 20px 65px / 114px 5px no-repeat, linear-gradient(#e8e5df,#e8e5df) 20px 82px / 94px 5px no-repeat, linear-gradient(#e8e5df,#e8e5df) 20px 99px / 74px 5px no-repeat, #fff; }
+  .waitlist-card { min-width: 0; padding: 32px 36px; background: #fff; border: 0; border-radius: 16px; box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 10px 28px -14px rgba(0,72,82,.16); }
+  .waitlist-progress { margin-bottom: 20px; color: #545454; }
+  .waitlist-progress b { font-weight: 600; }
+  .waitlist-demo { padding: 14px; background: #f0eee8; border: 0; border-radius: 14px; margin-bottom: 20px; }
+  .waitlist-demo button { color: #004852; }
+  .waitlist-demo p { font-size: 14px; line-height: 22px; margin: 6px 0 0; }
+  .waitlist-card h2 { margin: 0 0 6px; font-size: 30px; line-height: 36px; font-weight: 300; letter-spacing: -.6px; }
+  .waitlist-card > div > p { margin-bottom: 18px; font-size: 16px; line-height: 24px; }
+  .waitlist-card input, .waitlist-card select { border-color: #d8d8d8; border-radius: 12px; font-size: 16px; padding: 11px 14px; }
+  .waitlist-submit { min-height: 48px; margin: 12px 0 16px; justify-content: center; }
+  .waitlist-submit > span:empty { display: none; }
+  .waitlist-fine { color: #777; font-size: 12px !important; line-height: 20px; }
+  .waitlist-fine a { color: #004852; }
+  .waitlist-choice { margin-top: 20px; }
+  .choice-row { flex-wrap: wrap; }
+  .choice-row span { border-color: #d8d8d8; border-radius: 9999px; }
+  .waitlist-skip { color: #004852; font-weight: 600; border: 0; }
+  .waitlist-next { background: #f0eee8; border-radius: 16px; }
+  .waitlist-next h3 { font-size: 24px; font-weight: 300; }
+  .success-mark { width: 48px; height: 48px; background: #004852; color: #fff; margin-bottom: 16px; }
+  @media (max-width: 1000px) {
+    .waitlist-layout { grid-template-columns: 1fr; padding-top: 126px; }
+    .waitlist-intro { padding: 32px; }
+    .waitlist-card { width: 100%; max-width: 640px; justify-self: center; }
+  }
+  @media (max-width: 680px) {
+    .waitlist-layout { padding-top: 126px; padding-bottom: 64px; gap: 24px; }
+    .waitlist-intro { padding: 32px 28px; }
+    .waitlist-intro h1 { font-size: 40px; letter-spacing: -1.4px; }
+    .waitlist-dek { margin-top: 18px; }
+    .waitlist-card { padding: 28px 24px; }
+    .waitlist-card .fields { grid-template-columns: 1fr; }
+    .waitlist-flower { width: 200px; margin-left: 0; }
+  }
+</style>
