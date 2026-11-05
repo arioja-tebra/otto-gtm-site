@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
-const base = '/otto-gtm-site/gtm-seo-play';
+const base = '/otto-gtm-site';
 const pages = JSON.parse(readFileSync('src/data/pages.json', 'utf8'));
 
 test.beforeEach(async ({ context }) => {
@@ -26,8 +26,8 @@ test('deployed routes render with working scripts and images under the Pages pat
 
 test('preview navigation and signup retain the Pages path and campaign tags', async ({ page }) => {
   await page.goto('/otto-gtm-site/');
-  await page.getByRole('link', { name: 'Open the team preview' }).click();
-  await expect(page).toHaveURL(new RegExp(`${base}/mental-health-ehr/`));
+  await expect(page.locator('h1')).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Open the team preview' })).toHaveCount(0);
   await page.goto(`${base}/mental-health-ehr/?utm_source=pages-check`);
   const signup = page.locator(`main a[href^="${base}/waitlist/"]`).first();
   const target = new URL((await signup.getAttribute('href'))!, page.url());

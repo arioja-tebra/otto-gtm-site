@@ -1,17 +1,14 @@
 import { cpSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-// Keep review links stable while publishing the current Astro build.
+// Publish only the current Astro build at the repository Pages URL.
 const repositoryPath = '/otto-gtm-site';
-const editorialPath = `${repositoryPath}/gtm-seo-play`;
+const editorialPath = repositoryPath;
 const origin = new URL(process.env.SITE_URL || 'https://arioja-tebra.github.io').origin;
 const output = `.pages${repositoryPath}`;
 rmSync('.pages', { recursive: true, force: true });
 mkdirSync(output, { recursive: true });
-for (const path of ['index.html', '404.html', '.nojekyll', 'robots.txt', 'friendly', 'previous']) {
-  cpSync(path, join(output, path), { recursive: true });
-}
-cpSync('dist', join(output, 'gtm-seo-play'), { recursive: true });
+cpSync('dist', output, { recursive: true });
 
 // Astro source intentionally uses origin-relative URLs for the Cloudflare build.
 // Prefix only paths owned by this build, including URLs in inline scripts and CSS.
@@ -32,5 +29,5 @@ function visit(directory) {
     else if (/\.(html|css|js|xml)$/.test(path)) writeFileSync(path, rewrite(readFileSync(path, 'utf8')));
   }
 }
-visit(join(output, 'gtm-seo-play'));
+visit(output);
 console.log(`Pages artifact: ${output}; current Astro site: ${editorialPath}/`);

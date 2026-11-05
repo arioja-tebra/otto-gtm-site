@@ -47,13 +47,13 @@ The migration preserves the reviewed page markup as readable Astro files. To edi
 
 For a new page, add its `.astro` file and metadata entry, use `SiteLayout`, and link it from the relevant navigation or related content. Keep schema URLs site-relative; the layout resolves them against `SITE_URL`.
 
-The root-level `gtm-seo-play/`, `friendly/`, `previous/`, `index.html`, and other historical HTML files are frozen GitHub Pages snapshots. They remain in place so existing review links keep working. Astro builds only `src/` and `public/` into `dist/`; it does not publish those snapshots. Edit `src/` for all new work.
+The root-level `gtm-seo-play/`, `friendly/`, `previous/`, `index.html`, and other historical HTML files are frozen GitHub Pages snapshots. They remain in Git as historical references and are excluded from deployment. Astro builds only `src/` and `public/` into `dist/`; it does not publish those snapshots. Edit `src/` for all new work.
 
 ## GitHub Pages deployment
 
 Merges to `main` deploy automatically after Astro validation, the existing browser suite, and checks of the packaged Pages site pass. The workflow can also be run manually from GitHub Actions.
 
-The live editorial preview is at https://arioja-tebra.github.io/otto-gtm-site/gtm-seo-play/mental-health-ehr/. It serves the current Astro build, including blog and tool disclaimers. The root design chooser and the `friendly/` and `previous/` snapshots keep their existing URLs. `scripts/prepare-pages.mjs` packages these files and prefixes the Astro build’s links, assets, metadata, and runtime signup URLs for the repository path. It leaves `dist/` unchanged for Cloudflare.
+The live site is at https://arioja-tebra.github.io/otto-gtm-site/. Only the current Astro build is deployed, including blog and tool disclaimers. `scripts/prepare-pages.mjs` prefixes the build’s links, assets, metadata, and runtime signup URLs for the repository path. It leaves `dist/` unchanged for Cloudflare. The design chooser and historical HTML snapshots are excluded from the deployed artifact.
 
 To verify the deployment artifact locally:
 

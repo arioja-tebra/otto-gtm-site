@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { load } from 'cheerio';
 
 const root = '.pages';
-const base = '/otto-gtm-site/gtm-seo-play';
+const base = '/otto-gtm-site';
 const origin = process.env.SITE_URL || 'https://arioja-tebra.github.io';
 const pages = JSON.parse(readFileSync('src/data/pages.json', 'utf8'));
 const fileFor = path => join(root, path.endsWith('/') ? `${path}index.html` : path);
@@ -37,10 +37,11 @@ test('Pages artifact has working links, assets, anchors and preview metadata for
   }
 });
 
-test('Pages packaging preserves older previews and prefixes runtime signup URLs', () => {
-  for (const path of ['index.html', 'friendly/mental-health-ehr/index.html', 'previous/mental-health-ehr/index.html']) {
-    assert.equal(readFileSync(`.pages/otto-gtm-site/${path}`, 'utf8'), readFileSync(path, 'utf8'));
+test('Pages packaging excludes legacy previews and prefixes runtime signup URLs', () => {
+  for (const directory of ['friendly', 'previous', 'gtm-seo-play']) {
+    assert.ok(!existsSync(`.pages/otto-gtm-site/${directory}`), directory);
   }
+  assert.doesNotMatch(readFileSync(fileFor(`${base}/`), 'utf8'), /Compare Otto design versions/);
   const script = readFileSync(fileFor(`${base}/assets/site.js`), 'utf8');
   assert.ok(script.includes(`new URL('${base}/waitlist/'`));
   assert.ok(script.includes(`a[href="${base}/waitlist/"]`));
