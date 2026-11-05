@@ -1,0 +1,55 @@
+---
+interface Props {
+  title?: string;
+  rows?: string[];
+}
+const {
+  title = "Your practice day, connected",
+  rows = [
+    "Your schedule, at a glance",
+    "AI-assisted SOAP and DAP drafts",
+    "Billing and payments",
+  ],
+} = Astro.props;
+---
+
+<div class="practice-visual" aria-label="Illustrative practice workspace">
+  <div class="pv-orbit" aria-hidden="true"></div>
+  <div class="pv-window">
+    <div class="pv-top">
+      <img src="/assets/otto-logo.svg" alt="Otto" width="58" height="30" />
+      <span>YOUR PRACTICE</span>
+      <i aria-hidden="true">✳</i>
+    </div>
+    <div class="pv-greeting">A little space for what matters.</div>
+    <h2>{title}</h2>
+    <div class="pv-week" aria-hidden="true">
+      {["M", "T", "W", "T", "F"].map((day, i) => (
+        <span class:list={{ active: i === 2 }}>
+          {day}
+          <b>{12 + i}</b>
+        </span>
+      ))}
+    </div>
+    <div class="pv-rows">
+      {rows.map((row, i) => (
+        <div>
+          <span class="pv-icon" aria-hidden="true">
+            {["◷", "≡", "↗"][i]}
+          </span>
+          <strong>{row}</strong>
+          <span aria-hidden="true">✓</span>
+        </div>
+      ))}
+    </div>
+    <div class="pv-bottom">
+      <span class="pv-dot"></span> From preparation to payment.
+    </div>
+  </div>
+  <div class="pv-sticker">
+    A little more
+    <br />
+    room for <em>care.</em>
+  </div>
+  <p class="pv-caption">Illustration · Fictional practice</p>
+</div>

@@ -1,0 +1,83 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PracticeVideos from "../../components/PracticeVideos.astro";
+import PracticeVisual from "../../components/PracticeVisual.astro";
+import { features } from "../../data/practice";
+import pages from "../../data/pages.json";
+export function getStaticPaths() {
+  return features.map((feature) => ({
+    params: { feature: feature.slug },
+    props: { feature },
+  }));
+}
+const { feature } = Astro.props;
+---
+
+<SiteLayout
+  metadata={pages[`/your-practice/${feature.slug}/` as keyof typeof pages]}
+>
+  <link rel="stylesheet" href="/assets/practice.css" />
+  <main id="main" class="practice-page">
+    <div class="wrap">
+      <div class="practice-subnav">
+        <a href="/your-practice/">← See what Otto can do</a>
+        <span class="concept-tag">Explore Otto · {feature.short}</span>
+      </div>
+      <section class="practice-hero practice-feature-hero">
+        <div class="practice-intro">
+          <div class="eyebrow">{feature.label}</div>
+          <h1>{feature.title}</h1>
+          <p>{feature.description}</p>
+          <a
+            class="button"
+            href={`/your-practice/build/?feature=${feature.slug}`}
+          >
+            See this for my practice <span aria-hidden="true">↗</span>
+          </a>
+          <div class="practice-fine">
+            Take a closer look at the workflows that fit your practice.
+          </div>
+        </div>
+        <PracticeVisual title={feature.visualTitle} rows={feature.visualRows} />
+      </section>
+      <PracticeVideos billingOnly={feature.slug === "front-desk"} />
+      <section class="practice-feature-detail">
+        <div>
+          <div class="eyebrow">Your day, with Otto</div>
+          <h2>{feature.question}</h2>
+          <p>{feature.detail}</p>
+        </div>
+        <ol>
+          {feature.examples.map((example, i) => (
+            <li>
+              <span>0{i + 1}</span>
+              {example}
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section class="practice-close">
+        <span class="concept-tag">See Otto for your practice</span>
+        <h2>See how Otto fits your day.</h2>
+        <p>Tell us what you would like a hand with first.</p>
+        <a
+          class="button light"
+          href={`/your-practice/build/?feature=${feature.slug}`}
+        >
+          Show me Otto ↗
+        </a>
+      </section>
+      <div class="practice-related">
+        {features
+          .filter((item) => item.slug !== feature.slug)
+          .map((item) => (
+            <a href={`/your-practice/${item.slug}/`}>{item.label} ↗</a>
+          ))}
+      </div>
+      <p class="practice-disclosure">
+        Product tour preview. Videos show product demonstrations. Signup is
+        demo-only; no information is submitted or saved.
+      </p>
+    </div>
+  </main>
+</SiteLayout>

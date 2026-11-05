@@ -15,7 +15,7 @@ const files = dir => readdirSync(dir).flatMap(name => {
 });
 
 test('all migrated routes retain their content, metadata, and real navigation', () => {
-  assert.equal(Object.keys(pages).length, 35);
+  assert.equal(Object.keys(pages).length, 41);
   for (const [path, metadata] of Object.entries(pages)) {
     const html = readFileSync(outputPath(path), 'utf8');
     const $ = load(html);
