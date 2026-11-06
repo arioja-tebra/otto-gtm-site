@@ -4,9 +4,9 @@ export const features = [
     number: "01",
     label: "Walk into each session prepared",
     short: "Session prep",
-    title: "Be ready for the conversation.",
+    title: "Pick up the conversation where you left off.",
     description:
-      "Pick up where you left off with a patient summary and last-session highlights before the next visit.",
+      "Open the next visit with a patient summary and last-session highlights ready to review. Bring the context back into focus before your patient arrives.",
     detail:
       "Your calendar connects to the patient record, so the context you need stays close as you prepare for the next conversation.",
     examples: [
@@ -21,13 +21,13 @@ export const features = [
   {
     slug: "notes",
     number: "02",
-    label: "Let Otto draft the note",
+    label: "Leave the session with a draft to review",
     short: "AI progress notes",
-    title: "Stay with the conversation. Otto can start the note.",
+    title: "Be present for the conversation. Let Otto start the note.",
     description:
-      "Turn session audio into a SOAP or DAP draft. Review the details, edit, and sign a note that reflects the care you provided.",
+      "With patient consent, Otto turns session audio into a SOAP or DAP draft. Start your review with the conversation already on the page, then edit and sign.",
     detail:
-      "The work carries forward after your signature. Otto proposes structured chart updates from the final note, and you decide what belongs in the record.",
+      "Your signed note becomes the starting point for the next step. Otto proposes structured chart updates from it, and you confirm what belongs in the record. The visit’s information keeps working for you.",
     examples: [
       "Capture session audio with patient consent",
       "Review, edit, and sign your SOAP or DAP draft",
@@ -44,13 +44,13 @@ export const features = [
   {
     slug: "front-desk",
     number: "03",
-    label: "Keep payment moving",
+    label: "Carry the visit through to payment",
     short: "Billing & payments",
-    title: "The visit ends. The work keeps moving.",
+    title: "Finish the visit with the payment step connected.",
     description:
-      "Connect the completed visit to billing, fee review, and payment collection. See the workflow in the billing walkthrough.",
+      "Carry the completed visit into cash billing with a procedure code prefilled for review. Check the code and fee, then continue to payment collection.",
     detail:
-      "Follow the payment step from the visit, with a prefilled procedure code and fee review. Watch the demonstration to see how the pieces connect.",
+      "The completed visit gives the payment step its starting point. Review the proposed procedure code and fee before collecting payment. The walkthrough shows cash billing; confirm support for your payment model before switching.",
     examples: [
       "Carry the visit into the billing workflow",
       "Review the procedure code and fee",
