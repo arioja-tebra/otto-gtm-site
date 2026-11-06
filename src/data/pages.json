@@ -865,8 +865,8 @@
     ]
   },
   "/mental-health-ehr/": {
-    "title": "Mental Health EHR for Therapists & Independent Practices | Otto",
-    "description": "Review patient context before a visit, edit and sign a note draft, and follow payment steps. Explore Otto for solo, self-pay mental health practices.",
+    "title": "Mental health EHR | A connected practice day with Otto",
+    "description": "See how Otto carries a mental health visit into an AI note draft, chart updates you confirm, and cash billing, with clinician review throughout.",
     "type": "website",
     "noindex": false,
     "graph": [
@@ -1874,8 +1874,8 @@
     ]
   },
   "/your-practice/": {
-    "title": "See what Otto can do for you | Otto",
-    "description": "Review patient context before a session, then edit and sign Otto’s note draft. Explore the demo for independent mental health practices.",
+    "title": "Otto by Tebra | Give your patient your full attention",
+    "description": "Otto connects session context, AI note drafts, chart updates you confirm, and cash billing. Explore a different practice day for solo mental health providers.",
     "type": "website",
     "noindex": true,
     "graph": [
@@ -1978,8 +1978,8 @@
     ]
   },
   "/your-practice/notes/": {
-    "title": "Let Otto draft the note | Otto",
-    "description": "See how Otto turns session audio into SOAP or DAP drafts you review, edit, and sign.",
+    "title": "AI notes for mental health providers | Otto by Tebra",
+    "description": "Turn session audio into a SOAP or DAP draft with patient consent. Review, edit and sign, then confirm the chart updates Otto proposes.",
     "type": "website",
     "noindex": true,
     "graph": [
@@ -2030,8 +2030,8 @@
     ]
   },
   "/your-practice/front-desk/": {
-    "title": "Keep payment moving | Otto",
-    "description": "Watch the Otto billing workflow and explore the steps from visit to payment.",
+    "title": "Cash billing connected to the visit | Otto by Tebra",
+    "description": "See how Otto carries a completed visit into code and fee review, then cash payment collection. Explore the billing demonstration.",
     "type": "website",
     "noindex": true,
     "graph": [
